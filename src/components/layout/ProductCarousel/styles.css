@@ -1,0 +1,14 @@
+.products-carousel-section {
+  width: 100%;
+}
+
+.products-row {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding: 10px 0 20px 0;
+  align-items: flex-start;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}

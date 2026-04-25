@@ -1,0 +1,55 @@
+.shopping-form {
+  background: white;
+  width: 900px;
+  border-radius: 16px;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+.shopping-form-left {
+  flex: 1;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+  background: white;
+}
+
+.shopping-form-right {
+  flex: 1;
+  position: relative;
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+  overflow: hidden;
+}
+
+.shopping-form-title {
+  font-size: 28px;
+  font-weight: 800;
+  color: #e85d26;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  width: 52%;
+}
+
+.seller-forms {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.shopping-form-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.shopping-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}

@@ -1,0 +1,77 @@
+.expandable-container {
+  width: 1440px;
+}
+
+.expandable-action {
+  margin-bottom: 12px;
+}
+
+.expandable-title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 100%;
+  color: #E35D25;
+  text-transform: uppercase;
+}
+
+.expandable-btn {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+  color: #EB5A21;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding-right: 12px;
+}
+
+.expandable-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  overflow: hidden;
+  transition: height 0.4s ease;
+  /* Плавное открытие */
+  position: relative;
+  padding: 10px 0 20px 0;
+  box-sizing: border-box;
+  /* Важно для правильных расчетов */
+  align-content: flex-start;
+  /* Чтобы элементы не растягивались по вертикали */
+}
+
+.expandable-box::after {
+  content: '';
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  width: 200px;
+  height: 100%;
+  background: linear-gradient(to left,
+      #f3f3f3 0%,
+      rgba(243, 243, 243, 0.9) 15%,
+      rgba(243, 243, 243, 0) 100%);
+  pointer-events: none;
+  opacity: var(--gradient-opacity, 1);
+  transition: opacity 0.4s ease;
+}
+
+.item {
+  width: 260px;
+  height: 160px;
+  background: dodgerblue;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+}
+
+.expandable-footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4px;
+}

@@ -1,0 +1,42 @@
+.short-card {
+  position: relative;
+  width: 348px;
+  cursor: pointer;
+}
+
+.short-title {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 19.5px;
+  color: #212121;
+}
+
+.short-video-wrapper {
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+  border-radius: 16px;
+  margin-bottom: 12px;
+}
+
+.short-video-content {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+
+}
+
+.short-meta {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+}
+
+.short-category {
+  color: #E55C28;
+}
+
+.short-tag {
+  color: #454545;
+}

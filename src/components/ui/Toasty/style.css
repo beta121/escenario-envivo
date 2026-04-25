@@ -1,0 +1,16 @@
+.toasty {
+  width: 500px;
+  height: 55px;
+  background-color: rgb(38, 237, 16);
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  color: black;
+  font-weight: 700;
+  font-size: 16px;
+}

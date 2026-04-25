@@ -1,0 +1,29 @@
+.text-field-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.text-field {
+  width: 100%;
+  border: none;
+  border-bottom: 1.5px solid #ccc;
+  padding: 12px 0;
+  font-size: 16px;
+  outline: none;
+  background: transparent;
+  color: #3B3B3B;
+  padding: 12px 0 12px 0;
+  text-align: left;
+}
+
+.text-field:focus {
+  border-bottom: 1.5px solid #E35D25;
+}
+
+.text-field::placeholder {
+  font-size: 16px;
+  color: #3B3B3B;
+  text-align: left;
+  letter-spacing: 0%;
+}

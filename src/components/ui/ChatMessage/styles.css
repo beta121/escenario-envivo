@@ -1,0 +1,57 @@
+.chat-message {
+  display: flex;
+  align-items: flex-start;
+  /* Чтобы аватар не растягивался по высоте текста */
+  gap: 12px;
+  /* Расстояние между аватаром и текстом */
+  padding: 4px 0;
+  /* Небольшой вертикальный отступ между сообщениями */
+  width: 100%;
+}
+
+.message-avatar {
+  flex-shrink: 0;
+  /* Чтобы аватар не сжимался */
+}
+
+.message-avatar img,
+.avatar-placeholder {
+  width: 32px;
+  /* Размер аватара из макета */
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.avatar-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.message-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  /* Расстояние между ником и текстом (Gap: 4px в Figma) */
+  line-height: 1.4;
+}
+
+.message-author {
+  font-weight: 600;
+  font-size: 14px;
+  color: #333;
+  /* Или твой цвет текста */
+}
+
+.message-text {
+  font-size: 14px;
+  color: #555;
+  /* Основной текст сообщения */
+  margin: 0;
+  word-break: break-word;
+  /* Чтобы длинные слова не ломали чат */
+}

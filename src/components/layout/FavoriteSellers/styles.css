@@ -1,0 +1,76 @@
+.carousel-container {
+  width: 1400px;
+  max-width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 20px 0;
+}
+
+.avatar-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #e85d26;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 17px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+.avatar-box img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.avatar-name {
+  margin-top: 12px;
+  color: #000000;
+  font-size: 10px;
+  font-weight: 400;
+  text-align: center;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+}
+
+.avatar-box {
+  position: relative;
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100px;
+}
+
+.live-play-icon {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background: #f60053;
+  border-radius: 50%;
+  border: 2px solid white;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
