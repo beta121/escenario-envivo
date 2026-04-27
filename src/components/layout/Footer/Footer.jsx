@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './styles.css';
 
 export const Footer = () => {
@@ -12,9 +13,9 @@ export const Footer = () => {
           </a>
 
           <nav className="footer-nav">
-            <a href="/pages/seller.html" data-lang="footer_seller">
+            <Link to="/seller" data-lang="footer_seller">
               Seller
-            </a>
+            </Link>
             <a href="/pages/buyer.html" data-lang="footer_buyer">
               Buyer
             </a>
