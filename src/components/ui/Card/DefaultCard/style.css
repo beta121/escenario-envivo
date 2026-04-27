@@ -83,9 +83,13 @@
   border: none;
   cursor: pointer;
   background: #D9D9D9;
-  transition: background 0.2s;
+  transition: transform 0.1s;
 }
 
-.card-button:hover {
-  background: #cccccc;
+.card-buttonn:hover {
+  filter: brightness(1.1);
+}
+
+.card-button:active {
+  transform: scale(0.95);
 }

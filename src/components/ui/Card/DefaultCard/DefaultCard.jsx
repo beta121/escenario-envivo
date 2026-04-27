@@ -27,7 +27,15 @@ export const DefaultCard = ({ productId, variant, imgSrc, description, price, on
               {showBuyBtn && (
                 <>
                   <span className="price">${price}</span>
-                  <button className="card-button">Buy</button>
+                  <button
+                    className="card-button"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      e.stopPropagation();
+                    }}
+                  >
+                    Buy
+                  </button>
                 </>
               )}
 

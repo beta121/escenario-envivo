@@ -57,11 +57,27 @@ const OPTIONS = [
 export const ShoppingSignupForm = ({ onSuccess }) => {
   const [selectedIds, setSelectedIds] = useState([]);
   const [email, setEmail] = useState('');
+  const [errorEmail, setErrorEmail] = useState('');
 
   const handleToggle = (id) => {
     setSelectedIds((prev) =>
       prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id]
     );
+  };
+
+  const handleEmail = (e) => {
+    const regex = /^[\w\.-]+@[\w\.-]+\.\w+$/;
+    const value = e.target.value;
+
+    setEmail(value);
+
+    if (value.trim() === '') {
+      setErrorEmail('');
+    } else if (regex.test(value.trim())) {
+      setErrorEmail('');
+    } else {
+      setErrorEmail('Please enter a valid email address.');
+    }
   };
 
   const handleSubmit = (e) => {
@@ -91,14 +107,39 @@ export const ShoppingSignupForm = ({ onSuccess }) => {
               />
             ))}
           </div>
-          <TextField
-            placeholder="Your email"
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-          <div style={{ width: '168px', marginTop: '15px' }}>
-            <Button onClick={handleSubmit}> FIND YOUR JOY</Button>
+          <TextField placeholder="Your email" type="email" value={email} onChange={handleEmail} />
+          <div
+            style={{
+              marginTop: '25px',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '15px',
+            }}
+          >
+            <div style={{ width: '168px', flexShrink: 0 }}>
+              <Button
+                onClick={handleSubmit}
+                disabled={!!errorEmail || !email || !selectedIds.length}
+              >
+                START SELLING
+              </Button>
+            </div>
+
+            <div style={{ minHeight: '40px', display: 'flex', alignItems: 'center' }}>
+              {errorEmail && (
+                <p
+                  style={{
+                    color: '#FF4D4F',
+                    fontSize: '13px',
+                    lineHeight: '1.2',
+                    margin: 0,
+                    fontWeight: '500',
+                  }}
+                >
+                  {errorEmail}
+                </p>
+              )}
+            </div>
           </div>
         </form>
       </div>

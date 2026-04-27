@@ -20,7 +20,8 @@ export const sellersUsers = [
     upcomingStreams: 53,
     finishedStreams: 126,
     igHandle: '@LiveHaulHub',
-    store: true
+    store: true,
+    upcomingID: '7'
   },
   {
     id: 2,
@@ -37,7 +38,9 @@ export const sellersUsers = [
     upcomingStreams: 12,
     finishedStreams: 89,
     igHandle: '@CheckoutStream',
-    store: true
+    store: true,
+    upcomingID: '8'
+
   },
   {
     id: 3,
@@ -54,7 +57,9 @@ export const sellersUsers = [
     upcomingStreams: 5,
     finishedStreams: 210,
     igHandle: '@FlashSaleLive',
-    store: true
+    store: true,
+    upcomingID: '9'
+
   },
   {
     id: 4,
@@ -71,7 +76,9 @@ export const sellersUsers = [
     upcomingStreams: 0,
     finishedStreams: 45,
     igHandle: '@BestDeals',
-    store: true
+    store: true,
+    upcomingID: '10'
+
   },
   {
     id: 5,
@@ -88,6 +95,8 @@ export const sellersUsers = [
     upcomingStreams: 2,
     finishedStreams: 15,
     igHandle: '@DailyDrop',
-    store: false
+    store: false,
+    upcomingID: '11'
+
   },
 ]

@@ -111,5 +111,13 @@
   background: #E35D25;
   color: #fff;
   transition: all 0.2s;
-  text-transform: uppercase;
+  transition: transform 0.1s;
+}
+
+.card-giveaway__button:hover {
+  filter: brightness(1.1);
+}
+
+.card-giveaway__button:active {
+  transform: scale(0.95);
 }

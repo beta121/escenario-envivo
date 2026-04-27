@@ -1,22 +1,28 @@
 import { Link } from 'react-router-dom';
 import { sellersUsers } from '../../../shared/assets/user/sellersUsers';
+import { streamsData } from '../../../shared/assets/user/streamsData';
+
 import './styles.css';
 
 export const FavoriteSellers = ({ title }) => {
+  const currentUpcoming = streamsData;
+
   return (
     <div className="carousel-container">
       <h3 className="avatar-title">{title}</h3>
       <div className="carousel-track">
         {sellersUsers.map((user) => (
           <div key={user.id} className="avatar-box">
-            <Link to={`/user/${user?.id}`}>
+            <Link to={user.online ? `/live/${user?.id}` : `/upcoming/${user?.upcomingID}`}>
               <img
                 src={user.avatar}
                 alt={user.name}
                 style={{ border: user.online && '2px solid #FF0033' }}
               />
             </Link>
-            <span className="avatar-name">{user.name}</span>
+            <Link to={`/user/${user?.id}`}>
+              <span className="avatar-name">{user.name}</span>
+            </Link>
             {user.online && (
               <div className="live-play-icon">
                 <svg

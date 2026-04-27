@@ -56,7 +56,7 @@ export const Header = () => {
     <header className="header">
       <div className="header-content">
         <div className="logo-container">
-          <a href="/">
+          <a href="/escenario-envivo/">
             <img src={logo} alt="Logo" />
           </a>
         </div>
@@ -89,7 +89,8 @@ export const Header = () => {
         <Modal innerRef={modalRef}>
           {modalType === 'selling' && (
             <SellerSignupForm
-              onClose={() => {
+              onSuccess={() => {
+                setIsOpenTost(true);
                 setModalType(null);
               }}
             />

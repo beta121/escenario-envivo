@@ -14,9 +14,10 @@ const countries = [
   { name: 'GERMANY', code: 'DE', img: 'https://flagcdn.com/w40/de.png' },
 ];
 
-export const SellerSignupForm = ({ onClose }) => {
+export const SellerSignupForm = ({ onSuccess }) => {
   const [country, setCountry] = useState(null);
   const [email, setEmail] = useState('');
+  const [errorEmail, setErrorEmail] = useState('');
   const [name, setName] = useState('');
 
   const handleCountryChange = (selectedObject) => {
@@ -24,12 +25,27 @@ export const SellerSignupForm = ({ onClose }) => {
     console.log('Country Name:', selectedObject.code);
   };
 
+  const handleEmail = (e) => {
+    const regex = /^[\w\.-]+@[\w\.-]+\.\w+$/;
+    const value = e.target.value;
+
+    setEmail(value);
+
+    if (value.trim() === '') {
+      setErrorEmail('');
+    } else if (regex.test(value.trim())) {
+      setErrorEmail('');
+    } else {
+      setErrorEmail('Please enter a valid email address.');
+    }
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Выбранные ID:', name);
     console.log('Email:', email);
     console.log('country:', country);
-    onClose();
+    onSuccess();
   };
 
   return (
@@ -46,12 +62,7 @@ export const SellerSignupForm = ({ onClose }) => {
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
-          <TextField
-            placeholder="Your email"
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
+          <TextField placeholder="Your email" type="email" value={email} onChange={handleEmail} />
 
           <Select
             items={countries}
@@ -59,8 +70,35 @@ export const SellerSignupForm = ({ onClose }) => {
             onSelect={handleCountryChange}
             placeholder="Primary Country"
           />
-          <div style={{ width: '168px', marginTop: '15px' }}>
-            <Button onClick={handleSubmit}>START SELLING</Button>
+          <div
+            style={{
+              marginTop: '25px',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '15px',
+            }}
+          >
+            <div style={{ width: '168px', flexShrink: 0 }}>
+              <Button onClick={handleSubmit} disabled={!!errorEmail || !email || !name || !country}>
+                START SELLING
+              </Button>
+            </div>
+
+            <div style={{ minHeight: '40px', display: 'flex', alignItems: 'center' }}>
+              {errorEmail && (
+                <p
+                  style={{
+                    color: '#FF4D4F',
+                    fontSize: '13px',
+                    lineHeight: '1.2',
+                    margin: 0,
+                    fontWeight: '500',
+                  }}
+                >
+                  {errorEmail}
+                </p>
+              )}
+            </div>
           </div>
         </form>
       </div>

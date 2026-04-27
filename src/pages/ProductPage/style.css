@@ -122,10 +122,19 @@
   color: #fff;
 }
 
+.product__btn--primary:hover {
+  background-color: #cf4f1f;
+  border-color: #cf4f1f;
+}
+
 .product__btn--secondary {
   background-color: #fff;
   color: #E85D26;
   border: 1px solid #E85D26;
+}
+
+.product__btn--secondary:hover {
+  background-color: #fff5f2;
 }
 
 .product__quantity {

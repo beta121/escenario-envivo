@@ -7,9 +7,11 @@ export const Products = () => {
   const { id } = useParams();
   const { products } = P.find((p) => Number(p.userId) === Number(id));
 
+  const currentProducts = products.slice(4);
+
   return (
     <div style={{ display: 'flex', alignItems: 'center', gap: '16px', flexWrap: 'wrap' }}>
-      {products.map((product, index) => (
+      {currentProducts.map((product, index) => (
         <ProductCard key={product.productId} product={product} />
       ))}
     </div>

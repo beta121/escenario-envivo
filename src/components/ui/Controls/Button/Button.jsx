@@ -1,6 +1,6 @@
 import './style.css';
 
-export const Button = ({ children, variant = 'filled', onClick, ...props }) => {
+export const Button = ({ children, variant = 'filled', onClick, disabled, ...props }) => {
   const variants = {
     filled: 'btn-filled',
     outline: 'btn-outline',
@@ -10,7 +10,12 @@ export const Button = ({ children, variant = 'filled', onClick, ...props }) => {
   const variantClass = variants[variant] || variants.filled;
 
   return (
-    <button className={`btn ${variantClass}`} onClick={onClick} {...props}>
+    <button
+      className={`btn ${variantClass} ${disabled ? 'btn-disabled' : ''}`}
+      onClick={onClick}
+      disabled={disabled}
+      {...props}
+    >
       {children}
     </button>
   );

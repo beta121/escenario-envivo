@@ -25,7 +25,15 @@ export const GiveawayCard = ({ productId, imgSrc, description, joined, time }) =
             </div>
 
             <div className="card-giveaway__footer">
-              <button className="card-giveaway__button">join</button>
+              <button
+                className="card-giveaway__button"
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                }}
+              >
+                join
+              </button>
             </div>
           </div>
         </div>

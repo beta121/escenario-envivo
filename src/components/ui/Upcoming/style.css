@@ -71,6 +71,11 @@
   gap: 20px;
 }
 
+.reminder-button:hover {
+  background-color: #cf4f1f;
+  border-color: #cf4f1f;
+}
+
 .upcoming-blackout {
   position: absolute;
   top: 0;

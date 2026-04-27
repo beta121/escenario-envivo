@@ -63,7 +63,15 @@
   font-weight: 600;
   text-transform: uppercase;
   border-radius: 8px;
-  line-height: 100%;
+  transition: transform 0.1s;
+}
+
+.highlight-btn:hover {
+  filter: brightness(1.1);
+}
+
+.highlight-btn:active {
+  transform: scale(0.95);
 }
 
 .highlight-price p:nth-child(1) {

@@ -43,6 +43,10 @@ export const DiscountCard = ({
               <button
                 className="card-discount__button"
                 style={{ textTransform: type === 'discount' ? 'uppercase' : 'none' }}
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                }}
               >
                 Buy
               </button>

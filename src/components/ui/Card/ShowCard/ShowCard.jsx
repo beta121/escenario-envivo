@@ -20,7 +20,15 @@ export const ShowCard = ({ productId, imgSrc, description, price }) => {
 
             <div className="card-show__footer">
               <span className="card-show__price">${price}</span>
-              <button className="card-show__button">Buy</button>
+              <button
+                className="card-show__button"
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                }}
+              >
+                Buy
+              </button>
             </div>
           </div>
         </div>

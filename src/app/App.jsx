@@ -7,7 +7,7 @@ import '../shared/config/i18n/i18n';
 export default function App() {
   return (
     <Suspense fallback={<Loader />}>
-      <BrowserRouter>
+      <BrowserRouter basename="/escenario-envivo">
         <Router />
       </BrowserRouter>
     </Suspense>
