@@ -1,8 +1,9 @@
 import './style.css';
 
-export const TextField = ({ placeholder, type = 'text', onChange, value }) => {
+export const TextField = ({ placeholder, type = 'text', onChange, value, label }) => {
   return (
     <div className="text-field-container">
+      {label && <label className="text-field-label">{label}</label>}
       <input
         className="text-field"
         placeholder={placeholder}
