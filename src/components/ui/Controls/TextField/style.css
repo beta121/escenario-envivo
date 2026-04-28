@@ -9,7 +9,7 @@
   border: none;
   border-bottom: 1.5px solid #ccc;
   padding: 12px 0;
-  font-size: 16px;
+  font-size: 14px;
   outline: none;
   background: transparent;
   color: #3B3B3B;
@@ -26,4 +26,11 @@
   color: #3B3B3B;
   text-align: left;
   letter-spacing: 0%;
+}
+
+.text-field-label {
+  align-self: flex-start;
+  font-size: 12px;
+  font-weight: 700;
+  color: #333333;
 }

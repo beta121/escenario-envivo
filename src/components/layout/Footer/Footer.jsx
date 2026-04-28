@@ -13,21 +13,11 @@ export const Footer = () => {
           </a>
 
           <nav className="footer-nav">
-            <Link to="/seller" data-lang="footer_seller">
-              Seller
-            </Link>
-            <a href="/pages/buyer.html" data-lang="footer_buyer">
-              Buyer
-            </a>
-            <a href="/pages/investor.html" data-lang="footer_investor">
-              Investor
-            </a>
-            <a href="/pages/contact.html" data-lang="footer_contact">
-              Contact
-            </a>
-            <a href="/pages/aifeatures.html" data-lang="footer_ai">
-              AI Features
-            </a>
+            <Link to="/seller">Seller</Link>
+            <Link to="/buyer">Buyer</Link>
+            <Link>Investor</Link>
+            <Link to="/contact">Contact</Link>
+            <Link to="/aifeatures">AI Features</Link>
           </nav>
         </div>
 

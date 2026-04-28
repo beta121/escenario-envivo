@@ -7,6 +7,7 @@ const UserProfile = lazy(() => import('../../pages/UserProfile/UserProfile.jsx')
 const VideoProfile = lazy(() => import('../../pages/VideoProfile/VideoProfile.jsx'));
 const UpcomingProfile = lazy(() => import('../../pages/UpcomingProfile/UpcomingProfile.jsx'));
 const ProductPage = lazy(() => import('../../pages/ProductPage/ProductPage.jsx'));
+const Contact = lazy(() => import('../../pages/Contact/Contact.jsx'));
 
 const Loadable = (Component) => (props) => (
   <Suspense fallback={<div>Loading...</div>}>
@@ -25,6 +26,10 @@ export const routes = [
       {
         path: '/seller',
         element: <Seller />,
+      },
+      {
+        path: '/contact',
+        element: <Contact />,
       },
       {
         path: '/user/:id',
