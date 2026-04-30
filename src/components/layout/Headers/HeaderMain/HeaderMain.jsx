@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
-import { CustomSelect, SearchBar, Modal, TextField, Button, Toasty } from '../../ui';
-import { SellerSignupForm, ShoppingSignupForm } from '../../layout';
+import { CustomSelect, SearchBar, Modal, TextField, Button, Toasty } from '../../../ui';
+import { SellerSignupForm, ShoppingSignupForm } from '../../../layout';
 import { useTranslation } from 'react-i18next';
-import { useOutsideClick } from '../../../shared/hooks/useOutsideClick';
-import logo from '../../../shared/assets/Logo.svg';
+import { useOutsideClick } from '../../../../shared/hooks/useOutsideClick';
+import logo from '../../../../shared/assets/Logo.svg';
 import './styles.css';
 
 const regions = [
@@ -25,7 +25,7 @@ const languages = [
   { name: 'ES', code: 'es' },
 ];
 
-export const Header = () => {
+export const HeaderMain = () => {
   const { i18n } = useTranslation();
   const [region, setRegion] = useState(regions[0]);
   const [lang, setLang] = useState(() => {

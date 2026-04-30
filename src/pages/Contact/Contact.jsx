@@ -3,6 +3,14 @@ import { TextField, Button } from '../../components/ui';
 import contactSupport from '../../shared/assets/contactSupport.png';
 import './style.css';
 
+const initialFormState = {
+  name: '',
+  company: '',
+  phone: '',
+  email: '',
+  message: '',
+};
+
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -25,6 +33,14 @@ const Contact = () => {
       }
     }
   };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+
+    console.log('Form Submitted Data:', formData);
+
+    setFormData(initialFormState);
+  };
 
   const isFormInvalid =
     !!errorEmail || !formData.name || !formData.email || !formData.phone || !formData.message;
@@ -41,7 +57,7 @@ const Contact = () => {
           <p className="contact-form-description">We welcome new connections and feedback</p>
         </div>
 
-        <form className="contact-form">
+        <form className="contact-form" onSubmit={handleSubmit}>
           <TextField
             label="Name"
             placeholder="Your Name"
