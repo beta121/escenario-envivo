@@ -17,7 +17,7 @@ export const Footer = () => {
             <Link to="/buyer">Buyer</Link>
             <Link>Investor</Link>
             <Link to="/contact">Contact</Link>
-            <Link to="/aifeatures">AI Features</Link>
+            <Link to="/ai-features">AI Features</Link>
           </nav>
         </div>
 

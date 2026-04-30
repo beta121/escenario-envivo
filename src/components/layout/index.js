@@ -1,6 +1,5 @@
 export * from './MainLayout'
 export * from './ExpandableBox'
-export * from './Header'
 export * from './Footer'
 export * from './FavoriteSellers'
 export * from './ProductCarousel'
