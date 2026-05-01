@@ -32,10 +32,12 @@
 .btn-outline {
   background-color: transparent;
   color: #e85d26;
+  border: 1px solid #e85d26;
 }
 
 .btn-outline:hover {
   background-color: #fff5f2;
+
 }
 
 .btn-gray {

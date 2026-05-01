@@ -19,7 +19,7 @@ const Arrow = ({ style }) => {
   );
 };
 
-export function ExpandableBox({ title, children, showGradient = true }) {
+export function ExpandableBox({ title, children, showGradient = true, showMo }) {
   const containerRef = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
   const [heights, setHeights] = useState({ closed: 0, full: 0 });
@@ -70,16 +70,18 @@ export function ExpandableBox({ title, children, showGradient = true }) {
         {children}
       </div>
 
-      <div className="expandable-footer" onClick={() => setIsOpen(!isOpen)}>
-        <button className="expandable-btn">Show more</button>
-        <Arrow
-          style={{
-            cursor: 'pointer',
-            transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)',
-            transition: 'transform 0.3s ease',
-          }}
-        />
-      </div>
+      {showMo > 5 && (
+        <div className="expandable-footer" onClick={() => setIsOpen(!isOpen)}>
+          <button className="expandable-btn">Show more</button>
+          <Arrow
+            style={{
+              cursor: 'pointer',
+              transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)',
+              transition: 'transform 0.3s ease',
+            }}
+          />
+        </div>
+      )}
     </div>
   );
 }

@@ -78,3 +78,8 @@
   background: #eee;
   border-radius: 4px;
 }
+
+.select-custom.lang .select-custom-dropdown {
+  right: -20px;
+  min-width: 120px;
+}

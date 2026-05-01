@@ -1,8 +1,11 @@
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { Toasty } from '../../../ui';
 import { useTimer } from '../../../../shared/hooks/useTimer';
 import './style.css';
 
 export const HighlightCard = ({ product }) => {
+  const [isOpenTost, setIsOpenTost] = useState(false);
   const { type, oldPrice, newPrice, discounts, src, time } = product;
   const { timeLeft } = useTimer(time);
   const category = type === 'giveaway';
@@ -43,12 +46,16 @@ export const HighlightCard = ({ product }) => {
               onClick={(e) => {
                 e.preventDefault();
                 e.stopPropagation();
+                setIsOpenTost(true);
               }}
             >
-              Shop
+              {category ? 'join' : 'Shop'}
             </button>
           </div>
         </div>
+        {isOpenTost && (
+          <Toasty error text="Please create an account." setIsOpenTost={setIsOpenTost} />
+        )}
       </div>
     </Link>
   );

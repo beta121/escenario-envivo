@@ -9,6 +9,5 @@
   padding: 10px 0 20px 0;
   align-items: flex-start;
   -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
+
 }

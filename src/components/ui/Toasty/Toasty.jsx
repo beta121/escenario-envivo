@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import './style.css';
 
-export const Toasty = ({ text, setIsOpenTost }) => {
+export const Toasty = ({ text, setIsOpenTost, error }) => {
   const portals = document.getElementById('modal');
 
   useEffect(() => {
@@ -15,5 +15,10 @@ export const Toasty = ({ text, setIsOpenTost }) => {
 
   if (!portals) return null;
 
-  return createPortal(<div className="toasty">{text}</div>, portals);
+  return createPortal(
+    <div className="toasty" style={{ background: error ? 'red' : '#E35D25' }}>
+      {text}
+    </div>,
+    portals
+  );
 };

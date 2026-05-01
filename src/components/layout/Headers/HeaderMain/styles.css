@@ -1,5 +1,5 @@
 .header {
-  height: 80px;
+  height: 64px;
   background: white;
   border-bottom: 1px solid #eee;
   display: flex;
@@ -13,7 +13,7 @@
 .header-content {
   width: 1440px;
   max-width: 100%;
-  padding: 0 24px;
+  padding: 0 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -21,7 +21,6 @@
 }
 
 .logo-container img {
-  height: 40px;
   display: block;
 }
 

@@ -1,15 +1,18 @@
 import { useState } from 'react';
-import { Button, StreamCard } from '../../components/ui';
+import { Button, StreamCard, Toasty } from '../../components/ui';
 import { streamsData } from '../../shared/assets/user/streamsData';
 import ing from '../../shared/assets/products/Vector.svg';
 
 import './style.css';
 
 export const AboutProfileUser = ({ user }) => {
+  const [isOpenTost, setIsOpenTost] = useState(false);
   const [isFollow, setIsFollow] = useState(false);
+
   const streams = streamsData
     .filter((stream) => Number(stream.userId) === Number(user.id))
     .slice(0, 3);
+
   return (
     <section className="about-profile">
       <div className="about-profile__card">
@@ -77,13 +80,23 @@ export const AboutProfileUser = ({ user }) => {
         >
           {isFollow ? 'Following' : 'Follow'}
         </Button>
-        <Button variant="gray">Message</Button>
+        <Button
+          variant="gray"
+          onClick={() => {
+            setIsOpenTost(true);
+          }}
+        >
+          Message
+        </Button>
       </div>
       <ul className="about-profile__video-container">
         {streams?.map((stream) => (
           <StreamCard stream={stream} key={stream.videoId} />
         ))}
       </ul>
+      {isOpenTost && (
+        <Toasty error text="Please create an account." setIsOpenTost={setIsOpenTost} />
+      )}
     </section>
   );
 };
