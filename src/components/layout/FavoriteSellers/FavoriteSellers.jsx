@@ -20,6 +20,16 @@ export const FavoriteSellers = ({ title }) => {
                 style={{ border: user.online && '2px solid #FF0033' }}
               />
             </Link>
+            {!user.online && (
+              <div
+                className="avatar-badge"
+                style={{
+                  backgroundColor: user.time?.includes('min') ? '#e85d26' : '#333333',
+                }}
+              >
+                {user.time}
+              </div>
+            )}
             <Link to={`/user/${user?.id}`}>
               <span className="avatar-name">{user.name}</span>
             </Link>

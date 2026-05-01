@@ -76,6 +76,11 @@
   border-color: #cf4f1f;
 }
 
+.reminder-button img {
+  width: 35px;
+  height: 35px;
+}
+
 .upcoming-blackout {
   position: absolute;
   top: 0;

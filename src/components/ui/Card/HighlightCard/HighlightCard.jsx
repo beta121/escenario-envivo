@@ -7,7 +7,7 @@ export const HighlightCard = ({ product }) => {
   const { timeLeft } = useTimer(time);
   const category = type === 'giveaway';
   return (
-    <Link to={'product/1'}>
+    <Link to={'user/1'}>
       <div
         className="highlight-container"
         style={{

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { Gallery } from '../../components/ui';
+import { Gallery, Toasty } from '../../components/ui';
 import avatar1 from '../../shared/assets/user/img/avatar1.png';
 import com1 from '../../shared/assets/products/comp/item-buy1.png';
 import com2 from '../../shared/assets/products/comp/item-buy2.png';
@@ -19,6 +19,7 @@ const footerCard = [card1, card2, card3, card4];
 const imgArr = [com1, com2, com3, com4, com5, com12];
 
 const ProductPage = () => {
+  const [isOpenTost, setIsOpenTost] = useState(false);
   const [counter, setCounter] = useState(1);
   const [currentIndex, setCurrentIndex] = useState(0);
   const { id } = useParams();
@@ -99,8 +100,18 @@ const ProductPage = () => {
               +
             </button>
           </div>
-          <button className="product__btn product__btn--primary">BUY NOW</button>
-          <button className="product__btn product__btn--secondary">ADD TO CART</button>
+          <button
+            className="product__btn product__btn--primary"
+            onClick={() => setIsOpenTost(true)}
+          >
+            BUY NOW
+          </button>
+          <button
+            className="product__btn product__btn--secondary"
+            onClick={() => setIsOpenTost(true)}
+          >
+            ADD TO CART
+          </button>
         </div>
 
         <div className="product__divider" />
@@ -129,6 +140,7 @@ const ProductPage = () => {
           </li>
         </ul>
       </div>
+      {isOpenTost && <Toasty text="Please create an account." setIsOpenTost={setIsOpenTost} />}
     </div>
   );
 };

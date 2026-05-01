@@ -48,6 +48,7 @@ export const sellersUsers = [
     description: 'Blink and you miss it!',
     avatar: avatar3,
     online: false,
+    time: 'in 55 min',
     hasStore: true,
     rating: 4.1,
     followers: 50200,
@@ -67,6 +68,7 @@ export const sellersUsers = [
     description: 'Quality goods, lower prices',
     avatar: avatar4,
     online: false,
+    time: '12:00 PM',
     hasStore: true,
     rating: 4.8,
     followers: 32100,
@@ -86,6 +88,7 @@ export const sellersUsers = [
     description: 'Fresh items every morning',
     avatar: avatar5,
     online: false,
+    time: '5 Nov',
     hasStore: false,
     rating: 4,
     followers: 12000,
@@ -97,6 +100,5 @@ export const sellersUsers = [
     igHandle: '@DailyDrop',
     store: false,
     upcomingID: '11'
-
   },
 ]

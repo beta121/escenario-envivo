@@ -36,7 +36,7 @@ export const StreamerInfo = ({ userId, avatar, name, rating }) => {
         className="button"
         onClick={(e) => {
           e.preventDefault();
-          setFollow(false);
+          setFollow((prev) => !prev);
         }}
       >
         {isFollow ? (

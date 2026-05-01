@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import ball from '../../../shared/assets/svg/ball.svg';
+import gemini from '../../../shared/assets/svg/gemini-svg.svg';
+
 import './style.css';
 
 const parseTimeToMinutes = (timeString) => {
@@ -14,6 +16,7 @@ const parseTimeToMinutes = (timeString) => {
 
 export const Upcoming = ({ timeUpcoming }) => {
   const [totalMinutes, setTotalMinutes] = useState(() => parseTimeToMinutes(timeUpcoming));
+  const [isSend, setIsSend] = useState(false);
 
   useEffect(() => {
     setTotalMinutes(parseTimeToMinutes(timeUpcoming));
@@ -35,6 +38,8 @@ export const Upcoming = ({ timeUpcoming }) => {
 
   if (!timeUpcoming && totalMinutes === 0) return null;
 
+  console.log(isSend);
+
   return (
     <div className="upcoming-wrapper">
       <div className="countdown-container">
@@ -52,8 +57,12 @@ export const Upcoming = ({ timeUpcoming }) => {
         </div>
       </div>
 
-      <button className="reminder-button">
-        <img src={ball} alt="bell" />
+      <button
+        className="reminder-button"
+        onClick={(e) => setIsSend((prev) => !prev)}
+        style={{ background: isSend ? '#14aa3a' : '#e85d26' }}
+      >
+        <img src={isSend ? gemini : ball} alt="bell" />
         SEND ME A REMINDER
       </button>
     </div>

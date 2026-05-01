@@ -74,3 +74,14 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+.avatar-badge {
+  padding: 6px 12px;
+  border: 2px solid #FFFFFF;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 11px;
+  color: #FFFFFF;
+  position: absolute;
+  bottom: 15px;
+}
