@@ -1,0 +1,25 @@
+.headerAi-container {
+  height: 100%;
+  background-color: #FFFFFF;
+  min-height: 64px;
+  padding: 0 60px;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0
+}
+
+.headerAi-logo {
+  flex: 0 1 100%;
+}
+
+.headerAi-action {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+.headerAi-right-section {
+  width: 100%;
+}

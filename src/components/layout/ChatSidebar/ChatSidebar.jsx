@@ -173,7 +173,7 @@ export const ChatSidebar = () => {
   const handleKeyDown = (e) => {
     const newMessage = {
       id: new Date(),
-      user: { userName: 'User', avatarUrl: null },
+      user: { userName: 'Visitor', avatarUrl: null },
       text: {
         content: valueMess,
         isSpecial: false,

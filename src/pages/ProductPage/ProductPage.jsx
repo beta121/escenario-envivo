@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { Gallery, Toasty } from '../../components/ui';
 import avatar1 from '../../shared/assets/user/img/avatar1.png';
 import com1 from '../../shared/assets/products/comp/item-buy1.png';
@@ -61,10 +61,12 @@ const ProductPage = () => {
             <img src={avatar1} />
           </div>
 
-          <h3 className="product__shop-title">
-            Live Haul Hub <span className="product__rating">★ 4.7</span>{' '}
-            <span className="product__reviews">(21,671 reviews)</span>
-          </h3>
+          <Link to={`/user/1`}>
+            <h3 className="product__shop-title">
+              Live Haul Hub <span className="product__rating">★ 4.7</span>{' '}
+              <span className="product__reviews">(21,671 reviews)</span>
+            </h3>
+          </Link>
         </div>
 
         <p className="product__title">
@@ -140,7 +142,9 @@ const ProductPage = () => {
           </li>
         </ul>
       </div>
-      {isOpenTost && <Toasty text="Please create an account." setIsOpenTost={setIsOpenTost} />}
+      {isOpenTost && (
+        <Toasty error text="Please create an account." setIsOpenTost={setIsOpenTost} />
+      )}
     </div>
   );
 };

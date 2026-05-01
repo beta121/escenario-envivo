@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { StoreTabsController } from '../../layout';
-import { Button, ProductCard } from '../../ui';
+import { Button, ProductCard, Toasty } from '../../ui';
 import { sellersUsers } from '../../../shared/assets/user/sellersUsers';
 import { products as allProducts } from '../../../shared/assets/products/products';
 import ing from '../../../shared/assets/products/Vector.svg';
@@ -10,6 +10,7 @@ import star from '../../../shared/assets/svg/star.svg';
 import './style.css';
 
 export const SellerStore = () => {
+  const [isOpenTost, setIsOpenTost] = useState(false);
   const [isFollow, setIsFollow] = useState(false);
   const { id } = useParams();
 
@@ -60,7 +61,14 @@ export const SellerStore = () => {
           >
             {isFollow ? 'Following' : 'Follow'}
           </Button>
-          <Button variant="gray">Message</Button>
+          <Button
+            variant="gray"
+            onClick={() => {
+              setIsOpenTost(true);
+            }}
+          >
+            Message
+          </Button>
         </div>
       </div>
 
@@ -104,6 +112,9 @@ export const SellerStore = () => {
       <div className="tab-container">
         <StoreTabsController />
       </div>
+      {isOpenTost && (
+        <Toasty error text="Please create an account." setIsOpenTost={setIsOpenTost} />
+      )}
     </div>
   );
 };

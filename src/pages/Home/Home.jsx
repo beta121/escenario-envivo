@@ -53,20 +53,24 @@ const Home = () => {
     <div className="main-container">
       <CategoryAction onSelect={handleClick} active={category} categories={categoriesFilters} />
       <div style={{ marginTop: '15px' }}>
-        <ExpandableBox title="LIVE NOW" showGradient={false}>
+        <ExpandableBox title="LIVE NOW" showGradient={false} showMo={liveStreams.length}>
           {liveStreams?.map((stream) => (
             <StreamCard stream={stream} key={stream.videoId} />
           ))}
         </ExpandableBox>
       </div>
 
-      <ExpandableBox title="UPCOMING Streams" showGradient={false}>
+      <ExpandableBox title="UPCOMING Streams" showGradient={false} showMo={upcomingSorted.length}>
         {upcomingSorted?.map((stream) => (
           <StreamCard stream={stream} key={stream.videoId} />
         ))}
       </ExpandableBox>
 
-      <ExpandableBox title="Product highlights" showGradient={false}>
+      <ExpandableBox
+        title="Product highlights"
+        showGradient={false}
+        showMo={productHighlights.length}
+      >
         {productHighlights?.map((product) => (
           <HighlightCard product={product} key={product.id} />
         ))}

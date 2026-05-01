@@ -24,7 +24,8 @@ export const FavoriteSellers = ({ title }) => {
               <div
                 className="avatar-badge"
                 style={{
-                  backgroundColor: user.time?.includes('min') ? '#e85d26' : '#333333',
+                  backgroundColor: user.time?.includes('min') ? '#e85d26' : '#f5f5f5',
+                  color: user.time?.includes('min') ? '#FFFF' : '#333333',
                 }}
               >
                 {user.time}
