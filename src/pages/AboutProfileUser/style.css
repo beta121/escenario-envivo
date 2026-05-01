@@ -142,5 +142,12 @@
   display: flex;
   align-items: center;
   gap: 20px;
+}
+
+.about-profile__video-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   margin-bottom: 100px;
 }

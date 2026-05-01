@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { TextField, Button } from '../../components/ui';
+import { TextField, Button, Toasty } from '../../components/ui';
 import contactSupport from '../../shared/assets/contactSupport.png';
 import './style.css';
 
@@ -12,6 +12,7 @@ const initialFormState = {
 };
 
 const Contact = () => {
+  const [isOpenTost, setIsOpenTost] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     company: '',
@@ -40,10 +41,10 @@ const Contact = () => {
     console.log('Form Submitted Data:', formData);
 
     setFormData(initialFormState);
+    setIsOpenTost(true);
   };
 
-  const isFormInvalid =
-    !!errorEmail || !formData.name || !formData.email || !formData.phone || !formData.message;
+  const isFormInvalid = !!errorEmail || !formData.name || !formData.email;
 
   return (
     <div className="contact__page">
@@ -66,7 +67,7 @@ const Contact = () => {
           />
           <TextField
             label="Company"
-            placeholder="Google"
+            placeholder="On location"
             value={formData.company}
             onChange={(e) => handleChange('company', e.target.value)}
           />
@@ -109,6 +110,12 @@ const Contact = () => {
           </div>
         </form>
       </div>
+      {isOpenTost && (
+        <Toasty
+          text="Thank you for reaching out. Our team will be in touch shortly."
+          setIsOpenTost={setIsOpenTost}
+        />
+      )}
     </div>
   );
 };

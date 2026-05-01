@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { StoreTabsController } from '../../layout';
 import { Button, ProductCard } from '../../ui';
@@ -9,6 +10,7 @@ import star from '../../../shared/assets/svg/star.svg';
 import './style.css';
 
 export const SellerStore = () => {
+  const [isFollow, setIsFollow] = useState(false);
   const { id } = useParams();
 
   const seller = sellersUsers.find((u) => Number(u.id) === Number(id));
@@ -52,7 +54,12 @@ export const SellerStore = () => {
           <Button variant="gray">
             <img src={ing} />
           </Button>
-          <Button>Follow</Button>
+          <Button
+            onClick={() => setIsFollow((prev) => !prev)}
+            style={{ background: isFollow ? 'rgb(20, 170, 58)' : '#e85d26' }}
+          >
+            {isFollow ? 'Following' : 'Follow'}
+          </Button>
           <Button variant="gray">Message</Button>
         </div>
       </div>

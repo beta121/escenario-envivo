@@ -22,7 +22,6 @@
 .btn-filled {
   background-color: #e85d26;
   color: #ffffff;
-  border: 1.5px solid #e85d26;
 }
 
 .btn-filled:hover {
@@ -33,7 +32,6 @@
 .btn-outline {
   background-color: transparent;
   color: #e85d26;
-  border: 1.5px solid #e85d26;
 }
 
 .btn-outline:hover {

@@ -37,7 +37,9 @@ export const Footer = () => {
                 fill="black"
               />
             </svg>
-            <span>Let’s chat</span>
+            <Link to="/contact" style={{ color: 'black' }}>
+              <span>Let’s chat</span>
+            </Link>
           </a>
 
           <div className="social-icons">

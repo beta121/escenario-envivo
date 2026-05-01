@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { Badge } from '../../ui';
+
 import './styles.css';
 
 const Bell = ({ isActive }) => {
@@ -50,10 +52,14 @@ export const StreamCard = ({ stream }) => {
     hasNotification,
     isBellActive,
     userId,
+    textBadge,
   } = stream;
 
   const currentUrl = status === 'live' ? `/live/${videoId}` : `/upcoming/${videoId}`;
   const isUserPage = location.pathname.startsWith('/user/');
+
+  const finalBadgeText =
+    status === 'live' ? `Live ${badgeText}` : status === 'video' ? `Views ${badgeText}` : textBadge;
   return (
     <article className="stream-card">
       {!isUserPage && (
@@ -72,17 +78,7 @@ export const StreamCard = ({ stream }) => {
 
       <div className="u-videoBox">
         <Link to={currentUrl}>
-          <div
-            className="u-label"
-            style={{
-              background: status === 'live' ? ' #FF0033' : '#DDDDDD',
-              color: status === 'live' ? '#FFFFFF' : '#121212',
-            }}
-          >
-            {status === 'live' && `Live ${badgeText}`}
-            {status === 'upcoming' && badgeText}
-            {status === 'video' && `Views ${badgeText}`}
-          </div>
+          <Badge text={finalBadgeText} type={status} />
 
           {hasNotification && (
             <div

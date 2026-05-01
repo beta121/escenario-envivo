@@ -1,9 +1,15 @@
-import { Button } from '../../components/ui';
+import { useState } from 'react';
+import { Button, StreamCard } from '../../components/ui';
+import { streamsData } from '../../shared/assets/user/streamsData';
 import ing from '../../shared/assets/products/Vector.svg';
+
 import './style.css';
 
 export const AboutProfileUser = ({ user }) => {
-  console.log(user);
+  const [isFollow, setIsFollow] = useState(false);
+  const streams = streamsData
+    .filter((stream) => Number(stream.userId) === Number(user.id))
+    .slice(0, 3);
   return (
     <section className="about-profile">
       <div className="about-profile__card">
@@ -22,7 +28,6 @@ export const AboutProfileUser = ({ user }) => {
           </div>
         </div>
       </div>
-
       <div className="profile-stats">
         <div className="profile-stats__metrics">
           <div className="profile-stats__item">
@@ -62,14 +67,23 @@ export const AboutProfileUser = ({ user }) => {
           </p>
         </div>
       </div>
-
       <div className="about-profile__actions">
         <Button variant="gray">
           <img src={ing} />
         </Button>
-        <Button>Follow</Button>
+        <Button
+          onClick={() => setIsFollow((prev) => !prev)}
+          style={{ background: isFollow ? 'rgb(20, 170, 58)' : '#e85d26' }}
+        >
+          {isFollow ? 'Following' : 'Follow'}
+        </Button>
         <Button variant="gray">Message</Button>
       </div>
+      <ul className="about-profile__video-container">
+        {streams?.map((stream) => (
+          <StreamCard stream={stream} key={stream.videoId} />
+        ))}
+      </ul>
     </section>
   );
 };
