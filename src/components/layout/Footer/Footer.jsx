@@ -15,7 +15,7 @@ export const Footer = () => {
           <nav className="footer-nav">
             <Link to="/seller">Seller</Link>
             <Link to="/buyer">Buyer</Link>
-            <Link>Investor</Link>
+            <Link to="/investor">Investor</Link>
             <Link to="/contact">Contact</Link>
             <Link to="/ai-features">AI Features</Link>
           </nav>
@@ -24,7 +24,7 @@ export const Footer = () => {
         <div className="footer-divider"></div>
 
         <div className="footer-bottom">
-          <a href="#" className="chat-link">
+          <div href="#" className="chat-link">
             <svg
               width="20"
               height="16"
@@ -40,7 +40,7 @@ export const Footer = () => {
             <Link to="/contact" style={{ color: 'black' }}>
               <span>Let’s chat</span>
             </Link>
-          </a>
+          </div>
 
           <div className="social-icons">
             <a href="#" className="social-link" aria-label="Twitter">

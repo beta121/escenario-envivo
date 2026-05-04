@@ -7,7 +7,7 @@ import './styles.css';
 export const MainLayout = () => {
   const location = useLocation();
 
-  const isAIFeaturesPage = location.pathname.startsWith('/ai-feature');
+  const isAIFeaturesPage = location.pathname.startsWith('/investor');
 
   return (
     <main className="layout-wrapper">

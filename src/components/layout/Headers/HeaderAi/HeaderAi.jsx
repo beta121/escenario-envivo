@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+
 import { Button, CustomSelect } from '../../../ui';
 import { useTranslation } from 'react-i18next';
 import logo from '../../../../shared/assets/Logo.png';
@@ -31,9 +33,9 @@ export const HeaderAi = () => {
   return (
     <header className="headerAi-container">
       <div className="headerAi-logo">
-        <a href="/escenario-envivo/">
+        <Link to="/">
           <img src={logo} alt="Logo" />
-        </a>
+        </Link>
       </div>
       <div className="headerAi-action">
         <div className="headerAi-right-section">
@@ -44,8 +46,12 @@ export const HeaderAi = () => {
             type="lang"
           />
         </div>
-        <Button>GET A TOUCH</Button>
-        <Button variant="outline">TRY THE BETA</Button>
+        <Link to="/contact">
+          <Button>GET A TOUCH</Button>
+        </Link>
+        <Link to="/">
+          <Button variant="outline">TRY THE</Button>
+        </Link>
       </div>
     </header>
   );

@@ -16,7 +16,7 @@ export const StoreTabsController = () => {
   ];
 
   return (
-    <div style={{ margin: '25px 0 25px 0' }}>
+    <div style={{ margin: '25px 0 25px 0', height: '1000px' }}>
       <Tab
         items={tabData}
         filterCategory={categories}
