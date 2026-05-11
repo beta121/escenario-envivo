@@ -15,8 +15,10 @@ export const StoreTabsController = () => {
     { label: 'Reviews', content: <Reviews /> },
   ];
 
+  // ------ delete height
+
   return (
-    <div style={{ margin: '25px 0 25px 0', height: '1000px' }}>
+    <div style={{ margin: '25px 0 25px 0', height: '1100px' }}>
       <Tab
         items={tabData}
         filterCategory={categories}
