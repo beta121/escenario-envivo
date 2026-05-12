@@ -1,0 +1,26 @@
+.market-whi__card {
+  flex: 1;
+  border-radius: 16px;
+  background-color: #F4F4F4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px 16px;
+}
+
+.market-whi__subtitle {
+  font-family: 'Inter', sans-serif;
+  color: #E55C28;
+  text-align: center;
+  font-weight: 700;
+}
+
+.market-whi__description {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 32px;
+  color: #454545;
+  text-align: center;
+  margin-top: 8px;
+}
