@@ -1,0 +1,99 @@
+.opportunity-market_container {
+  display: flex;
+  align-items: center;
+  width: 1200px;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 56px 20px;
+}
+
+.opportunity-card {
+  background-color: #000;
+  color: #fff;
+  padding: 40px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.opportunity-card__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.opportunity-card__top-text {
+  font-size: 32px;
+  font-family: Roboto, sans-serif;
+  font-weight: 800;
+  margin: 0;
+  letter-spacing: 0.02em;
+}
+
+.opportunity-card__bottom-text {
+  font-family: Roboto, sans-serif;
+  font-size: 32px;
+  font-weight: 300;
+
+}
+
+.light-text {
+  font-weight: 300;
+}
+
+.opportunity-card__main {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.opportunity-card__percentage {
+  font-size: 168px;
+  font-weight: 800;
+  line-height: 100%;
+  color: #E55C28;
+}
+
+.opportunity-card__note {
+  font-family: Roboto, sans-serif;
+  font-size: 24px;
+  color: #E55C28;
+  margin-top: 20px;
+  font-weight: 300;
+}
+
+.orange-theme .opportunity-card__percentage {
+  color: #fff;
+}
+
+.orange-theme .opportunity-card__note {
+  color: #fff;
+}
+
+.opportunity-last-section {
+  width: 100%;
+  height: 100vh;
+  background: url('../../../../../shared/assets/landing/section42.png');
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  min-height: 700px;
+}
+
+.opportunity-last-section-title {
+  padding-top: 55px;
+  max-width: 1300px;
+  margin: 0 auto;
+  font-weight: 300;
+  font-family: Inter, sans-serif;
+  font-size: 56px;
+  color: White;
+  text-align: center;
+}
+
+.opportunity-title-orang {
+  font-weight: 800;
+  color: #E55C28;
+}
+
+.opportunity-title-white {
+  font-weight: 800;
+  color: White;
+}

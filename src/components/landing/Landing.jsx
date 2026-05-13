@@ -1,5 +1,5 @@
 import { useRef, useState, useEffect } from 'react';
-import { Header, MarketSection } from '../landing';
+import { Header, MarketSection, Opportunity, Entry } from '../landing';
 
 import './style.css';
 
@@ -44,7 +44,6 @@ export const Landing = () => {
       <Header scrollRef={containerRef} navItems={navItems} scrollPoints={scrollPoints} />
 
       <div className="scroll-track-container" ref={containerRef}>
-        {/* СЕКЦИЯ 1: MARKET */}
         <section
           id="market"
           ref={(el) => (sectionsRef.current[0] = el)}
@@ -54,27 +53,24 @@ export const Landing = () => {
           <MarketSection />
         </section>
 
-        {/* СЕКЦИЯ 2: OPPORTUNITY */}
         <section
           id="opportunity"
           ref={(el) => (sectionsRef.current[1] = el)}
           className="ai-features-section section-opportunity"
           style={{ height: 'auto', minHeight: '100vh' }}
         >
-          <h2>OPPORTUNITY</h2>
+          <Opportunity />
         </section>
 
-        {/* СЕКЦИЯ 3: ENTRY */}
         <section
           id="entry"
           ref={(el) => (sectionsRef.current[2] = el)}
           className="ai-features-section section-entry"
           style={{ height: 'auto', minHeight: '100vh' }}
         >
-          <h2>ENTRY</h2>
+          <Entry />
         </section>
 
-        {/* СЕКЦИЯ 4: BETA */}
         <section
           id="beta"
           ref={(el) => (sectionsRef.current[3] = el)}
