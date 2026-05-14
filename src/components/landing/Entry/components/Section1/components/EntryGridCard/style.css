@@ -1,0 +1,79 @@
+.grid-item:nth-child(5n) {
+  border-right: none;
+}
+
+.grid-item:nth-child(n+6) {
+  border-bottom: none;
+}
+
+.value {
+  font-family: Inter, sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 56px;
+  color: #010201
+}
+
+.country {
+  font-family: Inter, sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 30px;
+  color: #010201
+}
+
+.grid-item>img {
+  display: block;
+  width: 30px;
+  height: auto;
+}
+
+.grid-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #E0E0E0;
+  border-right: 1px solid #E0E0E0;
+  background: #fff;
+  padding: 28px 46px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.grid-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: var(--bg-flag);
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.grid-item:hover {
+  color: #fff;
+}
+
+.grid-item:hover::before {
+  opacity: 1;
+  filter: brightness(0.7);
+}
+
+.grid-item:hover .value,
+.grid-item:hover .country {
+  color: #fff;
+}
+
+.grid-item:hover>img {
+  visibility: hidden;
+  opacity: 0;
+}
