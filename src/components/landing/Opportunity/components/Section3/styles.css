@@ -66,34 +66,3 @@
 .orange-theme .opportunity-card__note {
   color: #fff;
 }
-
-.opportunity-last-section {
-  width: 100%;
-  height: 100vh;
-  background: url('../../../../../shared/assets/landing/section42.png');
-  background-size: cover;
-  background-position: top;
-  background-repeat: no-repeat;
-  min-height: 700px;
-}
-
-.opportunity-last-section-title {
-  padding-top: 55px;
-  max-width: 1300px;
-  margin: 0 auto;
-  font-weight: 300;
-  font-family: Inter, sans-serif;
-  font-size: 56px;
-  color: White;
-  text-align: center;
-}
-
-.opportunity-title-orang {
-  font-weight: 800;
-  color: #E55C28;
-}
-
-.opportunity-title-white {
-  font-weight: 800;
-  color: White;
-}

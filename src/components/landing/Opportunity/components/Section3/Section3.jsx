@@ -31,14 +31,6 @@ export const Section3 = () => {
           </div>
         </div>
       </div>
-
-      <div className="opportunity-last-section">
-        <h4 className="opportunity-last-section-title">
-          <span className="opportunity-title-white">Spanish Speakers</span> represent a unique entry
-          point for the North American <span className="opportunity-title-orang">Live Stream</span>{' '}
-          market
-        </h4>
-      </div>
     </>
   );
 };
