@@ -1,7 +1,15 @@
 .site-footer {
-  background-color: #f5f5f5;
   border-top: 1px solid #e0e0e0;
-  padding: 20px 0 20px;
+  padding: 20px 0;
+  background-color: #fff;
+  color: #000;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.site-footer.investor-theme {
+  background-color: #000;
+  color: #fff;
+  border-top: 1px solid #333;
 }
 
 .footer-container {
@@ -30,15 +38,25 @@
   gap: 30px;
 }
 
-.footer-nav a:hover {
-  color: #e35d25;
+.footer-nav a {
+  text-decoration: none;
+  transition: color 0.3s ease;
+  color: inherit;
 }
 
-/* Разделительная линия */
+.footer-nav a:hover,
+.chat-link:hover {
+  color: #e35d25 !important;
+}
+
 .footer-divider {
   height: 1px;
   background: #e0e0e0;
   margin-bottom: 20px;
+}
+
+.investor-theme .footer-divider {
+  background: #333;
 }
 
 .footer-bottom {
@@ -47,16 +65,12 @@
   align-items: center;
 }
 
-.footer-nav a {
-  color: #333;
-}
-
-.footer-nav a:hover {
-  color: #e35d25;
-}
-
-.social-icons a {
-  color: #333;
+.chat-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: inherit;
 }
 
 .social-icons {
@@ -64,10 +78,12 @@
   gap: 20px;
 }
 
-.chat-link {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  text-decoration: none;
+.social-icons a {
   color: inherit;
+  transition: opacity 0.3s;
+}
+
+.social-icons a:hover {
+  opacity: 0.7;
+  color: #e35d25;
 }

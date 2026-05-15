@@ -1,5 +1,5 @@
 import { useRef, useState, useEffect } from 'react';
-import { Header, MarketSection, Opportunity, Entry } from '../landing';
+import { Header, MarketSection, Opportunity, Entry, Beta } from '../landing';
 
 import './style.css';
 
@@ -77,7 +77,7 @@ export const Landing = () => {
           className="ai-features-section section-beta"
           style={{ height: 'auto', minHeight: '100vh' }}
         >
-          <h2>BETA</h2>
+          <Beta />
         </section>
       </div>
 

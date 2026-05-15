@@ -1,0 +1,26 @@
+.card-beta-wrapper {
+  border-radius: 16px;
+  padding: 16px;
+  background: #45454599;
+  max-width: 500px;
+}
+
+.card-beta-title {
+  font-family: Inter, sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 100%;
+  color: #FFFFFF;
+  text-align: center;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.card-beta-description {
+  font-family: Inter, sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 160%;
+  color: #D9D9D9;
+  text-align: center;
+}

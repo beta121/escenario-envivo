@@ -1,0 +1,31 @@
+.beta-section2-wrapper {
+  background: url(../../../../../shared/assets//landing//beta-bg2.png) no-repeat;
+  background-size: cover;
+  min-height: 810px;
+}
+
+.beta-section2-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 47px 0;
+}
+
+.beta-section2-title {
+  font-family: Roboto, sans-serif;
+  font-weight: 300;
+  font-size: 40px;
+  color: white;
+  line-height: 100%;
+  margin-bottom: 54px;
+}
+
+.beta-section2-title span {
+  font-weight: 600;
+  color: #E55C28;
+}
+
+.beta-section2-container-card {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
