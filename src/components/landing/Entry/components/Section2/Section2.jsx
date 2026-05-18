@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'; // 1. Импортируем motion
 import { EntryGridCard } from './components';
 import './style.css';
 
@@ -15,35 +16,60 @@ const statsData = [
 ];
 
 export const Section2 = () => {
+  const topContentCards = [
+    {
+      circle: '1',
+      title: '559 Million Spanish Speakers Globally',
+      subtitle: 'One of the quickest growing population groups outside of India and Nigeria',
+      extraClass: 'subtitle-first',
+    },
+    {
+      circle: '2',
+      title: 'Rapidly Expanding in the US',
+      subtitle:
+        'The US has 56,7 Million Spanish speakers, and is projected to become the largest spanish speaking country by 2050',
+    },
+    {
+      circle: '3',
+      title: 'US Latino Market Powerhouse',
+      subtitle:
+        'US Latinos are the 5th Largest Economy in the World by GDP, and 3rd fastest growing after China and India',
+    },
+  ];
+
   return (
     <section className="entity-wrapper">
       <div className="entity-container">
-        <div className="entity-top-content">
-          <div className="entity-top-content-card">
-            <div className="entity-card-circle">1</div>
-            <h2 className="entity-card-title">559 Million Spanish Speakers Globally</h2>
-            <p className="entity-card-subtitle subtitle-first">
-              One of the quickest growing population groups outside of India and Nigeria
-            </p>
-          </div>
-          <div className="entity-top-content-card">
-            <div className="entity-card-circle">2</div>
-            <h2 className="entity-card-title">Rapidly Expanding in the US</h2>
-            <p className="entity-card-subtitle">
-              The US has 56,7 Million Spanish speakers, and is projected to become the largest
-              spanish speaking country by 2050
-            </p>
-          </div>
-          <div className="entity-top-content-card">
-            <div className="entity-card-circle">3</div>
-            <h2 className="entity-card-title">US Latino Market Powerhouse</h2>
-            <p className="entity-card-subtitle">
-              US Latinos are the 5th Largest Economy in the World by GDP, and 3rd fastest growing
-              after China and India
-            </p>
-          </div>
-        </div>
-        <div class="entity-bottom-content">
+        <motion.div
+          className="entity-top-content"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.4 }}
+        >
+          {topContentCards.map((card, index) => (
+            <motion.div
+              key={index}
+              className="entity-top-content-card"
+              variants={{
+                hidden: { y: -50, opacity: 0 },
+                visible: {
+                  y: 0,
+                  opacity: 1,
+                  transition: {
+                    delay: index * 0.2,
+                    duration: 0.6,
+                    ease: 'easeOut',
+                  },
+                },
+              }}
+            >
+              <div className="entity-card-circle">{card.circle}</div>
+              <h2 className="entity-card-title">{card.title}</h2>
+              <p className={`entity-card-subtitle ${card.extraClass || ''}`}>{card.subtitle}</p>
+            </motion.div>
+          ))}
+        </motion.div>
+        <div className="entity-bottom-content">
           <div className="stats-grid">
             {statsData.map((item) => (
               <EntryGridCard

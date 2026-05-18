@@ -6,7 +6,7 @@ export const Section3 = () => {
     <div className="entity-banner">
       <div className="entity-banner-content">
         <div className="entity-banner-counter">
-          <CountUp to={559} />
+          <CountUp to={559} duration={8} />
         </div>
         <div className="entity-banner-title">
           <span>million</span> Spanish Speakers

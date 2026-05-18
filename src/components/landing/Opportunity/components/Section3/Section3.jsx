@@ -19,7 +19,7 @@ export const Section3 = () => {
 
             <div className="opportunity-card__main">
               <span className="opportunity-card__percentage">
-                <CountUp to={31} duration={3} />%
+                <CountUp to={31} duration={6} />%
               </span>
             </div>
 

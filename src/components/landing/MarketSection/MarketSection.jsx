@@ -66,7 +66,7 @@ export const MarketSection = () => {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
+            viewport={{ once: false, amount: 0.3 }}
           >
             <motion.div variants={cardVariants}>
               <InfoCard
@@ -111,7 +111,7 @@ export const MarketSection = () => {
               variants={whiContainerVariants}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, amount: 0.1 }}
+              viewport={{ once: false, amount: 0.3 }}
             >
               <motion.div variants={whiCardVariants} className="whi-motion-wrapper">
                 <MarketWhiCard
@@ -150,9 +150,9 @@ export const MarketSection = () => {
       </section>
       <section className="market-banner">
         <div className="market-banner__content">
-          <h2 className="market-banner__value">
-            <CountUp to={287} duration={3} />
-          </h2>
+          <motion.h2 className="market-banner__value">
+            <CountUp to={287} duration={8} />
+          </motion.h2>
           <h3 className="market-banner__unit">BILLION USD</h3>
           <p className="market-banner__description">Projected Market Size (2034)</p>
           <span className="market-banner__note">*Assuming CAGR rates since 2018</span>

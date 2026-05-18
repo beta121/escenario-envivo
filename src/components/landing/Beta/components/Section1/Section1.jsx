@@ -52,7 +52,7 @@ const data2032 = {
 spending for 2032 in selected markets.`,
   },
   footnote: `* Projecting 5 years of stable expansion as a niche marketplace 
-for specific goods categories, for minimal success parameters.`,
+for specific goods categories.`,
 };
 
 export const Section1 = () => {

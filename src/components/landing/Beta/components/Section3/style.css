@@ -2,6 +2,31 @@
   background: url(../../../../../shared/assets//landing//beta-bg2.png) no-repeat;
   background-size: cover;
   min-height: 810px;
+  position: relative;
+}
+
+.beta-section2-wrapper::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 20%;
+  background: linear-gradient(180deg,
+      #000000 0%,
+      rgba(0, 0, 0, 0) 100%);
+  z-index: 1;
+}
+
+.beta-section2-wrapper::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 25%;
+  background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+  z-index: 1;
 }
 
 .beta-section2-container {
@@ -11,6 +36,8 @@
 }
 
 .beta-section2-title {
+  position: relative;
+  z-index: 3;
   font-family: Roboto, sans-serif;
   font-weight: 300;
   font-size: 40px;
@@ -25,6 +52,8 @@
 }
 
 .beta-section2-container-card {
+  position: relative;
+  z-index: 3;
   display: flex;
   flex-direction: column;
   gap: 32px;

@@ -1,7 +1,6 @@
 .opportunity-map {
   width: 100%;
   background-color: #000;
-  /* Фон секции */
   display: flex;
   justify-content: center;
 }
@@ -14,7 +13,6 @@
   padding: 60px 20px;
   width: 100%;
   max-width: 1200px;
-  /* Ограничиваем общую ширину контента */
 }
 
 .opportunity-map_title {
@@ -27,15 +25,29 @@
   margin: 0;
 }
 
-/* Контейнер-координатная сетка */
 .map-container {
   position: relative;
-  /* Точка отсчета для маркеров */
   max-width: 964px;
-  /* Ширина как в Figma */
   width: 100%;
   line-height: 0;
-  /* Убирает дефолтный отступ снизу у img */
+}
+
+.map-note {
+  position: absolute;
+  border-radius: 16px;
+  top: 26%;
+  right: -148px;
+  width: 211px;
+  padding: 8px;
+  background-color: #FF0832;
+  font-family: Inter, sans-serif;
+  font-size: 20px;
+  line-height: 130%;
+  font-weight: 400;
+}
+
+.map-note span {
+  font-weight: 800;
 }
 
 .map-image {
@@ -43,5 +55,4 @@
   height: auto;
   display: block;
   user-select: none;
-  /* Чтобы случайно не перетаскивали карту */
 }
