@@ -16,7 +16,11 @@ export const AnimatedPercentage = ({ targetPercentage = 67, size = 100, border }
   return (
     <motion.div
       whileInView={{ opacity: 1 }}
-      onViewportEnter={() => animate(count, targetPercentage, { duration: 3, ease: 'easeOut' })}
+      onViewportEnter={() => {
+        count.set(0);
+        animate(count, targetPercentage, { duration: 3, ease: 'easeOut' });
+      }}
+      viewport={{ once: false, amount: 0.3 }}
       style={{
         position: 'relative',
         width: size,

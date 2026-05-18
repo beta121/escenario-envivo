@@ -47,10 +47,10 @@ export const HeaderAi = () => {
           />
         </div>
         <Link to="/contact">
-          <Button>GET A TOUCH</Button>
+          <Button>GET IN TOUCH</Button>
         </Link>
         <Link to="/">
-          <Button variant="outline">TRY THE</Button>
+          <Button variant="outline">TRY THE BETA</Button>
         </Link>
       </div>
     </header>

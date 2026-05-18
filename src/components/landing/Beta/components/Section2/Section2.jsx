@@ -62,7 +62,7 @@ export const Section2 = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveTabId((prev) => (prev === Object.keys(TABS_DATA).length ? 1 : prev + 1));
-    }, 5000);
+    }, 3000);
 
     return () => clearInterval(interval);
   }, [activeTabId]);
