@@ -1,6 +1,6 @@
 import './style.css';
 
-export const Button = ({ children, variant = 'filled', onClick, disabled, ...props }) => {
+export const Button = ({ padding, children, variant = 'filled', onClick, disabled, ...props }) => {
   const variants = {
     filled: 'btn-filled',
     outline: 'btn-outline',

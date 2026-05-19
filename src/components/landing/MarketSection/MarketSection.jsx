@@ -150,6 +150,7 @@ export const MarketSection = () => {
       </section>
       <section className="market-banner">
         <div className="market-banner__content">
+          <h3 className="market-banner-top-title">Our target market:</h3>
           <motion.h2 className="market-banner__value">
             <CountUp to={287} duration={8} />
           </motion.h2>

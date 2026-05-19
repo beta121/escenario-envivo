@@ -62,29 +62,38 @@
   z-index: 1;
 }
 
-.btn {
+.btn-section4 {
   display: inline-block;
   padding: 12px 20px;
   border-radius: 16px;
   text-decoration: none;
   font-weight: bold;
   text-align: center;
-  width: fit-content;
-  min-width: 200px;
+  width: 210px;
   transition: opacity 0.3s;
   cursor: pointer;
+  font-family: Roboto, sans-serif;
+  font-size: 19px;
+  font-weight: 600;
 }
 
-.btn:hover {
+.section4-btn-red:hover,
+.section4-btn-orange:hover,
+.section4-btn-blue:hover {
   opacity: 0.8;
 }
 
-.btn-blue {
+.section4-btn-blue {
   background-color: #048CE7;
   color: white;
 }
 
-.btn-orange {
+.section4-btn-red {
+  background-color: rgb(255, 0, 51);
+  color: white;
+}
+
+.section4-btn-orange {
   background-color: #E55C28;
   color: white;
 }

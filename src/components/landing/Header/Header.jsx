@@ -23,6 +23,7 @@ export const Header = ({ scrollRef, navItems, scrollPoints }) => {
   }, [navItems]);
 
   const { scrollYProgress } = useScroll({
+    target: scrollRef,
     offset: ['start start', 'end end'],
   });
 
@@ -64,7 +65,6 @@ export const Header = ({ scrollRef, navItems, scrollPoints }) => {
             />
           )}
 
-          {/* Пункты меню */}
           {navItems.map((item, index) => (
             <li key={item.id} className="nav-li" ref={(el) => (itemsRef.current[index] = el)}>
               <a href={`#${item.id}`} className="nav-link">

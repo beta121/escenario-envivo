@@ -6,10 +6,10 @@ import './styles.css';
 
 const MARKERS_DATA = [
   { id: 1, top: '21%', left: '14%', value: '13' },
-  { id: 2, top: '17%', left: '46%', value: '9' },
-  { id: 3, top: '38%', left: '59%', value: '4' },
+  { id: 2, top: '65%', left: '25%', value: '3' },
+  { id: 3, top: '17%', left: '46%', value: '9' },
   { id: 4, top: '53%', left: '51%', value: '2' },
-  { id: 5, top: '65%', left: '25%', value: '3' },
+  { id: 5, top: '38%', left: '59%', value: '4' },
   { id: 6, top: '73%', left: '87%', value: '2' },
   {
     id: 7,

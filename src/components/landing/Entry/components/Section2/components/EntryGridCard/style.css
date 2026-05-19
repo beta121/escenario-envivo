@@ -1,3 +1,19 @@
+.grid-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #E0E0E0;
+  border-right: 1px solid #E0E0E0;
+  background: #fff;
+  padding: 28px 46px;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
 .grid-item:nth-child(5n) {
   border-right: none;
 }
@@ -11,7 +27,8 @@
   font-weight: 400;
   font-size: 32px;
   line-height: 56px;
-  color: #010201
+  color: #010201;
+  transition: color 0.3s ease;
 }
 
 .country {
@@ -19,29 +36,15 @@
   font-weight: 800;
   font-size: 20px;
   line-height: 30px;
-  color: #010201
+  color: #010201;
+  transition: color 0.3s ease;
 }
 
 .grid-item>img {
   display: block;
   width: 30px;
   height: auto;
-}
-
-.grid-item {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border-bottom: 1px solid #E0E0E0;
-  border-right: 1px solid #E0E0E0;
-  background: #fff;
-  padding: 28px 46px;
-  transition: all 0.3s ease;
-  cursor: pointer;
-  overflow: hidden;
-  z-index: 1;
+  transition: visibility 0.3s ease, opacity 0.3s ease;
 }
 
 .grid-item::before {
@@ -55,25 +58,39 @@
   background-size: cover;
   background-position: center;
   opacity: 0;
-  transition: opacity 0.3s ease;
   z-index: -1;
+  transition: opacity 0.3s ease;
 }
 
-.grid-item:hover {
-  color: #fff;
-}
-
-.grid-item:hover::before {
+.grid-item:hover::before,
+.grid-item.default-active::before {
   opacity: 1;
   filter: brightness(0.7);
 }
 
 .grid-item:hover .value,
-.grid-item:hover .country {
+.grid-item:hover .country,
+.grid-item.default-active .value,
+.grid-item.default-active .country {
   color: #fff;
 }
 
-.grid-item:hover>img {
+.grid-item:hover>img,
+.grid-item.default-active>img {
   visibility: hidden;
   opacity: 0;
+}
+
+:has(.grid-item:hover) .grid-item.default-active:not(:hover)::before {
+  opacity: 0;
+}
+
+:has(.grid-item:hover) .grid-item.default-active:not(:hover) .value,
+:has(.grid-item:hover) .grid-item.default-active:not(:hover) .country {
+  color: #010201;
+}
+
+:has(.grid-item:hover) .grid-item.default-active:not(:hover)>img {
+  visibility: visible;
+  opacity: 1;
 }
