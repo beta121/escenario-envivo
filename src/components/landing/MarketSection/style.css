@@ -142,8 +142,9 @@
   background-position: left center;
   background-repeat: no-repeat;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-end;
+  padding-top: 60px;
 }
 
 .market-banner__content {
@@ -160,6 +161,14 @@
   line-height: 100%;
 }
 
+.market-banner-top-title {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  color: #454545;
+  line-height: 100%;
+}
+
 .market-banner__unit {
   font-family: 'Roboto', sans-serif;
   font-weight: 800;
@@ -167,14 +176,16 @@
   color: #010201;
   line-height: 100%;
   text-transform: uppercase;
+  margin-bottom: 4px;
 }
 
 .market-banner__description {
   font-family: 'Roboto', sans-serif;
-  font-weight: 600;
-  font-size: 40px;
+  font-weight: 400;
+  font-size: 24px;
   color: #010201;
   line-height: 100%;
+  margin-bottom: 4px;
 }
 
 .market-banner__note {

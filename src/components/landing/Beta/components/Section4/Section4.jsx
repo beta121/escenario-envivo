@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './style.css';
 
 export const Section4 = () => {
@@ -13,12 +14,11 @@ export const Section4 = () => {
             end of 2026.
           </p>
           <div className="button-group">
-            <a href="#" className="btn btn-blue">
-              ENGLISH VERSION
-            </a>
-            <a href="#" className="btn btn-orange">
-              SPANISH VERSION
-            </a>
+            <Link className="btn-section4 section4-btn-blue">ENGLISH VERSION</Link>
+            <Link className="btn-section4 section4-btn-orange">SPANISH VERSION</Link>
+            <Link to="/contact" className="btn-section4 section4-btn-red">
+              STAY UPDATED
+            </Link>
           </div>
         </div>
       </div>

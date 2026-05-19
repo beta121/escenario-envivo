@@ -93,7 +93,7 @@ export const StreamCard = ({ stream }) => {
             </div>
           )}
 
-          <video src={streamVideo} className="u-poster" />
+          <video src={streamVideo} className="u-poster" poster={''} />
 
           <div className="u-descriptionBox">
             <h4 className="video-title">{videoTitle}</h4>
