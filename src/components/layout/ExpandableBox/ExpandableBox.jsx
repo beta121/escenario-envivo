@@ -19,7 +19,7 @@ const Arrow = ({ style }) => {
   );
 };
 
-export function ExpandableBox({ title, children, showGradient = true, showMo }) {
+export function ExpandableBox({ children, showGradient = true, showMo, gap = '16px' }) {
   const containerRef = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
   const [heights, setHeights] = useState({ closed: 0, full: 0 });
@@ -29,40 +29,51 @@ export function ExpandableBox({ title, children, showGradient = true, showMo }) 
     if (!container) return;
 
     const calculateHeights = () => {
-      const firstItem = container.firstElementChild;
+      const childrenElements = Array.from(container.children);
+      const fullHeight = container.scrollHeight;
 
-      if (firstItem) {
-        const itemHeight = firstItem.offsetHeight;
-        const containerPaddingTop = parseInt(window.getComputedStyle(container).paddingTop);
-        const containerPaddingBottom = parseInt(window.getComputedStyle(container).paddingBottom);
-
-        const closedHeight = itemHeight + containerPaddingTop + containerPaddingBottom;
-        const fullHeight = container.scrollHeight;
-
-        setHeights({ closed: closedHeight, full: fullHeight });
+      if (childrenElements.length === 0) {
+        setHeights({ closed: 0, full: fullHeight });
+        return;
       }
+
+      const firstChildTop = childrenElements[0].offsetTop;
+      let firstRowMaxBottom = 0;
+
+      childrenElements.forEach((child) => {
+        if (child.offsetTop === firstChildTop) {
+          const childBottom = child.offsetTop + child.offsetHeight;
+          if (childBottom > firstRowMaxBottom) {
+            firstRowMaxBottom = childBottom;
+          }
+        }
+      });
+
+      const containerPaddingTop = parseInt(window.getComputedStyle(container).paddingTop, 10) || 0;
+      const closedHeight = firstRowMaxBottom + containerPaddingTop;
+
+      const finalClosedHeight = Math.min(closedHeight, fullHeight);
+
+      setHeights({ closed: finalClosedHeight, full: fullHeight });
     };
 
     const observer = new ResizeObserver(calculateHeights);
     observer.observe(container);
-    if (container.firstElementChild) {
-      observer.observe(container.firstElementChild);
-    }
 
     calculateHeights();
+
     return () => observer.disconnect();
   }, [children]);
 
   return (
     <div className="expandable-container">
-      <div className="expandable-action">
-        <h3 className="expandable-title">{title}</h3>
-      </div>
-
       <div
         ref={containerRef}
         className="expandable-box"
         style={{
+          display: 'flex',
+          flexWrap: 'wrap',
+          gap,
           height: heights.closed === 0 ? 'auto' : `${isOpen ? heights.full : heights.closed}px`,
           '--gradient-opacity': showGradient && !isOpen ? 1 : 0,
         }}
@@ -72,7 +83,7 @@ export function ExpandableBox({ title, children, showGradient = true, showMo }) 
 
       {showMo > 5 && (
         <div className="expandable-footer" onClick={() => setIsOpen(!isOpen)}>
-          <button className="expandable-btn">Show more</button>
+          <button className="expandable-btn">{isOpen ? 'Show less' : 'Show more'}</button>
           <Arrow
             style={{
               cursor: 'pointer',

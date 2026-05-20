@@ -6,7 +6,7 @@ import './style.css';
 
 export const HighlightCard = ({ product }) => {
   const [isOpenTost, setIsOpenTost] = useState(false);
-  const { type, oldPrice, newPrice, discounts, src, time } = product;
+  const { type, oldPrice, price, discounts, imgSrc, time, sale } = product;
   const { timeLeft } = useTimer(time);
   const category = type === 'giveaway';
   return (
@@ -26,20 +26,31 @@ export const HighlightCard = ({ product }) => {
           >
             {category ? 'Giveaway!!!' : 'DISCOUNT!'}
           </div>
-          {!category && <div className="highlight-discount">{discounts}% OFF</div>}
         </div>
         <div className="highlight-content">
           <div className="highlight-img">
-            <img src={src} />
+            <img src={imgSrc} />
           </div>
-          <h4 className="highlight-time" style={{ color: category ? '#FF0033' : '#E35D25' }}>
-            {category ? timeLeft : time}
-          </h4>
+
           <div className="highlight-action">
             <div className="highlight-price">
               <p>${oldPrice}</p>
-              <p style={{ color: category ? '#FF0033' : '#000000' }}>${newPrice}</p>
+              <p style={{ color: type === 'discount' ? '#E55C28' : '#FF0832' }}>${price}</p>
             </div>
+
+            <div className="highlight-description">
+              {time && <p className="highlight-description-time">{timeLeft}</p>}
+              <p
+                className="highlight-description-sale"
+                style={{
+                  color: sale === 'Today Only!' ? '#FF0832' : '#454545',
+                  fontWeight: sale === 'Today Only!' ? '600' : '400',
+                }}
+              >
+                {sale}
+              </p>
+            </div>
+
             <button
               className="highlight-btn"
               style={{ background: category ? '#FF0033' : '#E35D25' }}

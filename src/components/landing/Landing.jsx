@@ -39,7 +39,9 @@ export const Landing = () => {
 
   return (
     <div className="ai-features-wrapper">
-      <section className="ai-features-hero" />
+      <section className="ai-features-hero">
+        <h3>The Evolution of Live Shopping</h3>
+      </section>
 
       <Header scrollRef={containerRef} navItems={navItems} scrollPoints={scrollPoints} />
 
