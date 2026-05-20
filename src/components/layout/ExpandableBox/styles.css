@@ -1,17 +1,5 @@
 .expandable-container {
-  width: 1440px;
-}
-
-.expandable-action {
-  margin-bottom: 12px;
-}
-
-.expandable-title {
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 100%;
-  color: #E35D25;
-  text-transform: uppercase;
+  width: 1320px;
 }
 
 .expandable-btn {
@@ -26,18 +14,13 @@
 }
 
 .expandable-box {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+
   overflow: hidden;
   transition: height 0.4s ease;
-  /* Плавное открытие */
   position: relative;
   padding: 10px 0 20px 0;
   box-sizing: border-box;
-  /* Важно для правильных расчетов */
   align-content: flex-start;
-  /* Чтобы элементы не растягивались по вертикали */
 }
 
 .expandable-box::after {

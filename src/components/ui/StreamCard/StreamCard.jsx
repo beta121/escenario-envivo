@@ -53,6 +53,7 @@ export const StreamCard = ({ stream }) => {
     isBellActive,
     userId,
     textBadge,
+    screenSaver,
   } = stream;
 
   const currentUrl = status === 'live' ? `/live/${videoId}` : `/upcoming/${videoId}`;
@@ -93,7 +94,7 @@ export const StreamCard = ({ stream }) => {
             </div>
           )}
 
-          <video src={streamVideo} className="u-poster" poster={''} />
+          <video src={streamVideo} className="u-poster" poster={screenSaver} />
 
           <div className="u-descriptionBox">
             <h4 className="video-title">{videoTitle}</h4>

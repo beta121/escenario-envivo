@@ -3,19 +3,36 @@ import prod2 from './comp/item-buy2.png'
 import prod3 from './comp/item-buy3.png'
 import prod4 from './comp/item-buy4.png'
 import prod5 from './comp/item-buy5.png'
+
 import tel1 from './tel/tel1.jpg'
 import tel2 from './tel/tel2.jpg'
 import tel3 from './tel/tel3.jpg'
 import tel4 from './tel/tel4.jpg'
 import tel5 from './tel/tel5.jpg'
 
+import pcProduct from './AllProducts/pcProduct.png'
+import phoneProduct from './AllProducts/phoneProduct.png'
+import phoneProduct1 from './AllProducts/phoneProduct1.png'
+import phoneProduct2 from './AllProducts/phoneProduct2.png'
+import sonyProduct from './AllProducts/sonyProduct.png'
+
 export const products = [
   {
     userId: '1',
     products: [
       {
-        userId: '1',
         productId: '1',
+        variant: 'default',
+        imgSrc: pcProduct,
+        description: 'Lorem ipsum dolor sit amet consectetur.',
+        price: '0',
+        type: 'giveaway',
+        oldPrice: '7085',
+        time: '13:17',
+        sale: '11 joined'
+      },
+      {
+        productId: '2',
         variant: 'default',
         imgSrc: prod3,
         description: 'Lorem ipsum dolor sit amet consectetur.',
@@ -23,8 +40,7 @@ export const products = [
         type: 'showing-now',
       },
       {
-        userId: '1',
-        productId: '2',
+        productId: '3',
         variant: 'default',
         imgSrc: prod3,
         description: 'Lorem ipsum dolor sit amet consectetur.',
@@ -35,8 +51,7 @@ export const products = [
         discountLabel: '89% OFF'
       },
       {
-        userId: '1',
-        productId: '3',
+        productId: '4',
         variant: 'default',
         imgSrc: prod4,
         description: 'Lorem ipsum dolor sit amet consectetur.',
@@ -46,8 +61,7 @@ export const products = [
         type: 'auction',
       },
       {
-        userId: '1',
-        productId: '4',
+        productId: '5',
         variant: 'default',
         imgSrc: prod5,
         description: 'Lorem ipsum dolor sit amet consectetur.',
@@ -57,8 +71,7 @@ export const products = [
         type: 'giveaway',
       },
       {
-        userId: '1',
-        productId: '5',
+        productId: '6',
         variant: 'auction',
         imgSrc: prod1,
         description: 'Lorem ipsum dolor sit amet consectetur.',
@@ -66,8 +79,7 @@ export const products = [
         type: 'default'
       },
       {
-        userId: '1',
-        productId: '6',
+        productId: '7',
         variant: 'default',
         imgSrc: prod2,
         description: 'Lorem ipsum dolor sit amet consectetur.',
@@ -75,8 +87,7 @@ export const products = [
         type: 'default'
       },
       {
-        userId: '1',
-        productId: '7',
+        productId: '8',
         variant: 'giveaway',
         imgSrc: prod3,
         description: 'Lorem ipsum dolor sit amet consectetur.',
@@ -89,7 +100,18 @@ export const products = [
     userId: '2',
     products: [
       {
-        productId: '8',
+        productId: '9',
+        variant: 'default',
+        imgSrc: phoneProduct,
+        description: 'Lorem ipsum dolor sit amet consectetur.',
+        price: '13',
+        type: 'showing-now',
+        oldPrice: '129',
+        time: false,
+        sale: 'Next 2 hours Only!'
+      },
+      {
+        productId: '10',
         variant: 'default',
         imgSrc: tel1,
         description: 'Lorem ipsum dolor sit amet consectetur.',
@@ -97,7 +119,7 @@ export const products = [
         type: 'showing-now',
       },
       {
-        productId: '9',
+        productId: '11',
         variant: 'default',
         imgSrc: tel2,
         description: 'Lorem ipsum dolor sit amet consectetur.',
@@ -108,7 +130,7 @@ export const products = [
         discountLabel: '89% OFF'
       },
       {
-        productId: '10',
+        productId: '12',
         variant: 'default',
         imgSrc: tel3,
         description: 'Lorem ipsum dolor sit amet consectetur.',
@@ -118,7 +140,7 @@ export const products = [
         type: 'auction',
       },
       {
-        productId: '11',
+        productId: '13',
         variant: 'default',
         imgSrc: tel4,
         description: 'Lorem ipsum dolor sit amet consectetur.',
@@ -128,7 +150,7 @@ export const products = [
         type: 'giveaway',
       },
       {
-        productId: '12',
+        productId: '14',
         variant: 'auction',
         imgSrc: tel5,
         description: 'Lorem ipsum dolor sit amet consectetur.',
@@ -136,7 +158,7 @@ export const products = [
         type: 'default'
       },
       {
-        productId: '13',
+        productId: '15',
         variant: 'default',
         imgSrc: tel3,
         description: 'Lorem ipsum dolor sit amet consectetur.',
@@ -144,7 +166,7 @@ export const products = [
         type: 'default'
       },
       {
-        productId: '14',
+        productId: '16',
         variant: 'giveaway',
         imgSrc: tel2,
         description: 'Lorem ipsum dolor sit amet consectetur.',
@@ -157,7 +179,18 @@ export const products = [
     userId: '3',
     products: [
       {
-        productId: '15',
+        productId: '17',
+        variant: 'default',
+        imgSrc: phoneProduct1,
+        description: 'Lorem ipsum dolor sit amet consectetur.',
+        price: '599',
+        type: 'discount',
+        oldPrice: '1999',
+        time: false,
+        sale: 'Next 4 hours!'
+      },
+      {
+        productId: '18',
         variant: 'default',
         imgSrc: prod3,
         description: 'Lorem ipsum dolor sit amet consectetur.',
@@ -165,7 +198,7 @@ export const products = [
         type: 'showing-now',
       },
       {
-        productId: '16',
+        productId: '19',
         variant: 'default',
         imgSrc: prod3,
         description: 'Lorem ipsum dolor sit amet consectetur.',
@@ -176,7 +209,7 @@ export const products = [
         discountLabel: '89% OFF'
       },
       {
-        productId: '17',
+        productId: '20',
         variant: 'default',
         imgSrc: prod4,
         description: 'Lorem ipsum dolor sit amet consectetur.',
@@ -186,7 +219,7 @@ export const products = [
         type: 'auction',
       },
       {
-        productId: '18',
+        productId: '21',
         variant: 'default',
         imgSrc: prod5,
         description: 'Lorem ipsum dolor sit amet consectetur.',
@@ -196,7 +229,7 @@ export const products = [
         type: 'giveaway',
       },
       {
-        productId: '19',
+        productId: '22',
         variant: 'auction',
         imgSrc: prod1,
         description: 'Lorem ipsum dolor sit amet consectetur.',
@@ -204,7 +237,7 @@ export const products = [
         type: 'default'
       },
       {
-        productId: '20',
+        productId: '23',
         variant: 'default',
         imgSrc: prod2,
         description: 'Lorem ipsum dolor sit amet consectetur.',
@@ -212,7 +245,7 @@ export const products = [
         type: 'default'
       },
       {
-        productId: '21',
+        productId: '24',
         variant: 'giveaway',
         imgSrc: prod3,
         description: 'Lorem ipsum dolor sit amet consectetur.',
@@ -225,7 +258,18 @@ export const products = [
     userId: '4',
     products: [
       {
-        productId: '22',
+        productId: '25',
+        variant: 'default',
+        imgSrc: phoneProduct2,
+        description: 'Lorem ipsum dolor sit amet consectetur.',
+        price: '499',
+        type: 'discount',
+        oldPrice: '599',
+        time: false,
+        sale: 'Today Only!'
+      },
+      {
+        productId: '26',
         variant: 'default',
         imgSrc: prod3,
         description: 'Lorem ipsum dolor sit amet consectetur.',
@@ -233,7 +277,7 @@ export const products = [
         type: 'showing-now',
       },
       {
-        productId: '23',
+        productId: '27',
         variant: 'default',
         imgSrc: prod3,
         description: 'Lorem ipsum dolor sit amet consectetur.',
@@ -244,7 +288,7 @@ export const products = [
         discountLabel: '89% OFF'
       },
       {
-        productId: '24',
+        productId: '28',
         variant: 'default',
         imgSrc: prod4,
         description: 'Lorem ipsum dolor sit amet consectetur.',
@@ -254,7 +298,7 @@ export const products = [
         type: 'auction',
       },
       {
-        productId: '25',
+        productId: '29',
         variant: 'default',
         imgSrc: prod5,
         description: 'Lorem ipsum dolor sit amet consectetur.',
@@ -264,7 +308,7 @@ export const products = [
         type: 'giveaway',
       },
       {
-        productId: '26',
+        productId: '30',
         variant: 'auction',
         imgSrc: prod1,
         description: 'Lorem ipsum dolor sit amet consectetur.',
@@ -272,7 +316,7 @@ export const products = [
         type: 'default'
       },
       {
-        productId: '27',
+        productId: '31',
         variant: 'default',
         imgSrc: prod2,
         description: 'Lorem ipsum dolor sit amet consectetur.',
@@ -280,7 +324,7 @@ export const products = [
         type: 'default'
       },
       {
-        productId: '28',
+        productId: '32',
         variant: 'giveaway',
         imgSrc: prod3,
         description: 'Lorem ipsum dolor sit amet consectetur.',
@@ -293,7 +337,18 @@ export const products = [
     userId: '5',
     products: [
       {
-        productId: '29',
+        productId: '33',
+        variant: 'default',
+        imgSrc: sonyProduct,
+        description: 'Lorem ipsum dolor sit amet consectetur.',
+        price: '1299',
+        type: 'discount',
+        oldPrice: '3999',
+        time: false,
+        sale: 'Today Only!'
+      },
+      {
+        productId: '34',
         variant: 'default',
         imgSrc: prod3,
         description: 'Lorem ipsum dolor sit amet consectetur.',
@@ -301,7 +356,7 @@ export const products = [
         type: 'showing-now',
       },
       {
-        productId: '30',
+        productId: '35',
         variant: 'default',
         imgSrc: prod3,
         description: 'Lorem ipsum dolor sit amet consectetur.',
@@ -312,7 +367,7 @@ export const products = [
         discountLabel: '89% OFF'
       },
       {
-        productId: '31',
+        productId: '36',
         variant: 'default',
         imgSrc: prod4,
         description: 'Lorem ipsum dolor sit amet consectetur.',
@@ -322,7 +377,7 @@ export const products = [
         type: 'auction',
       },
       {
-        productId: '32',
+        productId: '37',
         variant: 'default',
         imgSrc: prod5,
         description: 'Lorem ipsum dolor sit amet consectetur.',
@@ -332,7 +387,7 @@ export const products = [
         type: 'giveaway',
       },
       {
-        productId: '33',
+        productId: '38',
         variant: 'auction',
         imgSrc: prod1,
         description: 'Lorem ipsum dolor sit amet consectetur.',
@@ -340,7 +395,7 @@ export const products = [
         type: 'default'
       },
       {
-        productId: '34',
+        productId: '39',
         variant: 'default',
         imgSrc: prod2,
         description: 'Lorem ipsum dolor sit amet consectetur.',
@@ -348,7 +403,7 @@ export const products = [
         type: 'default'
       },
       {
-        productId: '35',
+        productId: '40',
         variant: 'giveaway',
         imgSrc: prod3,
         description: 'Lorem ipsum dolor sit amet consectetur.',

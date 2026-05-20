@@ -3,6 +3,15 @@ import avatar2 from './img/avatar2.png'
 import avatar3 from './img/avatar3.png'
 import avatar4 from './img/avatar-4.png'
 import avatar5 from './img/avatar-5.png'
+
+import StreamPhoto1 from './img/StreamPhoto_1.png'
+import StreamPhoto2 from './img/StreamPhoto_2.png'
+import StreamPhoto3 from './img/StreamPhoto_3.png'
+import StreamPhoto4 from './img/StreamPhoto_4.png'
+import StreamPhoto5 from './img/StreamPhoto_5.png'
+
+
+
 import video1 from './img/video1.mp4'
 import video2 from './img/video2.mp4'
 import video3 from './img/video3.mp4'
@@ -16,13 +25,14 @@ export const streamsData = [
     star: true,
     streamVideo: video1,
     videoTitle: "$1 Starts, Giveaways, Macbooks, iPads, Chromebooks & More!",
-    category: "Computers",
+    category: "Appliances",
     description: "Appliances, Home electronics, Computers, Computer Appliances, Home electronics, Computers, Computer",
     status: 'live',
     badgeText: '3K',
     isNewSeller: true,
     rating: 5,
     hasNotification: false,
+    screenSaver: StreamPhoto1
   },
   {
     videoId: '2',
@@ -32,13 +42,15 @@ export const streamsData = [
     star: true,
     streamVideo: video2,
     videoTitle: "1 Starts, Giveaways, Macbooks, iPads, Chromebooks & More!",
-    category: "Telephones",
+    category: "Appliances",
     description: "Appliances, Home electronics, Comasdasd",
     status: 'live',
     badgeText: '2.3K',
     rating: 4.4,
     isNewSeller: false,
     hasNotification: false,
+    screenSaver: StreamPhoto2
+
   },
   {
     videoId: '3',
@@ -48,13 +60,15 @@ export const streamsData = [
     star: true,
     streamVideo: video3,
     videoTitle: "⚡️‼️Voltage HIGH END Electronics Show! Feat Abbie👀 Exercise Equipment",
-    category: "Digital cameras",
+    category: "Appliances",
     description: "Appliances, Home electronics, Coasda",
     status: 'live',
     badgeText: '1K',
     isNewSeller: true,
     rating: 4.1,
     hasNotification: false,
+    screenSaver: StreamPhoto3
+
   },
   {
     videoId: '4',
@@ -64,13 +78,15 @@ export const streamsData = [
     star: false,
     streamVideo: video1,
     videoTitle: "Pallet Pulls and Giveaways! Join the Shady Deals Crew!",
-    category: "Televisions",
+    category: "Appliances",
     description: "Appliances, Home electronics,",
     badgeText: '835',
     status: 'live',
     rating: 4.8,
     isNewSeller: false,
     hasNotification: false,
+    screenSaver: StreamPhoto4
+
   },
   {
     videoId: '5',
@@ -80,13 +96,15 @@ export const streamsData = [
     star: true,
     streamVideo: video1,
     videoTitle: "Pallet Pulls and Giveaways! Join the Shady Deals Crew!",
-    category: "Laptops",
+    category: "Appliances",
     description: "Appliances, Home electronics, Computers, Computers",
     badgeText: '120',
     status: 'live',
     rating: 4,
     isNewSeller: false,
     hasNotification: false,
+    screenSaver: StreamPhoto5
+
   },
 
 
@@ -100,7 +118,7 @@ export const streamsData = [
     star: true,
     streamVideo: video1,
     videoTitle: "$1 Starts, Giveaways, Macbooks, iPads, Chromebooks & More!",
-    category: "Computers",
+    category: "Gadgets",
     description: "Appliances, Home electronics, Computers, Computer Appliances, Home electronics, Computers, Computer",
     badgeText: '01:0:15',
     textBadge: 'Today 11:30 PM',
@@ -117,7 +135,7 @@ export const streamsData = [
     star: true,
     streamVideo: video1,
     videoTitle: "1 Starts, Giveaways, Macbooks, iPads, Chromebooks & More!",
-    category: "Telephones",
+    category: "Gadgets",
     description: "Appliances, Home electronics, Comasdasd",
     badgeText: '1:10:30',
     textBadge: 'Today 11:30 PM',
@@ -134,7 +152,7 @@ export const streamsData = [
     star: true,
     streamVideo: video1,
     videoTitle: "⚡️‼️Voltage HIGH END Electronics Show! Feat Abbie👀 Exercise Equipment",
-    category: "Digital cameras",
+    category: "Gadgets",
     description: "Appliances, Home electronics, Coasda",
     status: 'upcoming',
     isNewSeller: true,
@@ -151,7 +169,7 @@ export const streamsData = [
     star: false,
     streamVideo: video1,
     videoTitle: "Pallet Pulls and Giveaways! Join the Shady Deals Crew!",
-    category: "Televisions",
+    category: "Gadgets",
     description: "Appliances, Home electronics,",
     badgeText: '0:2:50',
     textBadge: 'Today 11:30 PM',
@@ -168,7 +186,7 @@ export const streamsData = [
     star: true,
     streamVideo: video1,
     videoTitle: "Pallet Pulls and Giveaways! Join the Shady Deals Crew!",
-    category: "Laptops",
+    category: "Gadgets",
     description: "Appliances, Home electronics, Computers, Computers",
     badgeText: '2:20:57',
     textBadge: 'Today 11:30 PM',
@@ -189,7 +207,7 @@ export const streamsData = [
     star: true,
     streamVideo: video1,
     videoTitle: "$1 Starts, Giveaways, Macbooks, iPads, Chromebooks & More!",
-    category: "Computers",
+    category: "Gadgets",
     description: "Appliances, Home electronics, Computers, Computer Appliances, Home electronics, Computers, Computer",
     badgeText: '3K',
     status: 'video',
@@ -205,7 +223,7 @@ export const streamsData = [
     star: true,
     streamVideo: video1,
     videoTitle: "1 Starts, Giveaways, Macbooks, iPads, Chromebooks & More!",
-    category: "Telephones",
+    category: "Phones",
     description: "Appliances, Home electronics, Comasdasd",
     badgeText: '1.2K',
     status: 'video',
@@ -221,7 +239,7 @@ export const streamsData = [
     star: true,
     streamVideo: video1,
     videoTitle: "⚡️‼️Voltage HIGH END Electronics Show! Feat Abbie👀 Exercise Equipment",
-    category: "Digital cameras",
+    category: "Phones",
     description: "Appliances, Home electronics, Coasda",
     status: 'video',
     isNewSeller: true,
@@ -237,7 +255,7 @@ export const streamsData = [
     star: false,
     streamVideo: video1,
     videoTitle: "Pallet Pulls and Giveaways! Join the Shady Deals Crew!",
-    category: "Televisions",
+    category: "Phones",
     description: "Appliances, Home electronics,",
     badgeText: '900',
     status: 'video',
@@ -253,7 +271,7 @@ export const streamsData = [
     star: true,
     streamVideo: video1,
     videoTitle: "Pallet Pulls and Giveaways! Join the Shady Deals Crew!",
-    category: "Laptops",
+    category: "Phones",
     description: "Appliances, Home electronics, Computers, Computers",
     badgeText: '754',
     status: 'video',
