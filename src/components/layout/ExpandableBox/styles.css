@@ -14,13 +14,14 @@
 }
 
 .expandable-box {
-
+  display: flex;
+  flex-wrap: wrap;
   overflow: hidden;
   transition: height 0.4s ease;
   position: relative;
   padding: 10px 0 20px 0;
   box-sizing: border-box;
-  align-content: flex-start;
+
 }
 
 .expandable-box::after {

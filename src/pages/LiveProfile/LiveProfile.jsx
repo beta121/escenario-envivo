@@ -4,7 +4,7 @@ import { streamsData } from '../../shared/assets/user/streamsData';
 import { products } from '../../shared/assets/products/products';
 import './style.css';
 
-const VideoProfile = () => {
+export const LiveProfile = () => {
   const { id } = useParams();
 
   const currentVideo = Object.fromEntries(streamsData.map((item) => [item.videoId, item]));
@@ -34,4 +34,4 @@ const VideoProfile = () => {
   );
 };
 
-export default VideoProfile;
+export default LiveProfile;

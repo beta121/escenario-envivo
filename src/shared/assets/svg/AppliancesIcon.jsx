@@ -11,13 +11,15 @@ const AppliancesIcon = ({ size = 24, color = 'currentColor', ...props }) => {
       strokeLinejoin="round"
       {...props}
     >
-      <rect width="20" height="16" x="2" y="4" rx="2" />
+      {/* Главный закругленный корпус вилки */}
+      <path d="M6 10V7a3 3 0 0 1 3-3h6a3 3 0 0 1 3 3v3a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4z" />
 
-      <rect width="11" height="10" x="5" y="7" rx="1" />
+      {/* Два штыря (аккуратно отступают, не слипаются) */}
+      <line x1="9" y1="4" x2="9" y2="1" />
+      <line x1="15" y1="4" x2="15" y2="1" />
 
-      <circle cx="18" cy="8" r="1" fill={color} />
-      <circle cx="18" cy="12" r="1" fill={color} />
-      <line x1="17" x2="19" y1="16" y2="16" />
+      {/* Провод, уходящий вниз */}
+      <path d="M12 14v4a2 2 0 0 0 2 2h4" />
     </svg>
   );
 };

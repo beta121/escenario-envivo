@@ -25,7 +25,7 @@ const flags = {
   ec: Ecuador,
 };
 
-const ALL_CODES = ['us', 'mx', 'co', 'es', 'ar', 'pe', 've', 'cl', 'gt', 'ec'];
+const ALL_CODES = ['mx', 'us', 'co', 'es', 'ar', 'pe', 've', 'cl', 'gt', 'ec'];
 
 export const EntryGridCard = ({ value, country, code, highlight }) => {
   const bigFlagUrl = flags[code];
@@ -40,6 +40,8 @@ export const EntryGridCard = ({ value, country, code, highlight }) => {
 
     return () => clearInterval(interval);
   }, []);
+
+  console.log(seconds);
 
   const currentIndex = seconds % ALL_CODES.length;
   const activeCode = ALL_CODES[currentIndex];

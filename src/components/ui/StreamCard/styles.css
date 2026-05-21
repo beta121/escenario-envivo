@@ -5,7 +5,7 @@
 .stream-card {
   display: flex;
   flex-direction: column;
-  width: 248px;
+  width: 251px;
   gap: 12px;
 }
 

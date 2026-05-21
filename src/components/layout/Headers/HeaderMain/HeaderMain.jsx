@@ -7,8 +7,8 @@ import logo from '../../../../shared/assets/Logo.png';
 import './styles.css';
 
 const regions = [
-  { name: 'MEXICO', code: 'mx' },
   { name: 'USA', code: 'us' },
+  { name: 'MEXICO', code: 'mx' },
   { name: 'GUATEMALA', code: 'gt' },
   { name: 'DOMINICAN REP.', code: 'do' },
   { name: 'HONDURAS', code: 'hn' },

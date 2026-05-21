@@ -3,6 +3,13 @@ import short2 from '../short/short2.png'
 import short3 from '../short/short3.png'
 import short4 from '../short/short4.png'
 
+import short11 from '../short/ShortsPhoto_1.png'
+import short22 from '../short/ShortsPhoto_2.png'
+import short33 from '../short/ShortsPhoto_3.png'
+import short44 from '../short/ShortsPhoto_4.png'
+import short55 from '../short/ShortsPhoto_5.png'
+
+
 
 
 export const shorts = [
@@ -13,7 +20,7 @@ export const shorts = [
     views: '3K',
     category: 'Competers',
     tags: ['Trxt', 'trewd', 'wuec'],
-    videoUrl: short1
+    videoUrl: short11
   },
   {
     id: 2,
@@ -59,7 +66,7 @@ export const shorts = [
     views: '3K',
     category: 'Competers',
     tags: ['Trxt', 'trewd', 'wuec'],
-    videoUrl: short1
+    videoUrl: short22
   },
   {
     id: 7,
@@ -105,7 +112,7 @@ export const shorts = [
     views: '3K',
     category: 'Competers',
     tags: ['Trxt', 'trewd', 'wuec'],
-    videoUrl: short1
+    videoUrl: short33
   },
   {
     id: 12,
@@ -151,7 +158,7 @@ export const shorts = [
     views: '3K',
     category: 'Competers',
     tags: ['Trxt', 'trewd', 'wuec'],
-    videoUrl: short1
+    videoUrl: short44
   },
   {
     id: 17,
@@ -197,7 +204,7 @@ export const shorts = [
     views: '3K',
     category: 'Competers',
     tags: ['Trxt', 'trewd', 'wuec'],
-    videoUrl: short1
+    videoUrl: short55
   },
   {
     id: 22,
