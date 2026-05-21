@@ -43,7 +43,7 @@ export const Footer = () => {
             </NavLink>
             <NavLink
               className={isInvestorPage ? 'nav-link-investor' : 'nav-link-default'}
-              to="/buyer"
+              to="/contact"
               style={getLinkStyle}
             >
               Buyer
@@ -64,7 +64,7 @@ export const Footer = () => {
             </NavLink>
             <NavLink
               className={isInvestorPage ? 'nav-link-investor' : 'nav-link-default'}
-              to="/ai-features"
+              to="/contact"
               style={getLinkStyle}
             >
               AI Features

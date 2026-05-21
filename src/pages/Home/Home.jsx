@@ -13,6 +13,8 @@ import ToysIcon from '../../shared/assets/svg/ToysIcon';
 import ScreensIcon from '../../shared/assets/svg/ScreensIcon';
 import ConsolesIcon from '../../shared/assets/svg/ConsolesIcon';
 import CamerasIcon from '../../shared/assets/svg/CamerasIcon';
+import DevicesIcon from '../../shared/assets/svg/DevicesIcon';
+import OfficeIcon from '../../shared/assets/svg/OfficeIcon';
 
 import './styles.css';
 
@@ -22,8 +24,10 @@ const categoryIcons = {
   Phones: <PhonesIcon />,
   Toys: <ToysIcon />,
   Screens: <ScreensIcon />,
-  'Game Consoles': <ConsolesIcon />,
+  Gaming: <ConsolesIcon />,
   Cameras: <CamerasIcon />,
+  Devices: <DevicesIcon />,
+  Office: <OfficeIcon />,
 };
 
 const Home = () => {
@@ -42,35 +46,63 @@ const Home = () => {
     const video = filteredData.filter((item) => item.status === 'video');
 
     return [...live, ...upcoming, ...video];
-  }, [category, streamsData]);
+  }, [category]);
 
   const currentProducts = products.map((product) => product.products[0]);
+
+  const limitShorts = useMemo(() => {
+    const firsts = Object.values(
+      shorts.reduce((acc, short) => {
+        if (!acc[short.userId]) {
+          acc[short.userId] = short;
+        }
+        return acc;
+      }, {})
+    );
+
+    if (shorts.length <= 12) return shorts;
+    if (firsts.length >= 12) return firsts.slice(0, 12);
+
+    const takenIds = new Set(firsts.map((s) => s.id));
+
+    const remaining = shorts.filter((short) => !takenIds.has(short.id));
+
+    const needed = 12 - firsts.length;
+
+    return [...firsts, ...remaining.slice(0, needed)];
+  }, []);
 
   return (
     <div className="main-container">
       <CategoryAction onSelect={handleClick} active={category} categories={categoryIcons} />
 
+      {/* Блок с стримами */}
       <div style={{ margin: '15px 0 24px' }}>
         <ExpandableBox showGradient={false} showMo={combinedStreams.length}>
-          {combinedStreams?.map((stream) => (
-            <StreamCard stream={stream} key={stream.videoId} />
+          {(combinedStreams || []).map((stream) => (
+            <StreamCard stream={stream} key={`stream-${stream.videoId}`} />
           ))}
+        </ExpandableBox>
+      </div>
+
+      {/* Блок с продуктами */}
+      <div style={{ margin: '15px 0 24px' }}>
+        <ExpandableBox showGradient={false} showMo={currentProducts.length}>
+          {(currentProducts || []).map((product, index) => {
+            const productId = product?.id || product?.productId || product?._id || index;
+
+            return <HighlightCard product={product} key={`product-${productId}`} />;
+          })}
         </ExpandableBox>
       </div>
 
       <div style={{ margin: '15px 0 24px' }}>
-        <ExpandableBox showGradient={false} showMo={currentProducts.length} gap="20px">
-          {currentProducts?.map((product) => (
-            <HighlightCard product={product} key={product.id} />
+        <ExpandableBox showGradient={false} showMo={limitShorts.length}>
+          {(limitShorts || []).map((short) => (
+            <Short key={`short-${short.id}`} short={short} showInfo={false} />
           ))}
         </ExpandableBox>
       </div>
-
-      <ExpandableBox showGradient={false} showMo={shorts.length}>
-        {shorts.map((short) => {
-          return <Short key={short.id} short={short} size="small" showInfo={false} />;
-        })}
-      </ExpandableBox>
 
       <FavoriteSellers title="TRENDING SELLERS" />
     </div>

@@ -16,7 +16,11 @@ const UpcomingProfile = () => {
         <h3 className="broadcast-title">{currentVideo[id].videoTitle}</h3>
 
         <div className="view-section">
-          <VideoPlayer streamerData={currentVideo[id]} videoUrl={currentVideo[id]?.streamVideo} />
+          <VideoPlayer
+            streamerData={currentVideo[id]}
+            videoUrl={currentVideo[id]?.streamVideo}
+            status={currentVideo[id]?.status}
+          />
           <ChatSidebar />
         </div>
 

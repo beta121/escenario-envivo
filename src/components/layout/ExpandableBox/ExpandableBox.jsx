@@ -19,7 +19,7 @@ const Arrow = ({ style }) => {
   );
 };
 
-export function ExpandableBox({ children, showGradient = true, showMo, gap = '16px' }) {
+export function ExpandableBox({ children, showGradient = true, showMo, gap = 16 }) {
   const containerRef = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
   const [heights, setHeights] = useState({ closed: 0, full: 0 });
@@ -71,9 +71,7 @@ export function ExpandableBox({ children, showGradient = true, showMo, gap = '16
         ref={containerRef}
         className="expandable-box"
         style={{
-          display: 'flex',
-          flexWrap: 'wrap',
-          gap,
+          gap: gap,
           height: heights.closed === 0 ? 'auto' : `${isOpen ? heights.full : heights.closed}px`,
           '--gradient-opacity': showGradient && !isOpen ? 1 : 0,
         }}

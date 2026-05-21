@@ -30,6 +30,12 @@ const StarIcon = () => (
   </div>
 );
 
+const urlPrefixes = {
+  live: '/live',
+  upcoming: '/upcoming',
+  video: '/video',
+};
+
 export const StreamCard = ({ stream }) => {
   const [isBell, setIsBell] = useState('');
   const location = useLocation();
@@ -56,7 +62,10 @@ export const StreamCard = ({ stream }) => {
     screenSaver,
   } = stream;
 
-  const currentUrl = status === 'live' ? `/live/${videoId}` : `/upcoming/${videoId}`;
+  const prefix = urlPrefixes[status] || '/video';
+
+  const currentUrl = `${prefix}/${videoId}`;
+
   const isUserPage = location.pathname.startsWith('/user/');
 
   const finalBadgeText =
