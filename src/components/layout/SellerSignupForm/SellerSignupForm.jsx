@@ -22,7 +22,6 @@ export const SellerSignupForm = ({ onSuccess }) => {
 
   const handleCountryChange = (selectedObject) => {
     setCountry(selectedObject);
-    console.log('Country Name:', selectedObject.code);
   };
 
   const handleEmail = (e) => {

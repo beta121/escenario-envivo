@@ -1,5 +1,6 @@
 import { useRef, useState, useEffect } from 'react';
 import { Header, MarketSection, Opportunity, Entry, Beta } from '../landing';
+import { Loader } from '../ui';
 
 import './style.css';
 
@@ -14,8 +15,21 @@ export const Landing = () => {
   const containerRef = useRef(null);
   const sectionsRef = useRef([]);
   const [scrollPoints, setScrollPoints] = useState([0, 0.25, 0.5, 0.75]);
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
+
+  const bgImage = new URL('../../shared/assets/ai-features/AiFrame.png', import.meta.url).href;
 
   useEffect(() => {
+    const img = new Image();
+    img.src = bgImage;
+    img.onload = () => {
+      setIsImageLoaded(true);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!isImageLoaded) return;
+
     const calculatePoints = () => {
       const sections = sectionsRef.current.filter(Boolean);
       if (sections.length === 0) return;
@@ -35,11 +49,13 @@ export const Landing = () => {
     calculatePoints();
     window.addEventListener('resize', calculatePoints);
     return () => window.removeEventListener('resize', calculatePoints);
-  }, []);
+  }, [isImageLoaded]);
+
+  if (!isImageLoaded) return <Loader />;
 
   return (
     <div className="ai-features-wrapper">
-      <section className="ai-features-hero">
+      <section className="ai-features-hero" style={{ backgroundImage: `url(${bgImage})` }}>
         <h3>The Evolution of Live Shopping</h3>
       </section>
 

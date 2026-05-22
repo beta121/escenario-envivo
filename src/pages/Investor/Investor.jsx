@@ -1,11 +1,7 @@
 import { Landing } from '../../components/landing';
 
 const Investor = () => {
-  return (
-    <div>
-      <Landing />
-    </div>
-  );
+  return <Landing />;
 };
 
 export default Investor;
