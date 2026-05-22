@@ -9,6 +9,7 @@ export const MainLayout = () => {
   const location = useLocation();
 
   const isAIFeaturesPage = location.pathname.startsWith('/investor');
+  const isFooter = location.pathname.startsWith('/short');
 
   return (
     <main className="layout-wrapper">
@@ -20,7 +21,7 @@ export const MainLayout = () => {
         <Outlet />
       </section>
 
-      <Footer />
+      {!isFooter && <Footer />}
     </main>
   );
 };

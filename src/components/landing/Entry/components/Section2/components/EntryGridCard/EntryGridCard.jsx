@@ -41,8 +41,6 @@ export const EntryGridCard = ({ value, country, code, highlight }) => {
     return () => clearInterval(interval);
   }, []);
 
-  console.log(seconds);
-
   const currentIndex = seconds % ALL_CODES.length;
   const activeCode = ALL_CODES[currentIndex];
 

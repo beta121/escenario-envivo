@@ -38,8 +38,6 @@ export const Upcoming = ({ timeUpcoming }) => {
 
   if (!timeUpcoming && totalMinutes === 0) return null;
 
-  console.log(isSend);
-
   return (
     <div className="upcoming-wrapper">
       <div className="countdown-container">
