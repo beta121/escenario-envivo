@@ -1,4 +1,4 @@
-import { useState, useRef, useLayoutEffect } from 'react';
+import { useState, useRef, useLayoutEffect, useEffect } from 'react';
 import './styles.css';
 
 const Arrow = ({ style }) => {
@@ -23,6 +23,10 @@ export function ExpandableBox({ children, showGradient = true, showMo, gap = 16 
   const containerRef = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
   const [heights, setHeights] = useState({ closed: 0, full: 0 });
+
+  useEffect(() => {
+    setIsOpen(false);
+  }, [children]);
 
   useLayoutEffect(() => {
     const container = containerRef.current;

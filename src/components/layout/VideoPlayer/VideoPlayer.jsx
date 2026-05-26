@@ -26,12 +26,15 @@ export const VideoPlayer = ({ videoUrl, streamerData, status }) => {
       <main className="video-screen">
         <div className="stream-info-overlay">
           <div className="top-row">
-            <StreamerInfo
-              userId={streamerData?.userId}
-              avatar={streamerData?.avatarUrl}
-              name={streamerData?.userName}
-              rating={streamerData?.rating}
-            />
+            <div style={{ width: '300px' }}>
+              <StreamerInfo
+                userId={streamerData?.userId}
+                avatar={streamerData?.avatarUrl}
+                name={streamerData?.userName}
+                rating={streamerData?.rating}
+              />
+            </div>
+
             {isLive && <div className="live-badge">LIVE {streamerData?.badgeText}</div>}
             {isRecordedVideo && (
               <div className="live-badge video-badge">VIEWS {streamerData?.badgeText}</div>

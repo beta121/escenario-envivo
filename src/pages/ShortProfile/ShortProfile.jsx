@@ -142,13 +142,13 @@ const ShortProfile = () => {
       <div className="short-profile-content">
         <div className="short-profile-user">
           <ProductCard product={currentProduct} />
+          <h3 className="short-profile-user-title">{currentShort.title}</h3>
           <StreamerInfo
             userId={currentUser?.id}
             avatar={currentUser?.avatar}
             name={currentUser?.name}
             rating={currentUser?.rating}
           />
-          <h3 className="short-profile-user-title">{currentShort.title}</h3>
         </div>
 
         <div className="short-profile-video">
