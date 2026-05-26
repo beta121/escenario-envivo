@@ -32,7 +32,7 @@ export const GiveawayCard = ({ productId, imgSrc, description, joined, time }) =
                   e.stopPropagation();
                 }}
               >
-                join
+                JOIN
               </button>
             </div>
           </div>

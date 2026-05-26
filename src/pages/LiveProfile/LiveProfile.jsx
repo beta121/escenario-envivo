@@ -10,6 +10,10 @@ export const LiveProfile = () => {
   const currentVideo = Object.fromEntries(streamsData.map((item) => [item.videoId, item]));
   const currentProduct = Object.fromEntries(products.map((item) => [item.userId, item]));
 
+  const prods = currentProduct[currentVideo[id].userId].products.filter(
+    (product) => product.type === 'showing-now' || product.type === 'default'
+  );
+
   return (
     <section className="broadcast-page">
       <div className="main-layout">
@@ -25,7 +29,7 @@ export const LiveProfile = () => {
         </div>
 
         <footer className="products-shelf">
-          <ProductCarousel currentProduct={currentProduct[currentVideo[id].userId]} />
+          <ProductCarousel currentProduct={prods} />
         </footer>
       </div>
 

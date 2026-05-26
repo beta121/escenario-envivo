@@ -1,16 +1,58 @@
 import { useState, useEffect, useRef } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { StreamerInfo } from '../../components/ui';
+import { motion, AnimatePresence } from 'framer-motion';
+import { StreamerInfo, ProductCard } from '../../components/ui';
+import { ChatSidebar } from '../../components/layout';
+
 import { shorts } from '../../shared/assets/user/shorts1';
 import { sellersUsers } from '../../shared/assets/user/sellersUsers';
+import { products } from '../../shared/assets/products/products';
+
 import DislikeIcon from '../../shared/assets/svg/DislikeIcon';
 import LikeIcon from '../../shared/assets/svg/LikeIcon';
 import MessengerIcon from '../../shared/assets/svg/MessengerIcon';
 import './style.css';
 
+const slideVariants = {
+  initial: (dir) => ({
+    y: dir === 'next' ? '100%' : '-100%',
+    opacity: 0,
+  }),
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: { duration: 0.4, ease: 'easeInOut' },
+  },
+  exit: (dir) => ({
+    y: dir === 'next' ? '-100%' : '100%',
+    opacity: 0,
+    transition: { duration: 0.4, ease: 'easeInOut' },
+  }),
+};
+
+const chatVariants = {
+  hidden: {
+    x: '-100%',
+    opacity: 0,
+  },
+  visible: {
+    x: 0,
+    opacity: 1,
+    transition: { ease: 'easeOut', duration: 0.35 },
+  },
+  exit: {
+    x: '-100%',
+    opacity: 0,
+    transition: { ease: 'easeInOut', duration: 0.3 },
+  },
+};
+
 const ShortProfile = () => {
+  const [isOpenChat, setIsOpenChat] = useState(false);
   const { id } = useParams();
   const navigate = useNavigate();
+
+  const [direction, setDirection] = useState('next');
 
   const currentIndex = shorts.findIndex((short) => Number(short.id) === Number(id));
   const currentShort = shorts[currentIndex];
@@ -35,19 +77,23 @@ const ShortProfile = () => {
     }
   }, [currentIndex, navigate]);
 
-  const changeShort = (direction) => {
+  const changeShort = (dir) => {
     if (currentIndex === -1) return;
 
-    if (direction === 'next' && currentIndex < shorts.length - 1) {
+    setDirection(dir);
+
+    if (dir === 'next' && currentIndex < shorts.length - 1) {
       const nextShort = shorts[currentIndex + 1];
       navigate(`/shorts/${nextShort.id}`, { replace: true });
-    } else if (direction === 'prev' && currentIndex > 0) {
+    } else if (dir === 'prev' && currentIndex > 0) {
       const prevShort = shorts[currentIndex - 1];
       navigate(`/shorts/${prevShort.id}`, { replace: true });
     }
   };
 
   const handleWheel = (e) => {
+    if (e.target.closest('.short-profile-chat')) return;
+
     if (Math.abs(e.deltaY) < 30) return;
     if (isScrolling.current) return;
 
@@ -86,69 +132,99 @@ const ShortProfile = () => {
   }
 
   const nextShort = shorts[currentIndex + 1];
-  console.log(currentUser);
+
+  const currentProduct = products
+    .find((data) => Number(data.userId) === Number(currentShort.userId))
+    ?.products?.find((product) => product.type === 'giveaway');
 
   return (
     <section className="short-profile-wrapper" onWheel={handleWheel}>
       <div className="short-profile-content">
         <div className="short-profile-user">
+          <ProductCard product={currentProduct} />
           <StreamerInfo
             userId={currentUser?.id}
             avatar={currentUser?.avatar}
             name={currentUser?.name}
             rating={currentUser?.rating}
           />
+          <h3 className="short-profile-user-title">{currentShort.title}</h3>
         </div>
 
         <div className="short-profile-video">
-          <div className="short-profile-video-content">
-            <div className="active-video-container">
-              <video
-                key={currentShort.id}
-                poster={currentShort.posterUrl}
-                src={currentShort.shortSrc}
-                autoPlay
-                loop
-                muted
-                playsInline
-              />
-            </div>
-
-            {nextShort && (
-              <div className="next-video-strip" onClick={() => changeShort('next')}>
-                <video src={nextShort.shortSrc} poster={nextShort.posterUrl} muted playsInline />
-              </div>
-            )}
-
-            <div className="short-profile-video-icons">
-              <div
-                className={`icon-container ${isLiked ? 'active-like' : ''}`}
-                onClick={handleLikeClick}
-              >
-                <LikeIcon
-                  fill={isLiked ? 'rgb(20, 170, 58)' : 'none'}
-                  color={isLiked ? 'rgb(20, 170, 58)' : 'currentColor'}
+          <AnimatePresence mode="popLayout" custom={direction}>
+            <motion.div
+              key={currentShort.id}
+              custom={direction}
+              variants={slideVariants}
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              className="short-profile-video-content"
+              style={{ width: '100%', height: '100%' }}
+            >
+              <div className="active-video-container">
+                <video
+                  key={currentShort.id}
+                  poster={currentShort.posterUrl}
+                  src={currentShort.shortSrc}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
                 />
               </div>
 
-              <div
-                className={`icon-container ${isDisliked ? 'active-dislike' : ''}`}
-                onClick={handleDislikeClick}
-              >
-                <DislikeIcon
-                  fill={isDisliked ? '#dc3545' : 'none'}
-                  color={isDisliked ? '#dc3545' : 'currentColor'}
-                />
-              </div>
+              {nextShort && (
+                <div className="next-video-strip" onClick={() => changeShort('next')}>
+                  <video src={nextShort.shortSrc} poster={nextShort.posterUrl} muted playsInline />
+                </div>
+              )}
 
-              <div className="icon-container">
-                <MessengerIcon />
+              <div className="short-profile-video-icons">
+                <div
+                  className={`icon-container ${isLiked ? 'active-like' : ''}`}
+                  onClick={handleLikeClick}
+                >
+                  <LikeIcon
+                    fill={isLiked ? 'rgb(20, 170, 58)' : 'none'}
+                    color={isLiked ? 'rgb(20, 170, 58)' : 'currentColor'}
+                  />
+                </div>
+
+                <div
+                  className={`icon-container ${isDisliked ? 'active-dislike' : ''}`}
+                  onClick={handleDislikeClick}
+                >
+                  <DislikeIcon
+                    fill={isDisliked ? '#dc3545' : 'none'}
+                    color={isDisliked ? '#dc3545' : 'currentColor'}
+                  />
+                </div>
+
+                <div className="icon-container" onClick={() => setIsOpenChat(!isOpenChat)}>
+                  <MessengerIcon />
+                </div>
               </div>
-            </div>
-          </div>
+            </motion.div>
+          </AnimatePresence>
         </div>
 
-        <div className="short-profile-chat"></div>
+        <div className="short-profile-chat">
+          <AnimatePresence>
+            {isOpenChat && (
+              <motion.div
+                variants={chatVariants}
+                initial="hidden"
+                animate="visible"
+                exit="exit"
+                style={{ height: '100%', width: '100%' }}
+              >
+                <ChatSidebar />
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
       </div>
     </section>
   );

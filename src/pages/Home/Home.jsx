@@ -15,11 +15,12 @@ import ConsolesIcon from '../../shared/assets/svg/ConsolesIcon';
 import CamerasIcon from '../../shared/assets/svg/CamerasIcon';
 import DevicesIcon from '../../shared/assets/svg/DevicesIcon';
 import OfficeIcon from '../../shared/assets/svg/OfficeIcon';
+import RefrigeratorIcon from '../../shared/assets/svg/RefrigeratorIcon';
 
 import './styles.css';
 
 const categoryIcons = {
-  Appliances: <AppliancesIcon />,
+  Accessories: <RefrigeratorIcon />,
   Gadgets: <GadgetsIcon />,
   Phones: <PhonesIcon />,
   Toys: <ToysIcon />,
@@ -28,6 +29,7 @@ const categoryIcons = {
   Cameras: <CamerasIcon />,
   Devices: <DevicesIcon />,
   Office: <OfficeIcon />,
+  Appliances: <AppliancesIcon />,
 };
 
 const Home = () => {
@@ -38,15 +40,10 @@ const Home = () => {
   };
 
   const combinedStreams = useMemo(() => {
-    const filteredData =
-      category === 'all' ? streamsData : streamsData.filter((item) => item.category === category);
-
-    const live = filteredData.filter((item) => item.status === 'live');
-    const upcoming = filteredData.filter((item) => item.status === 'upcoming');
-    const video = filteredData.filter((item) => item.status === 'video');
-
-    return [...live, ...upcoming, ...video];
-  }, [category]);
+    if (category === 'all') return streamsData;
+    const filtered = streamsData.filter((item) => item.category === category);
+    return filtered.length > 0 ? filtered : streamsData;
+  }, [category, streamsData]);
 
   const currentProducts = products.map((product) => product.products[0]);
 

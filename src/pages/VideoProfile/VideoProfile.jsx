@@ -10,6 +10,11 @@ const VideoProfile = () => {
   const currentVideo = Object.fromEntries(streamsData.map((item) => [item.videoId, item]));
   const currentProduct = Object.fromEntries(products.map((item) => [item.userId, item]));
 
+  const prods = currentProduct[currentVideo[id].userId].products.filter(
+    (product) =>
+      product.type === 'discount' || (product.type === 'default' && product.variant === 'default')
+  );
+
   return (
     <section className="broadcast-page">
       <div className="main-layout">
@@ -25,7 +30,7 @@ const VideoProfile = () => {
         </div>
 
         <footer className="products-shelf">
-          <ProductCarousel currentProduct={currentProduct[currentVideo[id].userId]} />
+          <ProductCarousel currentProduct={prods} />
         </footer>
       </div>
 
