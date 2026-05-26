@@ -14,6 +14,10 @@ const parseTimeToMinutes = (timeString) => {
   return 0;
 };
 
+const getPluralForm = (count, singular, plural) => {
+  return count === 1 ? singular : plural;
+};
+
 export const Upcoming = ({ timeUpcoming }) => {
   const [totalMinutes, setTotalMinutes] = useState(() => parseTimeToMinutes(timeUpcoming));
   const [isSend, setIsSend] = useState(false);
@@ -30,7 +34,7 @@ export const Upcoming = ({ timeUpcoming }) => {
     }, 60000);
 
     return () => clearInterval(interval);
-  }, [totalMinutes > 0]);
+  }, [totalMinutes]);
 
   const displayDays = Math.floor(totalMinutes / (24 * 60));
   const displayHours = Math.floor((totalMinutes % (24 * 60)) / 60);
@@ -43,21 +47,21 @@ export const Upcoming = ({ timeUpcoming }) => {
       <div className="countdown-container">
         <div className="time-block">
           <span className="time-value">{displayDays}</span>
-          <span className="time-label">days</span>
+          <span className="time-label">{getPluralForm(displayDays, 'day', 'days')}</span>
         </div>
         <div className="time-block">
           <span className="time-value">{displayHours}</span>
-          <span className="time-label">hours</span>
+          <span className="time-label">{getPluralForm(displayHours, 'hour', 'hours')}</span>
         </div>
         <div className="time-block">
           <span className="time-value">{displayMinutes}</span>
-          <span className="time-label">minutes</span>
+          <span className="time-label">{getPluralForm(displayMinutes, 'minute', 'minutes')}</span>
         </div>
       </div>
 
       <button
         className="reminder-button"
-        onClick={(e) => setIsSend((prev) => !prev)}
+        onClick={() => setIsSend((prev) => !prev)}
         style={{ background: isSend ? '#14aa3a' : '#e85d26' }}
       >
         <img src={isSend ? gemini : ball} alt="bell" />

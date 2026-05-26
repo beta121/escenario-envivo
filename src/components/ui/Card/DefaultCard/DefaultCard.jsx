@@ -34,7 +34,7 @@ export const DefaultCard = ({ productId, variant, imgSrc, description, price, on
                       e.stopPropagation();
                     }}
                   >
-                    Buy
+                    BUY
                   </button>
                 </>
               )}

@@ -48,7 +48,7 @@ export const DiscountCard = ({
                   e.stopPropagation();
                 }}
               >
-                Buy
+                BUY
               </button>
             </div>
           </div>

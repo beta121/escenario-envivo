@@ -23,19 +23,43 @@
 }
 
 .short-profile-user {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   height: auto;
   align-self: flex-end;
   padding: 0 0 16px 16px;
 }
 
+.short-profile-user-title {
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  overflow: hidden;
+  display: block;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 300px;
+}
+
 .short-profile-video {
   flex: 1;
-  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   max-width: 480px;
   margin: 0 auto;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.short-profile-video .short-profile-video-content[style*="position: absolute"] {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .short-profile-video-content {
@@ -118,4 +142,8 @@
 
 .short-profile-chat {
   height: 100%;
+  flex: 0 0 400px;
+  padding: 16px 0 0 0;
+  overflow: hidden;
+  position: relative;
 }

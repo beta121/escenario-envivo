@@ -1,0 +1,88 @@
+/* Базовые стили страницы */
+.ai-page {
+  max-width: 1015px;
+  margin: 0 auto 24px auto;
+  padding: 40px 20px;
+}
+
+/* Типографика и тексты */
+.ai-main-title {
+  font-weight: 700;
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #E85D35;
+}
+
+.ai-sub-title {
+  font-weight: 700;
+  font-size: 28px;
+  color: #E85D35;
+  border-bottom: 1px solid #E85D35;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.ai-text {
+  font-weight: 400;
+  font-size: 14px;
+  margin-top: 20px;
+  color: #4A4A4A;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.ai-check-list {
+  margin-top: 18px;
+  padding-left: 20px;
+  list-style: disc !important;
+  font-size: 14px;
+  color: #4A4A4A;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.ai-split-block {
+  margin-top: 60px;
+}
+
+.ai-bottom-section {
+  margin-top: 40px;
+  margin-bottom: 80px;
+}
+
+.ai-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 30px;
+  align-items: start;
+}
+
+.ai-grid-img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  display: block;
+}
+
+.ai-content-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ai-content-column .ai-text {
+  margin-top: 0;
+}
+
+.ai-full-width-text {
+  grid-column: span 2;
+}
+
+.ai-split-block.reversed .ai-grid {
+  direction: ltr;
+}
+
+.ai-split-block.reversed .ai-check-list {
+  margin-top: 0;
+}
