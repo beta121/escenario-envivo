@@ -39,7 +39,7 @@ export const HighlightCard = ({ product }) => {
             </div>
 
             <div className="highlight-description">
-              {time && <p className="highlight-description-time">{timeLeft}</p>}
+              {category && time && <p className="highlight-description-time">{timeLeft}</p>}
               <p
                 className="highlight-description-sale"
                 style={{
