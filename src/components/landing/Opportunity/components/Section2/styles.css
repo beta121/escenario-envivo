@@ -44,19 +44,22 @@
   display: flex;
   gap: 24px;
   flex-direction: column;
-  max-width: 429px;
+  max-width: 466px;
   width: 100%;
 }
 
 .opportunity-animation_container {
   display: flex;
   align-items: center;
-  gap: 50px
+  gap: 50px;
 }
 
 .opportunity-animation_text {
+
   font-family: Roboto, sans-serif;
   font-size: 20px;
   font-weight: 400;
-  line-height: 100%;
+  line-height: 1.2;
+  color: #FFFFFF;
+  max-width: 296px;
 }

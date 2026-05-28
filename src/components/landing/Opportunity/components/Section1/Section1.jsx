@@ -21,19 +21,33 @@ const MARKERS_DATA = [
   },
 ];
 
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.5,
+    },
+  },
+};
+
 export const Section1 = () => {
-  const markersCount = MARKERS_DATA.length;
-  const noteDelay = markersCount * 0.4 + 0.8;
+  const noteDelay = MARKERS_DATA.length * 0.5 + 0.3;
 
   return (
     <section className="opportunity-map">
       <div className="opportunity-map_wrapper">
         <h4 className="opportunity-map_title">Global Live Sales Percentage by Region</h4>
 
-        <div className="map-container">
+        <motion.div
+          className="map-container"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
           <img src={map} alt="World Map" className="map-image" />
 
-          {MARKERS_DATA.map((marker, index) => (
+          {MARKERS_DATA.map((marker) => (
             <MapMarker
               key={marker.id}
               top={marker.top}
@@ -41,8 +55,6 @@ export const Section1 = () => {
               value={marker.value}
               color={marker.color}
               isAnimated={marker.isAnimated}
-              duration={marker.duration}
-              index={index}
             />
           ))}
 
@@ -59,7 +71,7 @@ export const Section1 = () => {
           >
             * <span>Livestream</span> Sales only have peak adaptation in <span>Asia</span>
           </motion.div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

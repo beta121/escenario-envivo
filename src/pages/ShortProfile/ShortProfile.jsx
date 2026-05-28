@@ -218,7 +218,10 @@ const ShortProfile = () => {
                 initial="hidden"
                 animate="visible"
                 exit="exit"
-                style={{ height: '100%', width: '100%' }}
+                style={{
+                  height: '100%',
+                  width: '100%',
+                }}
               >
                 <ChatSidebar />
               </motion.div>

@@ -32,42 +32,55 @@ export function ExpandableBox({ children, showGradient = true, showMo, gap = 16 
     const container = containerRef.current;
     if (!container) return;
 
+    let frame;
+
     const calculateHeights = () => {
-      const childrenElements = Array.from(container.children);
-      const fullHeight = container.scrollHeight;
+      cancelAnimationFrame(frame);
 
-      if (childrenElements.length === 0) {
-        setHeights({ closed: 0, full: fullHeight });
-        return;
-      }
+      frame = requestAnimationFrame(() => {
+        const childrenElements = Array.from(container.children);
+        const fullHeight = container.scrollHeight;
 
-      const firstChildTop = childrenElements[0].offsetTop;
-      let firstRowMaxBottom = 0;
-
-      childrenElements.forEach((child) => {
-        if (child.offsetTop === firstChildTop) {
-          const childBottom = child.offsetTop + child.offsetHeight;
-          if (childBottom > firstRowMaxBottom) {
-            firstRowMaxBottom = childBottom;
-          }
+        if (childrenElements.length === 0) {
+          setHeights({ closed: 0, full: fullHeight });
+          return;
         }
+
+        const firstChildTop = childrenElements[0].offsetTop;
+        let firstRowMaxBottom = 0;
+
+        childrenElements.forEach((child) => {
+          if (child.offsetTop === firstChildTop) {
+            const childBottom = child.offsetTop + child.offsetHeight;
+            if (childBottom > firstRowMaxBottom) {
+              firstRowMaxBottom = childBottom;
+            }
+          }
+        });
+
+        const containerPaddingTop =
+          parseInt(window.getComputedStyle(container).paddingTop, 10) || 0;
+
+        const closedHeight = firstRowMaxBottom + containerPaddingTop;
+
+        setHeights({
+          closed: Math.min(closedHeight, fullHeight),
+          full: fullHeight,
+        });
       });
-
-      const containerPaddingTop = parseInt(window.getComputedStyle(container).paddingTop, 10) || 0;
-      const closedHeight = firstRowMaxBottom + containerPaddingTop;
-
-      const finalClosedHeight = Math.min(closedHeight, fullHeight);
-
-      setHeights({ closed: finalClosedHeight, full: fullHeight });
     };
 
     const observer = new ResizeObserver(calculateHeights);
+
     observer.observe(container);
 
     calculateHeights();
 
-    return () => observer.disconnect();
-  }, [children]);
+    return () => {
+      cancelAnimationFrame(frame);
+      observer.disconnect();
+    };
+  }, [showMo]);
 
   return (
     <div className="expandable-container">
@@ -76,7 +89,7 @@ export function ExpandableBox({ children, showGradient = true, showMo, gap = 16 
         className="expandable-box"
         style={{
           gap: gap,
-          height: heights.closed === 0 ? 'auto' : `${isOpen ? heights.full : heights.closed}px`,
+          maxHeight: heights.closed === 0 ? 'none' : `${isOpen ? heights.full : heights.closed}px`,
           '--gradient-opacity': showGradient && !isOpen ? 1 : 0,
         }}
       >
