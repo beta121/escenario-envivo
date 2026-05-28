@@ -21,7 +21,9 @@
   position: relative;
   padding: 10px 0 20px 0;
   box-sizing: border-box;
-
+  overflow: hidden;
+  transition: max-height 0.25s ease;
+  will-change: max-height;
 }
 
 .expandable-box::after {
