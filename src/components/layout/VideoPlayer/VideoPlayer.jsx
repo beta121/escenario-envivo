@@ -64,7 +64,7 @@ export const VideoPlayer = ({ videoUrl, streamerData, status }) => {
               controls={isRecordedVideo}
               autoPlay={!isRecordedVideo}
               loop={!isRecordedVideo}
-              muted={!isRecordedVideo}
+              muted={false}
               autoPlay={true}
               playsInline
               onCanPlay={() => setIsLoading(false)}
