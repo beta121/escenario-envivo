@@ -11,10 +11,21 @@ import StreamPhoto4 from './img/StreamPhoto_4.png'
 import StreamPhoto5 from './img/StreamPhoto_5.png'
 
 
+import stream1 from './streams/stream1.mp4';
+import stream2 from './streams/stream2.mp4';
+import stream3 from './streams/stream3.mp4';
+import stream4 from './streams/stream4.mp4';
+import stream5 from './streams/stream5.mp4';
 
-import video1 from './img/video1.mp4'
-import video2 from './img/video2.mp4'
-import video3 from './img/video3.mp4'
+
+import video1 from './video/video1.mp4';
+import video2 from './video/video2.mp4';
+import video3 from './video/video3.mp4';
+import video4 from './video/video4.mp4';
+import video5 from './video/video5.mp4';
+
+
+
 
 export const streamsData = [
   {
@@ -23,7 +34,7 @@ export const streamsData = [
     userName: "Live Haul Hub",
     avatarUrl: avatar1,
     star: true,
-    streamVideo: video1,
+    streamVideo: stream1,
     videoTitle: "$1 Starts, Giveaways, Macbooks, iPads, Chromebooks & More!",
     category: "Appliances",
     description: "Appliances, Home electronics, Computers, Computer Appliances, Home electronics, Computers, Computer",
@@ -40,7 +51,7 @@ export const streamsData = [
     userName: "Spotlight Sales",
     avatarUrl: avatar2,
     star: true,
-    streamVideo: video2,
+    streamVideo: stream2,
     videoTitle: "1 Starts, Giveaways, Macbooks, iPads, Chromebooks & More!",
     category: "Appliances",
     description: "Appliances, Home electronics, Comasdasd",
@@ -58,7 +69,7 @@ export const streamsData = [
     userName: "Flash Sale Live",
     avatarUrl: avatar3,
     star: true,
-    streamVideo: video3,
+    streamVideo: stream3,
     videoTitle: "⚡️‼️Voltage HIGH END Electronics Show! Feat Abbie👀 Exercise Equipment",
     category: "Appliances",
     description: "Appliances, Home electronics, Coasda",
@@ -76,7 +87,7 @@ export const streamsData = [
     userName: "Best buys",
     avatarUrl: avatar4,
     star: false,
-    streamVideo: video1,
+    streamVideo: stream4,
     videoTitle: "Pallet Pulls and Giveaways! Join the Shady Deals Crew!",
     category: "Appliances",
     description: "Appliances, Home electronics,",
@@ -94,7 +105,7 @@ export const streamsData = [
     userName: "Curated Catch",
     avatarUrl: avatar5,
     star: true,
-    streamVideo: video1,
+    streamVideo: stream5,
     videoTitle: "Pallet Pulls and Giveaways! Join the Shady Deals Crew!",
     category: "Appliances",
     description: "Appliances, Home electronics, Computers, Computers",
@@ -126,6 +137,7 @@ export const streamsData = [
     rating: 5,
     isNewSeller: true,
     hasNotification: true,
+    screenSaver: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg'
   },
   {
     videoId: '8',
@@ -143,6 +155,7 @@ export const streamsData = [
     rating: 4.4,
     isNewSeller: false,
     hasNotification: true,
+    screenSaver: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg'
   },
   {
     videoId: '9',
@@ -160,6 +173,7 @@ export const streamsData = [
     textBadge: 'Today 11:30 PM',
     rating: 4.1,
     hasNotification: true,
+    screenSaver: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg'
   },
   {
     videoId: '10',
@@ -177,6 +191,7 @@ export const streamsData = [
     rating: 4.8,
     isNewSeller: false,
     hasNotification: true,
+    screenSaver: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg'
   },
   {
     videoId: '11',
@@ -194,6 +209,7 @@ export const streamsData = [
     rating: 4,
     isNewSeller: false,
     hasNotification: true,
+    screenSaver: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg'
   },
 
 
@@ -221,7 +237,7 @@ export const streamsData = [
     userName: "Spotlight Sales",
     avatarUrl: avatar2,
     star: true,
-    streamVideo: video1,
+    streamVideo: video2,
     videoTitle: "1 Starts, Giveaways, Macbooks, iPads, Chromebooks & More!",
     category: "Phones",
     description: "Appliances, Home electronics, Comasdasd",
@@ -237,7 +253,7 @@ export const streamsData = [
     userName: "Flash Sale Live",
     avatarUrl: avatar3,
     star: true,
-    streamVideo: video1,
+    streamVideo: video3,
     videoTitle: "⚡️‼️Voltage HIGH END Electronics Show! Feat Abbie👀 Exercise Equipment",
     category: "Phones",
     description: "Appliances, Home electronics, Coasda",
@@ -253,7 +269,7 @@ export const streamsData = [
     userName: "Best buys",
     avatarUrl: avatar4,
     star: false,
-    streamVideo: video1,
+    streamVideo: video4,
     videoTitle: "Pallet Pulls and Giveaways! Join the Shady Deals Crew!",
     category: "Phones",
     description: "Appliances, Home electronics,",
@@ -269,7 +285,7 @@ export const streamsData = [
     userName: "Curated Catch",
     avatarUrl: avatar5,
     star: true,
-    streamVideo: video1,
+    streamVideo: video5,
     videoTitle: "Pallet Pulls and Giveaways! Join the Shady Deals Crew!",
     category: "Phones",
     description: "Appliances, Home electronics, Computers, Computers",
