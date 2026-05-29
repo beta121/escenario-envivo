@@ -1,22 +1,18 @@
 .short-card {
   position: relative;
-  width: 348px;
+  width: 206.66px;
+  /* Один фиксированный маленький размер */
   cursor: pointer;
-}
-
-.short-title {
-  font-weight: 700;
-  font-size: 15px;
-  line-height: 19.5px;
-  color: #212121;
 }
 
 .short-video-wrapper {
   width: 100%;
-  height: 440px;
+  height: 285px;
+  /* Высота под маленькую карточку */
   overflow: hidden;
   border-radius: 16px;
-  margin-bottom: 12px;
+  margin-bottom: 0;
+  /* По умолчанию отступа нет, если showInfo={false} */
 }
 
 .short-video-content {
@@ -24,7 +20,19 @@
   height: 100%;
   object-fit: cover;
   display: block;
+}
 
+/* Если ПОСЛЕ видео идет инфо-блок (showInfo={true}), добавляем аккуратный отступ сверху */
+.short-video-wrapper+.short-info {
+  margin-top: 10px;
+}
+
+.short-title {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 19.5px;
+  color: #212121;
+  margin: 0 0 4px 0;
 }
 
 .short-meta {
@@ -39,4 +47,5 @@
 
 .short-tag {
   color: #454545;
+  margin-left: 4px;
 }

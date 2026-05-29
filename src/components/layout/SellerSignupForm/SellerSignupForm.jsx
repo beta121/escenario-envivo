@@ -4,14 +4,18 @@ import sellerForm from '../../../shared/assets/seller-form.png';
 import './style.css';
 
 const countries = [
-  { name: 'CANADA', code: 'CA', img: 'https://flagcdn.com/w40/ca.png' },
-  { name: 'COLOMBIA', code: 'CO', img: 'https://flagcdn.com/w40/co.png' },
-  { name: 'MEXICO', code: 'MX', img: 'https://flagcdn.com/w40/mx.png' },
-  { name: 'ARGENTINA', code: 'AR', img: 'https://flagcdn.com/w40/ar.png' },
-  { name: 'BRAZIL', code: 'BR', img: 'https://flagcdn.com/w40/br.png' },
-  { name: 'UKRAINE', code: 'UA', img: 'https://flagcdn.com/w40/ua.png' },
-  { name: 'USA', code: 'US', img: 'https://flagcdn.com/w40/us.png' },
-  { name: 'GERMANY', code: 'DE', img: 'https://flagcdn.com/w40/de.png' },
+  { name: 'USA', code: 'us', img: 'https://flagcdn.com/w40/us.png' },
+  { name: 'MEXICO', code: 'mx', img: 'https://flagcdn.com/w40/mx.png' },
+  { name: 'GUATEMALA', code: 'gt', img: 'https://flagcdn.com/w40/gt.png' },
+  { name: 'DOMINICAN REP.', code: 'do', img: 'https://flagcdn.com/w40/do.png' },
+  { name: 'HONDURAS', code: 'hn', img: 'https://flagcdn.com/w40/hn.png' },
+  { name: 'EL SALVADOR', code: 'sv', img: 'https://flagcdn.com/w40/sv.png' },
+  { name: 'NICARAGUA', code: 'ni', img: 'https://flagcdn.com/w40/ni.png' },
+  { name: 'COSTA RICA', code: 'cr', img: 'https://flagcdn.com/w40/cr.png' },
+  { name: 'PANAMA', code: 'pa', img: 'https://flagcdn.com/w40/pa.png' },
+  { name: 'PUERTO RICO', code: 'pr', img: 'https://flagcdn.com/w40/pr.png' },
+  { name: 'COLOMBIA', code: 'co', img: 'https://flagcdn.com/w40/co.png' },
+  { name: 'CANADA', code: 'ca', img: 'https://flagcdn.com/w40/ca.png' },
 ];
 
 export const SellerSignupForm = ({ onSuccess }) => {
@@ -22,7 +26,6 @@ export const SellerSignupForm = ({ onSuccess }) => {
 
   const handleCountryChange = (selectedObject) => {
     setCountry(selectedObject);
-    console.log('Country Name:', selectedObject.code);
   };
 
   const handleEmail = (e) => {

@@ -32,26 +32,28 @@ export const HeaderAi = () => {
 
   return (
     <header className="headerAi-container">
-      <div className="headerAi-logo">
-        <Link to="/">
-          <img src={logo} alt="Logo" />
-        </Link>
-      </div>
-      <div className="headerAi-action">
-        <div className="headerAi-right-section">
-          <CustomSelect
-            items={languages}
-            selectedItem={lang}
-            onSelect={handleLanguageChange}
-            type="lang"
-          />
+      <div className="headerAi-content">
+        <div className="headerAi-logo">
+          <Link to="/">
+            <img src={logo} alt="Logo" />
+          </Link>
         </div>
-        <Link to="/contact">
-          <Button>GET A TOUCH</Button>
-        </Link>
-        <Link to="/">
-          <Button variant="outline">TRY THE</Button>
-        </Link>
+        <div className="headerAi-action">
+          <div className="headerAi-right-section">
+            <CustomSelect
+              items={languages}
+              selectedItem={lang}
+              onSelect={handleLanguageChange}
+              type="lang"
+            />
+          </div>
+          <Link to="/contact">
+            <button className="headerAi-orange">GET IN TOUCH</button>
+          </Link>
+          <Link to="/">
+            <button className="headerAi-outline">TRY THE BETA</button>
+          </Link>
+        </div>
       </div>
     </header>
   );

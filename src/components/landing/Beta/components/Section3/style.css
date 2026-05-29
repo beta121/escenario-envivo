@@ -1,0 +1,60 @@
+.beta-section2-wrapper {
+  background: url(../../../../../shared/assets//landing//beta-bg2.png) no-repeat;
+  background-size: cover;
+  min-height: 810px;
+  position: relative;
+}
+
+.beta-section2-wrapper::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 20%;
+  background: linear-gradient(180deg,
+      #000000 0%,
+      rgba(0, 0, 0, 0) 100%);
+  z-index: 1;
+}
+
+.beta-section2-wrapper::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 25%;
+  background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+  z-index: 1;
+}
+
+.beta-section2-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 47px 0;
+}
+
+.beta-section2-title {
+  position: relative;
+  z-index: 3;
+  font-family: Roboto, sans-serif;
+  font-weight: 300;
+  font-size: 40px;
+  color: white;
+  line-height: 100%;
+  margin-bottom: 54px;
+}
+
+.beta-section2-title span {
+  font-weight: 600;
+  color: #E55C28;
+}
+
+.beta-section2-container-card {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}

@@ -2,9 +2,18 @@ import { useState, useEffect } from 'react';
 import { Loader, StreamerInfo, Upcoming } from '../../../components/ui';
 import './style.css';
 
-export const VideoPlayer = ({ videoUrl, streamerData }) => {
+const VIDEO_STATUS = {
+  LIVE: 'live',
+  UPCOMING: 'upcoming',
+  VIDEO: 'video',
+};
+
+export const VideoPlayer = ({ videoUrl, streamerData, status }) => {
   const [isLoading, setIsLoading] = useState(true);
-  const isUpcoming = streamerData.status === 'upcoming';
+
+  const isUpcoming = status === VIDEO_STATUS.UPCOMING;
+  const isRecordedVideo = status === VIDEO_STATUS.VIDEO;
+  const isLive = status === VIDEO_STATUS.LIVE;
 
   useEffect(() => {
     if (videoUrl) {
@@ -17,22 +26,30 @@ export const VideoPlayer = ({ videoUrl, streamerData }) => {
       <main className="video-screen">
         <div className="stream-info-overlay">
           <div className="top-row">
-            <StreamerInfo
-              userId={streamerData?.userId}
-              avatar={streamerData?.avatarUrl}
-              name={streamerData?.userName}
-              rating={streamerData?.rating}
-            />
-            {!isUpcoming && <div className="live-badge">LIVE {streamerData?.badgeText}</div>}
+            <div style={{ width: '300px' }}>
+              <StreamerInfo
+                userId={streamerData?.userId}
+                avatar={streamerData?.avatarUrl}
+                name={streamerData?.userName}
+                rating={streamerData?.rating}
+              />
+            </div>
+
+            {isLive && <div className="live-badge">LIVE {streamerData?.badgeText}</div>}
+            {isRecordedVideo && (
+              <div className="live-badge video-badge">VIEWS {streamerData?.badgeText}</div>
+            )}
           </div>
-          <div className="bottom-row">
-            <h4 className="live-direction">{streamerData?.description}</h4>
-          </div>
+          {!isRecordedVideo && (
+            <div className="bottom-row">
+              <h4 className="live-direction">{streamerData?.description}</h4>
+            </div>
+          )}
         </div>
 
         {!isUpcoming && isLoading && videoUrl && <Loader color="#FFF" />}
 
-        {isUpcoming && <Upcoming timeUpcoming={streamerData.badgeText} />}
+        {isUpcoming && <Upcoming timeUpcoming={streamerData?.badgeText} />}
 
         {isUpcoming ? (
           <div className="video-placeholder upcoming-blackout">
@@ -44,10 +61,12 @@ export const VideoPlayer = ({ videoUrl, streamerData }) => {
               key={videoUrl}
               src={videoUrl}
               className="main-video-element"
-              autoPlay
-              muted
+              controls={isRecordedVideo}
+              autoPlay={!isRecordedVideo}
+              loop={!isRecordedVideo}
+              muted={!isRecordedVideo}
+              autoPlay={true}
               playsInline
-              loop
               onCanPlay={() => setIsLoading(false)}
               onWaiting={() => setIsLoading(true)}
               onPlaying={() => setIsLoading(false)}

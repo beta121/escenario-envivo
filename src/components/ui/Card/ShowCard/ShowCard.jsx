@@ -27,7 +27,7 @@ export const ShowCard = ({ productId, imgSrc, description, price }) => {
                   e.stopPropagation();
                 }}
               >
-                Buy
+                BUY
               </button>
             </div>
           </div>

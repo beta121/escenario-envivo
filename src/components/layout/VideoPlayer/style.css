@@ -47,3 +47,7 @@
   height: 100%;
   object-fit: cover;
 }
+
+.live-badge.video-badge {
+  background-color: rgb(69, 69, 69);
+}

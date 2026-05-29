@@ -10,18 +10,26 @@ html {
 .ai-features-hero {
   height: 95vh;
   background: url('../../shared/assets/ai-features/AiFrame.png') no-repeat center;
-  background-size: cover;
-  background-color: #d5ece7;
+  background-size: contain;
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 
-.ai-features-section {
-  height: 100vh;
-  width: 100%;
+.ai-features-hero h3 {
   color: white;
-  font-family: sans-serif;
-  font-size: 32px;
-  scroll-margin-top: 72px;
+  font-family: Roboto, sans-serif;
+  font-size: 40px;
+  padding: 12px 46px 24px 48px;
+  background-color: #010201;
+  display: flex;
+  width: 658px;
+  align-items: center;
+  margin: 0 auto;
+  border-top-left-radius: 64px;
+  border-top-right-radius: 64px;
 }
 
 .section-market {
@@ -30,17 +38,17 @@ html {
 }
 
 .section-opportunity {
-  background-color: #F5A623;
+  background-color: #010201;
   height: 100vh;
 }
 
 .section-entry {
-  background-color: #D0021B;
+  background-color: white;
   height: 300vh;
 }
 
 .section-beta {
-  background-color: #9013FE;
+  background-color: #010201;
   height: 300vh;
 }
 

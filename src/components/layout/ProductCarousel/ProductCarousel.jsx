@@ -5,7 +5,7 @@ export const ProductCarousel = ({ currentProduct }) => {
   return (
     <section className="products-carousel-section">
       <div className="products-row">
-        {currentProduct.products.map((product, index) => (
+        {currentProduct.map((product, index) => (
           <ProductCard key={product.productId} product={product} />
         ))}
       </div>

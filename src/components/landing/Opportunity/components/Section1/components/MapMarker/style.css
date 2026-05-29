@@ -1,0 +1,31 @@
+.map-marker {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.marker-bubble {
+  font-family: Roboto, sans-serif;
+  background: #E55C28;
+  color: white;
+  padding: 15px 28px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 18px;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.marker-dot {
+  position: relative;
+  top: -14px;
+  left: -38%;
+  width: 24px;
+  height: 24px;
+  background: white;
+  border-radius: 50%;
+  border: 4px solid #E55C28;
+}

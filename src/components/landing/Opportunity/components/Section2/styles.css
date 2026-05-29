@@ -1,0 +1,65 @@
+.opportunity-percent_container {
+  width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.opportunity-percent_wrapper {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 48px 39px;
+}
+
+
+.opportunity-percent_title {
+  font-family: Roboto, sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 100%;
+  color: #FFFFFF;
+  border-radius: 8px;
+  max-width: 624px;
+  width: 100%;
+  padding: 18px 0;
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.opportunity-percent_title.orang {
+  background-color: #E55C28;
+}
+
+.opportunity-percent_wrapper.orang {
+  background-color: #E55C28;
+}
+
+.opportunity-percent_wrapper.orang .opportunity-percent_title {
+  background-color: #010201;
+}
+
+.opportunity-animation_wrapper {
+  display: flex;
+  gap: 24px;
+  flex-direction: column;
+  max-width: 466px;
+  width: 100%;
+}
+
+.opportunity-animation_container {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.opportunity-animation_text {
+
+  font-family: Roboto, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #FFFFFF;
+  max-width: 296px;
+}

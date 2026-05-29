@@ -1,22 +1,36 @@
 import { useMemo, useState } from 'react';
-import { CategoryAction, HighlightCard } from '../../components/ui';
+import { CategoryAction, HighlightCard, Short } from '../../components/ui';
 import { ExpandableBox, FavoriteSellers } from '../../components/layout';
 import { streamsData } from '../../shared/assets/user/streamsData';
-import { productHighlights } from '../../shared/assets/products/productHighlights';
+import { products } from '../../shared/assets/products/products';
+import { shorts } from '../../shared/assets/user/shorts1';
 import { StreamCard } from '../../components/ui';
+
+import AppliancesIcon from '../../shared/assets/svg/AppliancesIcon';
+import GadgetsIcon from '../../shared/assets/svg/GadgetsIcon';
+import PhonesIcon from '../../shared/assets/svg/PhonesIcon';
+import ToysIcon from '../../shared/assets/svg/ToysIcon';
+import ScreensIcon from '../../shared/assets/svg/ScreensIcon';
+import ConsolesIcon from '../../shared/assets/svg/ConsolesIcon';
+import CamerasIcon from '../../shared/assets/svg/CamerasIcon';
+import DevicesIcon from '../../shared/assets/svg/DevicesIcon';
+import OfficeIcon from '../../shared/assets/svg/OfficeIcon';
+import RefrigeratorIcon from '../../shared/assets/svg/RefrigeratorIcon';
+
 import './styles.css';
 
-const categoriesFilters = [
-  'Appliances',
-  'Computers',
-  'Telephones',
-  'Electric toys',
-  'Accessories',
-  'Televisions',
-  'Laptops',
-  'Video game consoles',
-  'Digital cameras',
-];
+const categoryIcons = {
+  Accessories: <RefrigeratorIcon />,
+  Gadgets: <GadgetsIcon />,
+  Phones: <PhonesIcon />,
+  Toys: <ToysIcon />,
+  Screens: <ScreensIcon />,
+  Gaming: <ConsolesIcon />,
+  Cameras: <CamerasIcon />,
+  Devices: <DevicesIcon />,
+  Office: <OfficeIcon />,
+  Appliances: <AppliancesIcon />,
+};
 
 const Home = () => {
   const [category, setCategory] = useState('all');
@@ -25,58 +39,69 @@ const Home = () => {
     setCategory((prev) => (prev === key ? 'all' : key));
   };
 
-  const liveStreams = useMemo(() => {
-    const live = streamsData.filter((item) => item.status === 'live');
-    const video = streamsData.filter((item) => item.status === 'video');
-
-    if (category === 'all') return [...live, ...video];
-
-    const currentCategoryLive = live.filter((item) => item.category === category);
-    const otherLive = live.filter((item) => item.category !== category);
-    const currentCategoryVideo = video.filter((item) => item.category === category);
-
-    return [...currentCategoryLive, ...otherLive, ...currentCategoryVideo];
+  const combinedStreams = useMemo(() => {
+    if (category === 'all') return streamsData;
+    const filtered = streamsData.filter((item) => item.category === category);
+    return filtered.length > 0 ? filtered : streamsData;
   }, [category, streamsData]);
 
-  const upcomingSorted = useMemo(() => {
-    const raw = streamsData.filter((item) => item.status === 'upcoming');
+  const currentProducts = products.map((product) => product.products[0]);
 
-    if (category === 'all') return raw;
+  const limitShorts = useMemo(() => {
+    const firsts = Object.values(
+      shorts.reduce((acc, short) => {
+        if (!acc[short.userId]) {
+          acc[short.userId] = short;
+        }
+        return acc;
+      }, {})
+    );
 
-    return [
-      ...raw.filter((item) => item.category === category),
-      ...raw.filter((item) => item.category !== category),
-    ];
-  }, [category]);
+    if (shorts.length <= 12) return shorts;
+    if (firsts.length >= 12) return firsts.slice(0, 12);
+
+    const takenIds = new Set(firsts.map((s) => s.id));
+
+    const remaining = shorts.filter((short) => !takenIds.has(short.id));
+
+    const needed = 12 - firsts.length;
+
+    return [...firsts, ...remaining.slice(0, needed)];
+  }, []);
 
   return (
     <div className="main-container">
-      <CategoryAction onSelect={handleClick} active={category} categories={categoriesFilters} />
-      <div style={{ marginTop: '15px' }}>
-        <ExpandableBox title="LIVE NOW" showGradient={false} showMo={liveStreams.length}>
-          {liveStreams?.map((stream) => (
-            <StreamCard stream={stream} key={stream.videoId} />
+      <CategoryAction onSelect={handleClick} active={category} categories={categoryIcons} />
+
+      {/* Блок с стримами */}
+      <div style={{ margin: '15px 0 24px' }}>
+        <ExpandableBox showGradient={false} showMo={combinedStreams.length}>
+          {(combinedStreams || []).map((stream) => (
+            <StreamCard stream={stream} key={`stream-${stream.videoId}`} />
           ))}
         </ExpandableBox>
       </div>
 
-      <ExpandableBox title="UPCOMING Streams" showGradient={false} showMo={upcomingSorted.length}>
-        {upcomingSorted?.map((stream) => (
-          <StreamCard stream={stream} key={stream.videoId} />
-        ))}
-      </ExpandableBox>
+      {/* Блок с продуктами */}
+      <div style={{ margin: '15px 0 24px' }}>
+        <ExpandableBox showGradient={false} showMo={currentProducts.length}>
+          {(currentProducts || []).map((product, index) => {
+            const productId = product?.id || product?.productId || product?._id || index;
 
-      <ExpandableBox
-        title="Product highlights"
-        showGradient={false}
-        showMo={productHighlights.length}
-      >
-        {productHighlights?.map((product) => (
-          <HighlightCard product={product} key={product.id} />
-        ))}
-      </ExpandableBox>
+            return <HighlightCard product={product} key={`product-${productId}`} />;
+          })}
+        </ExpandableBox>
+      </div>
 
-      <FavoriteSellers title="DISCOVER AMAZING SELLERS" />
+      <div style={{ margin: '15px 0 24px' }}>
+        <ExpandableBox showGradient={false} showMo={limitShorts.length}>
+          {(limitShorts || []).map((short) => (
+            <Short key={`short-${short.id}`} short={short} showInfo={false} />
+          ))}
+        </ExpandableBox>
+      </div>
+
+      <FavoriteSellers title="TRENDING SELLERS" />
     </div>
   );
 };

@@ -1,0 +1,28 @@
+.broadcast-page {
+  max-width: 1440px;
+  margin: 0 auto;
+  margin-top: 20px
+}
+
+.view-section {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  height: 640px;
+}
+
+.chat-sidebar {
+  flex: 1;
+  min-width: 300px;
+  height: auto;
+  border-radius: 16px;
+}
+
+.broadcast-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 8px;
+}

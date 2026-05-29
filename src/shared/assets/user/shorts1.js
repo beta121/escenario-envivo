@@ -3,6 +3,42 @@ import short2 from '../short/short2.png'
 import short3 from '../short/short3.png'
 import short4 from '../short/short4.png'
 
+import short11 from '../short/ShortsPhoto_1.png'
+import short22 from '../short/ShortsPhoto_2.png'
+import short33 from '../short/ShortsPhoto_3.png'
+import short44 from '../short/ShortsPhoto_4.png'
+import short55 from '../short/ShortsPhoto_5.png'
+
+import shortVideo1 from '../short/shortVideo1.mp4'
+import shortVideo2 from '../short/shortVideo2.mp4'
+import shortVideo3 from '../short/shortVideo3.mp4'
+import shortVideo4 from '../short/shortVideo4.mp4'
+import shortVideo5 from '../short/shortVideo5.mp4'
+import shortVideo6 from '../short/shortVideo6.mp4'
+import shortVideo7 from '../short/shortVideo7.mp4'
+import shortVideo8 from '../short/shortVideo8.mp4'
+import shortVideo9 from '../short/shortVideo9.mp4'
+import shortVideo10 from '../short/shortVideo10.mp4'
+import shortVideo11 from '../short/shortVideo11.mp4'
+import shortVideo12 from '../short/shortVideo12.mp4'
+import shortVideo13 from '../short/shortVideo13.mp4'
+import shortVideo14 from '../short/shortVideo14.mp4'
+import shortVideo15 from '../short/shortVideo15.mp4'
+import shortVideo16 from '../short/shortVideo16.mp4'
+import shortVideo17 from '../short/shortVideo17.mp4'
+import shortVideo18 from '../short/shortVideo18.mp4'
+import shortVideo19 from '../short/shortVideo19.mp4'
+import shortVideo20 from '../short/shortVideo20.mp4'
+import shortVideo21 from '../short/shortVideo21.mp4'
+import shortVideo22 from '../short/shortVideo22.mp4'
+import shortVideo23 from '../short/shortVideo23.mp4'
+import shortVideo24 from '../short/shortVideo24.mp4'
+import shortVideo25 from '../short/shortVideo25.mp4'
+
+
+
+
+
 
 
 export const shorts = [
@@ -13,7 +49,8 @@ export const shorts = [
     views: '3K',
     category: 'Competers',
     tags: ['Trxt', 'trewd', 'wuec'],
-    videoUrl: short1
+    posterUrl: short11,
+    shortSrc: shortVideo1,
   },
   {
     id: 2,
@@ -22,7 +59,8 @@ export const shorts = [
     views: '1K',
     category: 'Competers',
     tags: ['Trxt', 'trewd', 'wuec'],
-    videoUrl: short2
+    posterUrl: short2,
+    shortSrc: shortVideo2,
   }, {
     id: 3,
     userId: 1,
@@ -30,7 +68,9 @@ export const shorts = [
     views: '2.4K',
     category: 'Competers',
     tags: ['Trxt', 'trewd', 'wuec'],
-    videoUrl: short3
+    posterUrl: short3,
+    shortSrc: shortVideo3,
+
   },
   {
     id: 4,
@@ -39,7 +79,9 @@ export const shorts = [
     views: '2K',
     category: 'Competers',
     tags: ['Trxt', 'trewd', 'wuec'],
-    videoUrl: short4
+    posterUrl: short4,
+    shortSrc: shortVideo4,
+
   },
   {
     id: 5,
@@ -48,7 +90,9 @@ export const shorts = [
     views: '2K',
     category: 'Competers',
     tags: ['Trxt', 'trewd', 'wuec'],
-    videoUrl: short4
+    posterUrl: short4,
+    shortSrc: shortVideo5,
+
   },
   // =====
 
@@ -59,7 +103,8 @@ export const shorts = [
     views: '3K',
     category: 'Competers',
     tags: ['Trxt', 'trewd', 'wuec'],
-    videoUrl: short1
+    posterUrl: short22,
+    shortSrc: shortVideo6,
   },
   {
     id: 7,
@@ -68,7 +113,9 @@ export const shorts = [
     views: '1K',
     category: 'Competers',
     tags: ['Trxt', 'trewd', 'wuec'],
-    videoUrl: short2
+    posterUrl: short2,
+    shortSrc: shortVideo7,
+
   }, {
     id: 8,
     userId: 2,
@@ -76,7 +123,9 @@ export const shorts = [
     views: '2.4K',
     category: 'Competers',
     tags: ['Trxt', 'trewd', 'wuec'],
-    videoUrl: short3
+    posterUrl: short3,
+    shortSrc: shortVideo8,
+
   },
   {
     id: 9,
@@ -85,7 +134,9 @@ export const shorts = [
     views: '2K',
     category: 'Competers',
     tags: ['Trxt', 'trewd', 'wuec'],
-    videoUrl: short4
+    posterUrl: short4,
+    shortSrc: shortVideo9,
+
   },
   {
     id: 10,
@@ -94,7 +145,9 @@ export const shorts = [
     views: '2K',
     category: 'Competers',
     tags: ['Trxt', 'trewd', 'wuec'],
-    videoUrl: short4
+    posterUrl: short4,
+    shortSrc: shortVideo10,
+
   },
   // =====
 
@@ -105,7 +158,9 @@ export const shorts = [
     views: '3K',
     category: 'Competers',
     tags: ['Trxt', 'trewd', 'wuec'],
-    videoUrl: short1
+    posterUrl: short33,
+    shortSrc: shortVideo11,
+
   },
   {
     id: 12,
@@ -114,7 +169,9 @@ export const shorts = [
     views: '1K',
     category: 'Competers',
     tags: ['Trxt', 'trewd', 'wuec'],
-    videoUrl: short2
+    posterUrl: short2,
+    shortSrc: shortVideo12,
+
   }, {
     id: 13,
     userId: 3,
@@ -122,7 +179,9 @@ export const shorts = [
     views: '2.4K',
     category: 'Competers',
     tags: ['Trxt', 'trewd', 'wuec'],
-    videoUrl: short3
+    posterUrl: short3,
+    shortSrc: shortVideo13,
+
   },
   {
     id: 14,
@@ -131,7 +190,9 @@ export const shorts = [
     views: '2K',
     category: 'Competers',
     tags: ['Trxt', 'trewd', 'wuec'],
-    videoUrl: short4
+    posterUrl: short4,
+    shortSrc: shortVideo14,
+
   },
   {
     id: 15,
@@ -140,7 +201,9 @@ export const shorts = [
     views: '2K',
     category: 'Competers',
     tags: ['Trxt', 'trewd', 'wuec'],
-    videoUrl: short4
+    posterUrl: short4,
+    shortSrc: shortVideo15,
+
   },
   // =====
 
@@ -151,7 +214,9 @@ export const shorts = [
     views: '3K',
     category: 'Competers',
     tags: ['Trxt', 'trewd', 'wuec'],
-    videoUrl: short1
+    posterUrl: short44,
+    shortSrc: shortVideo16,
+
   },
   {
     id: 17,
@@ -160,7 +225,9 @@ export const shorts = [
     views: '1K',
     category: 'Competers',
     tags: ['Trxt', 'trewd', 'wuec'],
-    videoUrl: short2
+    posterUrl: short2,
+    shortSrc: shortVideo17,
+
   }, {
     id: 18,
     userId: 4,
@@ -168,7 +235,9 @@ export const shorts = [
     views: '2.4K',
     category: 'Competers',
     tags: ['Trxt', 'trewd', 'wuec'],
-    videoUrl: short3
+    posterUrl: short3,
+    shortSrc: shortVideo18,
+
   },
   {
     id: 19,
@@ -177,7 +246,9 @@ export const shorts = [
     views: '2K',
     category: 'Competers',
     tags: ['Trxt', 'trewd', 'wuec'],
-    videoUrl: short4
+    posterUrl: short4,
+    shortSrc: shortVideo19,
+
   },
   {
     id: 20,
@@ -186,7 +257,9 @@ export const shorts = [
     views: '2K',
     category: 'Competers',
     tags: ['Trxt', 'trewd', 'wuec'],
-    videoUrl: short4
+    posterUrl: short4,
+    shortSrc: shortVideo20,
+
   },
 
   // ====
@@ -197,7 +270,9 @@ export const shorts = [
     views: '3K',
     category: 'Competers',
     tags: ['Trxt', 'trewd', 'wuec'],
-    videoUrl: short1
+    posterUrl: short55,
+    shortSrc: shortVideo21,
+
   },
   {
     id: 22,
@@ -206,7 +281,9 @@ export const shorts = [
     views: '1K',
     category: 'Competers',
     tags: ['Trxt', 'trewd', 'wuec'],
-    videoUrl: short2
+    posterUrl: short2,
+    shortSrc: shortVideo22,
+
   }, {
     id: 23,
     userId: 5,
@@ -214,7 +291,9 @@ export const shorts = [
     views: '2.4K',
     category: 'Competers',
     tags: ['Trxt', 'trewd', 'wuec'],
-    videoUrl: short3
+    posterUrl: short3,
+    shortSrc: shortVideo23,
+
   },
   {
     id: 24,
@@ -223,7 +302,9 @@ export const shorts = [
     views: '2K',
     category: 'Competers',
     tags: ['Trxt', 'trewd', 'wuec'],
-    videoUrl: short4
+    posterUrl: short4,
+    shortSrc: shortVideo24,
+
   },
   {
     id: 25,
@@ -232,7 +313,7 @@ export const shorts = [
     views: '2K',
     category: 'Competers',
     tags: ['Trxt', 'trewd', 'wuec'],
-    videoUrl: short4
+    posterUrl: short4,
+    shortSrc: shortVideo25,
   },
-
 ]
