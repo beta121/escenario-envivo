@@ -3,7 +3,7 @@ import { CustomSelect, SearchBar, Modal, TextField, Button, Toasty } from '../..
 import { SellerSignupForm, ShoppingSignupForm } from '../../../layout';
 import { useTranslation } from 'react-i18next';
 import { useOutsideClick } from '../../../../shared/hooks/useOutsideClick';
-import logo from '../../../../shared/assets/Logo.png';
+import logo from '../../../../shared/assets/Logo.jpg';
 import './styles.css';
 
 const regions = [

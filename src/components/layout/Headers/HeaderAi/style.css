@@ -24,6 +24,13 @@
   flex: 0 1 100%;
 }
 
+.headerAi-logo img {
+  width: 148px;
+  height: 48px;
+  object-fit: cover;
+  display: block;
+}
+
 .headerAi-action {
   display: flex;
   align-items: center;
