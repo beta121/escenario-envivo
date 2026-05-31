@@ -22,6 +22,10 @@
 
 .logo-container img {
   display: block;
+  width: 148px;
+  height: 48px;
+  object-fit: cover;
+  display: block;
 }
 
 .header-right-section {
