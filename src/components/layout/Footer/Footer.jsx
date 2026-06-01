@@ -1,5 +1,5 @@
 import { NavLink, useLocation } from 'react-router-dom';
-import LogoFooter from '../../../shared/assets/Logo-footer.png';
+import LogoFooter from '../../../shared/assets/Logo-footer.svg';
 
 import './styles.css';
 
