@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import { Button, CustomSelect } from '../../../ui';
 import { useTranslation } from 'react-i18next';
-import logo from '../../../../shared/assets/Logo.png';
+import logo from '../../../../shared/assets/Logo.svg';
 import './style.css';
 
 const languages = [

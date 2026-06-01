@@ -33,6 +33,12 @@
   color: inherit;
 }
 
+.footer-logo img {
+  width: 148px;
+  height: 48px;
+  object-fit: contain;
+}
+
 .footer-nav {
   display: flex;
   gap: 30px;

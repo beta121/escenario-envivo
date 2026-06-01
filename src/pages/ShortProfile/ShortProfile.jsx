@@ -166,7 +166,6 @@ const ShortProfile = () => {
               <div className="active-video-container">
                 <video
                   key={currentShort.id}
-                  poster={currentShort.posterUrl}
                   src={currentShort.shortSrc}
                   autoPlay
                   loop

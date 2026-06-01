@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Loader, StreamerInfo, Upcoming } from '../../../components/ui';
+import { useLiveVideoRandomTime } from './hooks';
 import './style.css';
 
 const VIDEO_STATUS = {
@@ -14,6 +15,8 @@ export const VideoPlayer = ({ videoUrl, streamerData, status }) => {
   const isUpcoming = status === VIDEO_STATUS.UPCOMING;
   const isRecordedVideo = status === VIDEO_STATUS.VIDEO;
   const isLive = status === VIDEO_STATUS.LIVE;
+
+  const videoRef = useLiveVideoRandomTime(isLive, videoUrl);
 
   useEffect(() => {
     if (videoUrl) {
@@ -60,11 +63,12 @@ export const VideoPlayer = ({ videoUrl, streamerData, status }) => {
             <video
               key={videoUrl}
               src={videoUrl}
+              ref={videoRef}
               className="main-video-element"
               controls={isRecordedVideo}
               autoPlay={!isRecordedVideo}
               loop={!isRecordedVideo}
-              muted={!isRecordedVideo}
+              muted={false}
               autoPlay={true}
               playsInline
               onCanPlay={() => setIsLoading(false)}

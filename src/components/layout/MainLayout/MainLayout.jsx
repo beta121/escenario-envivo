@@ -1,7 +1,7 @@
 import { Outlet, useLocation } from 'react-router-dom';
 import { HeaderMain, HeaderAi } from '../../layout/Headers';
 import { Footer } from '../../layout';
-import ScrollToTop from '../../../shared/hooks/ScrollToTop';
+import { ScrollToTop } from '../../../shared/helpers';
 
 import './styles.css';
 
