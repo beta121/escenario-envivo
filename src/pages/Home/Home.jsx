@@ -84,7 +84,7 @@ const Home = () => {
 
       {/* Блок с продуктами */}
       <div style={{ margin: '15px 0 24px' }}>
-        <ExpandableBox showGradient={false} showMo={currentProducts.length}>
+        <ExpandableBox showGradient={false} showMo={currentProducts.length} gap={20}>
           {(currentProducts || []).map((product, index) => {
             const productId = product?.id || product?.productId || product?._id || index;
 

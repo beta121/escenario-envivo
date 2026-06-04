@@ -4,6 +4,9 @@ import { SellerSignupForm, ShoppingSignupForm } from '../../../layout';
 import { useTranslation } from 'react-i18next';
 import { useOutsideClick } from '../../../../shared/hooks/useOutsideClick';
 import logo from '../../../../shared/assets/Logo.svg';
+import burger from '../../../../shared/assets/burger.svg';
+import search from '../../../../shared/assets/search.svg';
+
 import './styles.css';
 
 const regions = [
@@ -61,28 +64,40 @@ export const HeaderMain = () => {
           </a>
         </div>
 
-        <CustomSelect items={regions} selectedItem={region} onSelect={setRegion} type="region" />
+        <div className="desktop-menu">
+          <CustomSelect items={regions} selectedItem={region} onSelect={setRegion} type="region" />
 
-        <SearchBar onSearch={(val) => console.log(val)} />
+          <SearchBar onSearch={(val) => console.log(val)} />
 
-        <div className="header-right-section">
-          <CustomSelect
-            items={languages}
-            selectedItem={lang}
-            onSelect={handleLanguageChange}
-            type="lang"
-          />
+          <div className="header-right-section">
+            <CustomSelect
+              items={languages}
+              selectedItem={lang}
+              onSelect={handleLanguageChange}
+              type="lang"
+            />
 
-          <a href="#" className="login-link">
-            Log in
-          </a>
+            <a href="#" className="login-link">
+              Log in
+            </a>
 
-          <div className="cta-buttons">
-            <Button variant="outline" onClick={() => openModal('selling')}>
-              START SELLING
-            </Button>
-            <Button onClick={() => openModal('shopping')}>START SHOPPING</Button>
+            <div className="cta-buttons">
+              <Button variant="outline" onClick={() => openModal('selling')}>
+                START SELLING
+              </Button>
+              <Button onClick={() => openModal('shopping')}>START SHOPPING</Button>
+            </div>
           </div>
+        </div>
+
+        <div className="mobile-menu">
+          <button>
+            <img className="search-icon" src={search} />
+          </button>
+
+          <button>
+            <img className="burger-icon" src={burger} />
+          </button>
         </div>
       </div>
       {modalType && (

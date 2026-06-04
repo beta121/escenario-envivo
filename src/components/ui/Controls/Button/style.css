@@ -1,5 +1,4 @@
 .btn {
-  padding: 13px 30px;
   border-radius: 22px;
   width: 100%;
   font-weight: 700;
@@ -70,4 +69,19 @@
 .btn-outline:disabled {
   background: transparent;
   border: 1px solid #ccc;
+}
+
+@media (min-width: 800px) {
+  .btn {
+    padding: 12px 8px;
+    font-size: 12px;
+  }
+}
+
+
+@media (min-width: 1280px) {
+  .btn {
+    padding: 12px 16px;
+    font-size: 16px;
+  }
 }

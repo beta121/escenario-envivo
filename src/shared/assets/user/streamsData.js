@@ -230,6 +230,7 @@ export const streamsData = [
     rating: 5,
     isNewSeller: true,
     hasNotification: false,
+    screenSaver: ''
   },
   {
     videoId: '13',
@@ -246,6 +247,7 @@ export const streamsData = [
     rating: 4.4,
     isNewSeller: false,
     hasNotification: false,
+    screenSaver: ''
   },
   {
     videoId: '14',
@@ -262,6 +264,7 @@ export const streamsData = [
     badgeText: '2.2K',
     rating: 4.1,
     hasNotification: false,
+    screenSaver: ''
   },
   {
     videoId: '15',
@@ -278,6 +281,7 @@ export const streamsData = [
     rating: 4.8,
     isNewSeller: false,
     hasNotification: false,
+    screenSaver: ''
   },
   {
     videoId: '16',
@@ -294,5 +298,6 @@ export const streamsData = [
     rating: 4,
     isNewSeller: false,
     hasNotification: false,
+    screenSaver: ''
   },
 ]
