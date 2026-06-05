@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { CustomSelect, SearchBar, Modal, TextField, Button, Toasty } from '../../../ui';
 import { SellerSignupForm, ShoppingSignupForm } from '../../../layout';
 import { useTranslation } from 'react-i18next';
@@ -29,6 +30,7 @@ const languages = [
 ];
 
 export const HeaderMain = () => {
+  const [isOpenBurger, setIsOpenBurger] = useState(false);
   const { i18n } = useTranslation();
   const [region, setRegion] = useState(regions[0]);
   const [lang, setLang] = useState(() => {
@@ -59,9 +61,9 @@ export const HeaderMain = () => {
     <header className="header">
       <div className="header-content">
         <div className="logo-container">
-          <a href="/escenario-envivo/">
+          <Link to="/">
             <img src={logo} alt="Logo" />
-          </a>
+          </Link>
         </div>
 
         <div className="desktop-menu">
@@ -77,9 +79,9 @@ export const HeaderMain = () => {
               type="lang"
             />
 
-            <a href="#" className="login-link">
+            <Link className="login-link" to="/login">
               Log in
-            </a>
+            </Link>
 
             <div className="cta-buttons">
               <Button variant="outline" onClick={() => openModal('selling')}>
@@ -95,7 +97,7 @@ export const HeaderMain = () => {
             <img className="search-icon" src={search} />
           </button>
 
-          <button>
+          <button onClick={() => setIsOpenBurger((prev) => !prev)}>
             <img className="burger-icon" src={burger} />
           </button>
         </div>
