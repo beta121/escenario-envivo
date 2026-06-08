@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { CustomSelect, SearchBar, Modal, TextField, Button, Toasty } from '../../../ui';
 import { SellerSignupForm, ShoppingSignupForm } from '../../../layout';
+import { useHeader } from '../../../../shared/context/HeaderContext';
+
 import { useTranslation } from 'react-i18next';
 import { useOutsideClick } from '../../../../shared/hooks/useOutsideClick';
 import logo from '../../../../shared/assets/Logo.svg';
@@ -31,6 +33,7 @@ const languages = [
 
 export const HeaderMain = () => {
   const [isOpenBurger, setIsOpenBurger] = useState(false);
+
   const { i18n } = useTranslation();
   const [region, setRegion] = useState(regions[0]);
   const [lang, setLang] = useState(() => {
@@ -40,6 +43,8 @@ export const HeaderMain = () => {
   const [isOpenTost, setIsOpenTost] = useState(false);
   const modalRef = useOutsideClick(() => setModalType(null));
   const [modalType, setModalType] = useState(null); // 'selling' | 'shopping' | null
+
+  const { toggleSearch } = useHeader();
 
   useEffect(() => {
     const current = languages.find((l) => l.code === i18n.language);
@@ -93,7 +98,7 @@ export const HeaderMain = () => {
         </div>
 
         <div className="mobile-menu">
-          <button>
+          <button onClick={toggleSearch}>
             <img className="search-icon" src={search} />
           </button>
 
