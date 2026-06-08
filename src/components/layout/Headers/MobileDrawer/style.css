@@ -1,0 +1,102 @@
+/* ========================================================
+   Затемнение заднего фона (Overlay)
+   ======================================================== */
+.mobile-drawer-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2000;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.mobile-drawer-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ========================================================
+   Выезжающая белая плашка (Drawer)
+   ======================================================== */
+.mobile-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 290px;
+  max-width: 85%;
+  height: 100vh;
+  background-color: #ffffff;
+  z-index: 2001;
+  padding: 24px;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+
+  /* Прячем за правый край экрана */
+  transform: translateX(100%);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-drawer.active {
+  /* Выдвигаем */
+  transform: translateX(0);
+}
+
+.drawer-header {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 32px;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+  padding: 4px;
+}
+
+.drawer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.drawer-content button {
+  width: 100%;
+}
+
+.login-link-mobile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.drawer-selectors {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+/* Отключаем отображение на десктопах */
+@media (min-width: 800px) {
+
+  .mobile-drawer,
+  .mobile-drawer-overlay {
+    display: none !important;
+  }
+}

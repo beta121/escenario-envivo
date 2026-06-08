@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { CustomSelect, SearchBar, Modal, TextField, Button, Toasty } from '../../../ui';
 import { SellerSignupForm, ShoppingSignupForm } from '../../../layout';
 import { useHeader } from '../../../../shared/context/HeaderContext';
-
+import { MobileDrawer } from '../MobileDrawer/MobileDrawer';
 import { useTranslation } from 'react-i18next';
 import { useOutsideClick } from '../../../../shared/hooks/useOutsideClick';
 import logo from '../../../../shared/assets/Logo.svg';
@@ -96,6 +96,18 @@ export const HeaderMain = () => {
             </div>
           </div>
         </div>
+
+        <MobileDrawer
+          isOpen={isOpenBurger}
+          onClose={() => setIsOpenBurger(false)}
+          regions={regions}
+          region={region}
+          setRegion={setRegion}
+          languages={languages}
+          lang={lang}
+          handleLanguageChange={handleLanguageChange}
+          openModal={openModal}
+        />
 
         <div className="mobile-menu">
           <button onClick={toggleSearch}>
