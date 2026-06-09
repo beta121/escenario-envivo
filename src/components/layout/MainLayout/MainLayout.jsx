@@ -19,7 +19,7 @@ export const MainLayout = () => {
 
         {isAIFeaturesPage ? <HeaderAi /> : <HeaderMain />}
 
-        <section className="main-content" style={{ paddingLeft: isAIFeaturesPage ? '' : '16px' }}>
+        <section className="main-content">
           <Outlet />
         </section>
 

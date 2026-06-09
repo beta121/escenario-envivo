@@ -1,13 +1,20 @@
 .main-container {
   max-width: 1320px;
   margin: 0 auto;
-  padding: 0 0;
+  padding-left: 16px;
   margin-top: 20px;
   box-sizing: border-box;
 }
 
 @media (min-width: 800px) {
+
   .main-search-container {
     display: none;
+  }
+}
+
+@media (min-width: 1400px) {
+  .main-container {
+    padding-left: 0;
   }
 }

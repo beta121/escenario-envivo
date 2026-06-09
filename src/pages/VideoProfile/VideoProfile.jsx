@@ -1,4 +1,4 @@
-import { useParams, Outlet } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { ProductCarousel, ChatSidebar, VideoPlayer } from '../../components/layout';
 import { streamsData } from '../../shared/assets/user/streamsData';
 import { products } from '../../shared/assets/products/products';
@@ -33,8 +33,6 @@ const VideoProfile = () => {
           <ProductCarousel currentProduct={prods} />
         </footer>
       </div>
-
-      <Outlet />
     </section>
   );
 };

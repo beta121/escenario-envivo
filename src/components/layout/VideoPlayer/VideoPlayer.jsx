@@ -62,7 +62,7 @@ export const VideoPlayer = ({ videoUrl, streamerData, status }) => {
           videoUrl && (
             <video
               key={videoUrl}
-              src={videoUrl}
+              // src={videoUrl}
               ref={videoRef}
               className="main-video-element"
               controls={isRecordedVideo}

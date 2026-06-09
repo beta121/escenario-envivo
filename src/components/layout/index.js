@@ -10,5 +10,7 @@ export * from './ShoppingSignupForm'
 export * from './SellerStore'
 export * from './Tab'
 export * from './StoreTabsController'
+export * from './VideoPlayers'
+
 
 
