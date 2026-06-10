@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Loader, StreamerInfo, Upcoming } from '../../../components/ui';
+import { Loader, StreamerInfo } from '../../../components/ui';
 import { useLiveVideoRandomTime } from './hooks';
 import './style.css';
 
@@ -51,8 +51,6 @@ export const VideoPlayer = ({ videoUrl, streamerData, status }) => {
         </div>
 
         {!isUpcoming && isLoading && videoUrl && <Loader color="#FFF" />}
-
-        {isUpcoming && <Upcoming timeUpcoming={streamerData?.badgeText} />}
 
         {isUpcoming ? (
           <div className="video-placeholder upcoming-blackout">

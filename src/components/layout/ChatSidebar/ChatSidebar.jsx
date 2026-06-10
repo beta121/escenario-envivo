@@ -1,5 +1,7 @@
 import { useEffect, useState, useRef } from 'react';
 import { ChatInput, ChatMessage } from '../../ui';
+import ExpandArrow from '../../../shared/assets/svg/ExpandArrow';
+import ChatIcon from '../../../shared/assets/svg/ChatIcon';
 import './style.css';
 
 const chatMessages = [
@@ -103,85 +105,82 @@ const chatMessages = [
   },
 ];
 
-export const ChatSidebar = () => {
-  const [message, setMessage] = useState([
-    {
-      id: 1,
-      user: { userName: 'tinyanda866', avatarUrl: null },
-      text: {
-        content: 'Lorem ipsum dolor sit amet consectetur. Viverra donec pellentesque nulla amet.',
-        isSpecial: false,
-      },
-      color: '#6c5ce7',
+const defaultMessage = [
+  {
+    id: 1,
+    user: { userName: 'tinyanda866', avatarUrl: null },
+    text: {
+      content: 'Lorem ipsum dolor sit amet consectetur. Viverra donec pellentesque nulla amet.',
+      isSpecial: false,
     },
-    {
-      id: 2,
-      user: { userName: 'beautifulbutterfly101', avatarUrl: 'https://i.pravatar.cc/150?u=1' },
-      text: {
-        content: 'Lorem ipsum dolor sit amet consectetur. Tortor id sit a nec.',
-        isSpecial: false,
-      },
+    color: '#6c5ce7',
+  },
+  {
+    id: 2,
+    user: { userName: 'beautifulbutterfly101', avatarUrl: 'https://i.pravatar.cc/150?u=1' },
+    text: {
+      content: 'Lorem ipsum dolor sit amet consectetur. Tortor id sit a nec.',
+      isSpecial: false,
     },
-    {
-      id: 3,
-      user: { userName: 'whiterabbit554', avatarUrl: 'https://i.pravatar.cc/150?u=2' },
-      text: {
-        content:
-          'Lorem ipsum dolor sit 😊 amet consectetur. At fringilla aenean quis mattis ut aliquet. 😊',
-        isSpecial: false,
-      },
+  },
+  {
+    id: 3,
+    user: { userName: 'whiterabbit554', avatarUrl: 'https://i.pravatar.cc/150?u=2' },
+    text: {
+      content:
+        'Lorem ipsum dolor sit 😊 amet consectetur. At fringilla aenean quis mattis ut aliquet. 😊',
+      isSpecial: false,
     },
-    {
-      id: 4,
-      user: { userName: 'brownbear646', avatarUrl: 'https://i.pravatar.cc/150?u=3' },
-      text: {
-        content:
-          'Lorem ipsum dolor sit amet consectetur. Hac at velit odio aliquam sapien ullamcorper ✔️',
-        isSpecial: true,
-      },
+  },
+  {
+    id: 4,
+    user: { userName: 'brownbear646', avatarUrl: 'https://i.pravatar.cc/150?u=3' },
+    text: {
+      content:
+        'Lorem ipsum dolor sit amet consectetur. Hac at velit odio aliquam sapien ullamcorper ✔️',
+      isSpecial: true,
     },
-    {
-      id: 5,
-      user: { userName: 'lazymeercat616', avatarUrl: null },
-      text: {
-        content: 'Lorem ipsum dolor sit amet consectetur. Eget nunc odio mollis sed vitae posuere.',
-        isSpecial: false,
-      },
-      color: '#d63031',
+  },
+  {
+    id: 5,
+    user: { userName: 'lazymeercat616', avatarUrl: null },
+    text: {
+      content: 'Lorem ipsum dolor sit amet consectetur. Eget nunc odio mollis sed vitae posuere.',
+      isSpecial: false,
     },
-    {
-      id: 6,
-      user: { userName: 'coolshark22', avatarUrl: 'https://i.pravatar.cc/150?u=4' },
-      text: { content: "Is the stream starting soon? Can't wait! 🚀", isSpecial: false },
-    },
-    {
-      id: 7,
-      user: { userName: 'goldeneagle99', avatarUrl: null },
-      text: { content: 'The quality looks amazing today.', isSpecial: false },
-      color: '#f1c40f',
-    },
-  ]);
-  const [valueMess, setValueMess] = useState('');
+    color: '#d63031',
+  },
+  {
+    id: 6,
+    user: { userName: 'coolshark22', avatarUrl: 'https://i.pravatar.cc/150?u=4' },
+    text: { content: "Is the stream starting soon? Can't wait! 🚀", isSpecial: false },
+  },
+  {
+    id: 7,
+    user: { userName: 'goldeneagle99', avatarUrl: null },
+    text: { content: 'The quality looks amazing today.', isSpecial: false },
+    color: '#f1c40f',
+  },
+];
 
+export const ChatSidebar = ({ isDefaultOpen = true }) => {
+  const [isOpen, setIsOpen] = useState(isDefaultOpen);
+  const [message, setMessage] = useState(defaultMessage);
+  const [valueMess, setValueMess] = useState('');
   const scrollContainerRef = useRef(null);
 
   const handleChange = (e) => {
-    const value = e.target.value;
-    setValueMess(value);
+    setValueMess(e.target.value);
   };
 
   const handleKeyDown = (e) => {
-    const newMessage = {
-      id: new Date(),
-      user: { userName: 'Visitor', avatarUrl: null },
-      text: {
-        content: valueMess,
-        isSpecial: false,
-      },
-      color: '#6c5ce7',
-    };
-
-    if (e.key === 'Enter') {
+    if (e.key === 'Enter' && valueMess.trim() !== '') {
+      const newMessage = {
+        id: new Date().getTime(),
+        user: { userName: 'Visitor', avatarUrl: null },
+        text: { content: valueMess, isSpecial: false },
+        color: '#6c5ce7',
+      };
       setMessage((prev) => [...prev, newMessage]);
       setValueMess('');
     }
@@ -192,32 +191,66 @@ export const ChatSidebar = () => {
       const container = scrollContainerRef.current;
       container.scrollTop = container.scrollHeight;
     }
-  }, [message]);
+  }, [message, isOpen]);
 
   useEffect(() => {
+    let isMounted = true;
     const addMessage = async () => {
-      while (true) {
+      while (isMounted) {
         for (let i = 0; i < chatMessages.length; i++) {
+          if (!isMounted) break;
           await new Promise((res) => setTimeout(res, 60000));
+          if (!isMounted) break;
 
           setMessage((prev) => [...prev, chatMessages[i]]);
 
           if (i === chatMessages.length - 1) {
             await new Promise((res) => setTimeout(res, 2000));
-            setMessage([]);
+            if (isMounted) setMessage([]);
           }
         }
       }
     };
 
     addMessage();
+    return () => {
+      isMounted = false;
+    };
   }, []);
+
+  if (!isOpen) {
+    return (
+      <div className="chat-collapsed-header" onClick={() => setIsOpen(true)}>
+        <div className="chat-collapsed-title">
+          <span>Chat</span>
+          <span className="chat-icon">
+            <ChatIcon />
+          </span>
+        </div>
+        <div className="chat-arrow-icon">
+          <ExpandArrow />
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="chat-container">
+      <div className="chat-header" onClick={() => setIsOpen(false)}>
+        <div className="chat-collapsed-title">
+          <span>Chat</span>
+          <span className="chat-icon">
+            <ChatIcon />
+          </span>
+        </div>
+        <div className="chat-arrow-icon up" style={{ transform: 'rotate(180deg)' }}>
+          <ExpandArrow />
+        </div>
+      </div>
+
       <div className="chat-messages" ref={scrollContainerRef}>
         {message.map((msg, i) => (
-          <ChatMessage key={i} user={msg.user} text={msg.text} color={msg.color} />
+          <ChatMessage key={msg.id || i} user={msg.user} text={msg.text} color={msg.color} />
         ))}
       </div>
       <ChatInput value={valueMess} onChange={handleChange} handleKeyDown={handleKeyDown} />
