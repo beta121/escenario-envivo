@@ -97,14 +97,3 @@
   background-color: #E55C28;
   color: white;
 }
-
-@media (max-width: 768px) {
-  .beta-section4-wrapper {
-    background-position: 20% center;
-    min-height: 600px;
-  }
-
-  .title {
-    font-size: 32px;
-  }
-}

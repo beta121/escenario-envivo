@@ -1,9 +1,15 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { CustomSelect, SearchBar, Modal, TextField, Button, Toasty } from '../../../ui';
 import { SellerSignupForm, ShoppingSignupForm } from '../../../layout';
+import { MobileDrawer } from '../MobileDrawer/MobileDrawer';
+import { useHeader } from '../../../../shared/context/HeaderContext';
 import { useTranslation } from 'react-i18next';
 import { useOutsideClick } from '../../../../shared/hooks/useOutsideClick';
 import logo from '../../../../shared/assets/Logo.svg';
+import burger from '../../../../shared/assets/burger.svg';
+import search from '../../../../shared/assets/search.svg';
+
 import './styles.css';
 
 const regions = [
@@ -26,6 +32,8 @@ const languages = [
 ];
 
 export const HeaderMain = () => {
+  const [isOpenBurger, setIsOpenBurger] = useState(false);
+
   const { i18n } = useTranslation();
   const [region, setRegion] = useState(regions[0]);
   const [lang, setLang] = useState(() => {
@@ -35,6 +43,8 @@ export const HeaderMain = () => {
   const [isOpenTost, setIsOpenTost] = useState(false);
   const modalRef = useOutsideClick(() => setModalType(null));
   const [modalType, setModalType] = useState(null); // 'selling' | 'shopping' | null
+
+  const { toggleSearch } = useHeader();
 
   useEffect(() => {
     const current = languages.find((l) => l.code === i18n.language);
@@ -56,33 +66,57 @@ export const HeaderMain = () => {
     <header className="header">
       <div className="header-content">
         <div className="logo-container">
-          <a href="/escenario-envivo/">
+          <Link to="/">
             <img src={logo} alt="Logo" />
-          </a>
+          </Link>
         </div>
 
-        <CustomSelect items={regions} selectedItem={region} onSelect={setRegion} type="region" />
+        <div className="desktop-menu">
+          <CustomSelect items={regions} selectedItem={region} onSelect={setRegion} type="region" />
 
-        <SearchBar onSearch={(val) => console.log(val)} />
+          <SearchBar onSearch={(val) => console.log(val)} />
 
-        <div className="header-right-section">
-          <CustomSelect
-            items={languages}
-            selectedItem={lang}
-            onSelect={handleLanguageChange}
-            type="lang"
-          />
+          <div className="header-right-section">
+            <CustomSelect
+              items={languages}
+              selectedItem={lang}
+              onSelect={handleLanguageChange}
+              type="lang"
+            />
 
-          <a href="#" className="login-link">
-            Log in
-          </a>
+            <Link className="login-link" to="/login">
+              Log in
+            </Link>
 
-          <div className="cta-buttons">
-            <Button variant="outline" onClick={() => openModal('selling')}>
-              START SELLING
-            </Button>
-            <Button onClick={() => openModal('shopping')}>START SHOPPING</Button>
+            <div className="cta-buttons">
+              <Button variant="outline" onClick={() => openModal('selling')}>
+                START SELLING
+              </Button>
+              <Button onClick={() => openModal('shopping')}>START SHOPPING</Button>
+            </div>
           </div>
+        </div>
+
+        <MobileDrawer
+          isOpen={isOpenBurger}
+          onClose={() => setIsOpenBurger(false)}
+          regions={regions}
+          region={region}
+          setRegion={setRegion}
+          languages={languages}
+          lang={lang}
+          handleLanguageChange={handleLanguageChange}
+          openModal={openModal}
+        />
+
+        <div className="mobile-menu">
+          <button onClick={toggleSearch}>
+            <img className="search-icon" src={search} />
+          </button>
+
+          <button onClick={() => setIsOpenBurger((prev) => !prev)}>
+            <img className="burger-icon" src={burger} />
+          </button>
         </div>
       </div>
       {modalType && (

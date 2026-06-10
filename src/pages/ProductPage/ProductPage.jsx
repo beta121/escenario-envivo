@@ -46,8 +46,8 @@ const ProductPage = () => {
         <div className="product__footer">
           <h5>100% secure payment guarantee.</h5>
           <ul style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-            {footerCard.map((card) => (
-              <li>
+            {footerCard.map((card, idx) => (
+              <li key={idx}>
                 <img src={card} />
               </li>
             ))}

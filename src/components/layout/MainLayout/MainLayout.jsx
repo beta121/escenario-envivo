@@ -1,5 +1,6 @@
 import { Outlet, useLocation } from 'react-router-dom';
 import { HeaderMain, HeaderAi } from '../../layout/Headers';
+import { HeaderProvider } from '../../../shared/context/HeaderContext';
 import { Footer } from '../../layout';
 import { ScrollToTop } from '../../../shared/helpers';
 
@@ -12,16 +13,18 @@ export const MainLayout = () => {
   const isFooter = location.pathname.startsWith('/short');
 
   return (
-    <main className="layout-wrapper">
-      <ScrollToTop />
+    <HeaderProvider>
+      <main className="layout-wrapper">
+        <ScrollToTop />
 
-      {isAIFeaturesPage ? <HeaderAi /> : <HeaderMain />}
+        {isAIFeaturesPage ? <HeaderAi /> : <HeaderMain />}
 
-      <section className="main-content">
-        <Outlet />
-      </section>
+        <section className="main-content">
+          <Outlet />
+        </section>
 
-      {!isFooter && <Footer />}
-    </main>
+        {!isFooter && <Footer />}
+      </main>
+    </HeaderProvider>
   );
 };

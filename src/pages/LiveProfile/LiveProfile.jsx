@@ -1,5 +1,6 @@
-import { useParams, Outlet } from 'react-router-dom';
-import { ProductCarousel, ChatSidebar, VideoPlayer } from '../../components/layout';
+import { useParams } from 'react-router-dom';
+import { ProductCarousel, ChatSidebar, VideoLive, ExpandableBox } from '../../components/layout';
+import { StreamCard } from '../../components/ui';
 import { streamsData } from '../../shared/assets/user/streamsData';
 import { products } from '../../shared/assets/products/products';
 import './style.css';
@@ -15,25 +16,30 @@ export const LiveProfile = () => {
   );
 
   return (
-    <section className="broadcast-page">
-      <div className="main-layout">
-        <h3 className="broadcast-title">{currentVideo[id].videoTitle}</h3>
+    <section className="video-section-page">
+      <div className="live-section-wrapper">
+        <h3 className="live-section-video-title">{currentVideo[id].videoTitle}</h3>
 
-        <div className="view-section">
-          <VideoPlayer
-            streamerData={currentVideo[id]}
-            videoUrl={currentVideo[id]?.streamVideo}
-            status={currentVideo[id]?.status}
-          />
+        <div className="live-section-video">
+          <VideoLive title={currentVideo[id].videoTitle} video={currentVideo[id]} />
+        </div>
+
+        <div className="live-section-chat">
           <ChatSidebar />
         </div>
 
-        <footer className="products-shelf">
+        <div className="live-section-product">
           <ProductCarousel currentProduct={prods} />
-        </footer>
-      </div>
+        </div>
 
-      <Outlet />
+        <div className="live-section-all-video">
+          <ExpandableBox showGradient={false} showMo={streamsData.length}>
+            {(streamsData || []).map((stream) => (
+              <StreamCard stream={stream} key={`stream-${stream.videoId}`} />
+            ))}
+          </ExpandableBox>
+        </div>
+      </div>
     </section>
   );
 };

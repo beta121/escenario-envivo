@@ -1,10 +1,11 @@
 import { useMemo, useState } from 'react';
-import { CategoryAction, HighlightCard, Short } from '../../components/ui';
+import { motion, AnimatePresence } from 'framer-motion';
+import { CategoryAction, HighlightCard, Short, SearchBar, StreamCard } from '../../components/ui';
 import { ExpandableBox, FavoriteSellers } from '../../components/layout';
 import { streamsData } from '../../shared/assets/user/streamsData';
 import { products } from '../../shared/assets/products/products';
 import { shorts } from '../../shared/assets/user/shorts1';
-import { StreamCard } from '../../components/ui';
+import { useHeader } from '../../shared/context/HeaderContext';
 
 import AppliancesIcon from '../../shared/assets/svg/AppliancesIcon';
 import GadgetsIcon from '../../shared/assets/svg/GadgetsIcon';
@@ -34,6 +35,7 @@ const categoryIcons = {
 
 const Home = () => {
   const [category, setCategory] = useState('all');
+  const { isSearchVisible } = useHeader();
 
   const handleClick = (key) => {
     setCategory((prev) => (prev === key ? 'all' : key));
@@ -71,6 +73,21 @@ const Home = () => {
 
   return (
     <div className="main-container">
+      <AnimatePresence>
+        {isSearchVisible && (
+          <motion.div
+            className="main-search-container"
+            style={{ paddingRight: '16px', marginBottom: '20px' }}
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3, ease: 'easeInOut' }}
+          >
+            <SearchBar onSearch={(val) => console.log(val)} />
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       <CategoryAction onSelect={handleClick} active={category} categories={categoryIcons} />
 
       {/* Блок с стримами */}
@@ -84,7 +101,7 @@ const Home = () => {
 
       {/* Блок с продуктами */}
       <div style={{ margin: '15px 0 24px' }}>
-        <ExpandableBox showGradient={false} showMo={currentProducts.length}>
+        <ExpandableBox showGradient={false} showMo={currentProducts.length} gap={20}>
           {(currentProducts || []).map((product, index) => {
             const productId = product?.id || product?.productId || product?._id || index;
 
