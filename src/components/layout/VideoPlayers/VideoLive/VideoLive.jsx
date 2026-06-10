@@ -29,7 +29,7 @@ export const VideoLive = ({ video, title }) => {
         src={video.streamVideo}
         className="video-live"
         muted={false}
-        // autoPlay={true}
+        autoPlay={true}
         playsInline
         onCanPlay={() => setIsLoading(false)}
         onWaiting={() => setIsLoading(true)}

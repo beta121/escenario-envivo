@@ -1,5 +1,6 @@
 import { useParams } from 'react-router-dom';
-import { ProductCarousel, ChatSidebar, VideoLive } from '../../components/layout';
+import { ProductCarousel, ChatSidebar, VideoLive, ExpandableBox } from '../../components/layout';
+import { StreamCard } from '../../components/ui';
 import { streamsData } from '../../shared/assets/user/streamsData';
 import { products } from '../../shared/assets/products/products';
 import './style.css';
@@ -27,9 +28,17 @@ export const LiveProfile = () => {
           <ChatSidebar />
         </div>
 
-        <footer className="live-section-product">
+        <div className="live-section-product">
           <ProductCarousel currentProduct={prods} />
-        </footer>
+        </div>
+
+        <div className="live-section-all-video">
+          <ExpandableBox showGradient={false} showMo={streamsData.length}>
+            {(streamsData || []).map((stream) => (
+              <StreamCard stream={stream} key={`stream-${stream.videoId}`} />
+            ))}
+          </ExpandableBox>
+        </div>
       </div>
     </section>
   );

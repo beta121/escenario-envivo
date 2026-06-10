@@ -12,7 +12,7 @@
     'title'
     "video"
     "chat"
-    "product";
+    "allVideo";
   gap: 16px;
   width: 100%;
 }
@@ -30,6 +30,13 @@
 .live-section-chat {
   width: 100%;
   grid-area: chat;
+  height: 330px;
+}
+
+.live-section-all-video {
+  width: 100%;
+  padding-left: 16px;
+  grid-area: allVideo;
 }
 
 .live-section-product {
@@ -44,11 +51,13 @@
   }
 
   .live-section-wrapper {
+    padding: 0 0 32px 0;
     grid-template-areas:
       'title'
       "video"
       "product"
-      "chat";
+      "chat"
+      "allVideo";
   }
 
   .live-section-product {
@@ -57,6 +66,7 @@
   }
 
   .live-section-chat {
+    height: 416px;
     padding: 0 32px;
   }
 
@@ -67,18 +77,28 @@
     color: #000000;
     margin: 16px 0 0 32px;
   }
+
+  .live-section-all-video {
+    padding-left: 32px;
+  }
+
 }
 
 @media (min-width: 1280px) {
   .live-section-wrapper {
     grid-template-columns: 784px 400px;
     grid-template-areas:
-      "title   title"
-      "video   chat"
-      "product product";
+      "title title"
+      "video chat"
+      "product product"
+      "allVideo allVideo";
     gap: 16px;
 
     justify-content: center;
+  }
+
+  .live-section-all-video {
+    padding-left: 0;
   }
 
   .live-section-video-title {
@@ -116,7 +136,8 @@
     grid-template-areas:
       "title   title"
       "video   chat"
-      "product product";
+      "product product"
+      "allVideo allVideo";
     gap: 16px;
 
     justify-content: center;

@@ -50,10 +50,15 @@
   }
 }
 
+@media (min-width: 1280px) {
+  .video-live-wrapper {
+    border-radius: 16px;
+  }
+}
+
 @media (min-width: 1440px) {
   .video-live-wrapper {
     width: 888px;
     height: 100%;
-    border-radius: 16px;
   }
 }
