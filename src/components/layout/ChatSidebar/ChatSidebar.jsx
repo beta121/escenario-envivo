@@ -163,7 +163,7 @@ const defaultMessage = [
   },
 ];
 
-export const ChatSidebar = ({ isDefaultOpen = true }) => {
+export const ChatSidebar = ({ isDefaultOpen = true, isLive = false }) => {
   const [isOpen, setIsOpen] = useState(isDefaultOpen);
   const [message, setMessage] = useState(defaultMessage);
   const [valueMess, setValueMess] = useState('');
@@ -220,7 +220,12 @@ export const ChatSidebar = ({ isDefaultOpen = true }) => {
 
   if (!isOpen) {
     return (
-      <div className="chat-collapsed-header" onClick={() => setIsOpen(true)}>
+      <div
+        className="chat-collapsed-header"
+        onClick={() => {
+          setIsOpen(true);
+        }}
+      >
         <div className="chat-collapsed-title">
           <span>Chat</span>
           <span className="chat-icon">
@@ -236,16 +241,24 @@ export const ChatSidebar = ({ isDefaultOpen = true }) => {
 
   return (
     <div className="chat-container">
-      <div className="chat-header" onClick={() => setIsOpen(false)}>
+      <div
+        className="chat-header"
+        onClick={() => {
+          if (isLive) return;
+          setIsOpen(false);
+        }}
+      >
         <div className="chat-collapsed-title">
           <span>Chat</span>
           <span className="chat-icon">
             <ChatIcon />
           </span>
         </div>
-        <div className="chat-arrow-icon up" style={{ transform: 'rotate(180deg)' }}>
-          <ExpandArrow />
-        </div>
+        {!isLive && (
+          <div className="chat-arrow-icon up" style={{ transform: 'rotate(180deg)' }}>
+            <ExpandArrow />
+          </div>
+        )}
       </div>
 
       <div className="chat-messages" ref={scrollContainerRef}>

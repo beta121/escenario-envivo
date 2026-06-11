@@ -27,8 +27,8 @@ const regions = [
 ];
 
 const languages = [
-  { name: 'EN', code: 'us' },
-  { name: 'ES', code: 'es' },
+  { name: 'EN', code: null },
+  { name: 'ES', code: null },
 ];
 
 export const HeaderMain = () => {
@@ -78,6 +78,7 @@ export const HeaderMain = () => {
 
           <div className="header-right-section">
             <CustomSelect
+              planet
               items={languages}
               selectedItem={lang}
               onSelect={handleLanguageChange}
