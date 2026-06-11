@@ -1,28 +1,153 @@
-.broadcast-page {
+.video-section-page {
   max-width: 1320px;
-  margin: 0 auto;
-  margin-top: 20px
-}
-
-.view-section {
-  display: flex;
-  gap: 20px;
   width: 100%;
   margin: 0 auto;
-  margin-bottom: 20px;
-  height: 640px;
+  box-sizing: border-box;
 }
 
-.chat-sidebar {
-  flex: 1;
-  min-width: 300px;
-  height: auto;
-  border-radius: 16px;
+.upcoming-section-wrapper {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas:
+    'title'
+    "video"
+    "btn"
+    "chat"
+    "allVideo";
+  gap: 16px;
+  width: 100%;
 }
 
-.broadcast-title {
-  font-size: 20px;
-  font-weight: 600;
-  color: #000000;
-  margin-bottom: 8px;
+.upcoming-section-video-title {
+  display: none;
+  grid-area: title;
+}
+
+.upcoming-section-video {
+  width: 100%;
+  grid-area: video;
+}
+
+.upcoming-section-chat {
+  width: 100%;
+  grid-area: chat;
+  max-height: 330px;
+  padding: 0 16px;
+  height: 100%;
+}
+
+.upcoming-section-btn-rem {
+  padding: 0 16px;
+  grid-area: btn;
+}
+
+.upcoming-section-all-video {
+  width: 100%;
+  padding-left: 16px;
+  grid-area: allVideo;
+}
+
+.upcoming-section-product {
+  display: none;
+  width: 100%;
+  grid-area: product;
+}
+
+@media (min-width: 800px) {
+  .upcoming-section-btn-rem {
+    display: none;
+  }
+
+  .upcoming-section-video {
+    height: 496px;
+  }
+
+  .upcoming-section-wrapper {
+    padding: 0 0 32px 0;
+    grid-template-areas:
+      'title'
+      "video"
+      "product"
+      "chat"
+      "allVideo";
+  }
+
+  .upcoming-section-product {
+    padding-left: 32px;
+    display: block;
+  }
+
+  .upcoming-section-chat {
+    max-height: 416px;
+    padding: 0 32px;
+  }
+
+  .upcoming-section-video-title {
+    display: block;
+    font-size: 20px;
+    font-weight: 600;
+    color: #000000;
+    margin: 16px 0 0 32px;
+  }
+
+  .upcoming-section-all-video {
+    padding-left: 32px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .upcoming-section-wrapper {
+    grid-template-columns: 784px 400px;
+    grid-template-areas:
+      "title title"
+      "video chat"
+      "product product"
+      "allVideo allVideo";
+    gap: 16px;
+    justify-content: center;
+  }
+
+  .upcoming-section-all-video {
+    padding-left: 0;
+  }
+
+  .upcoming-section-video-title {
+    display: block;
+    grid-area: title;
+    margin-left: 0;
+  }
+
+  .upcoming-section-video {
+    width: 100%;
+    height: 496px;
+  }
+
+  .upcoming-section-chat {
+    width: 400px;
+    max-height: 496px;
+    padding: 0;
+  }
+
+  .chat-sidebar {
+    height: 100%;
+    width: 100%;
+  }
+
+  .upcoming-section-product {
+    margin-top: 0;
+    padding-left: 0;
+  }
+}
+
+@media (min-width: 1440px) {
+  .upcoming-section-wrapper {
+    grid-template-columns: 888px 400px;
+    grid-template-areas:
+      "title   title"
+      "video   chat"
+      "product product"
+      "allVideo allVideo";
+    gap: 16px;
+    justify-content: center;
+  }
 }

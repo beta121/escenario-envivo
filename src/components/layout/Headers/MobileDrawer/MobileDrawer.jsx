@@ -58,6 +58,7 @@ export const MobileDrawer = ({
               type="region"
             />
             <CustomSelect
+              planet
               items={languages}
               selectedItem={lang}
               onSelect={handleLanguageChange}

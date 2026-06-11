@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom';
+import { useParams, useLocation } from 'react-router-dom';
 import { ProductCarousel, ChatSidebar, VideoLive, ExpandableBox } from '../../components/layout';
 import { StreamCard } from '../../components/ui';
 import { streamsData } from '../../shared/assets/user/streamsData';
@@ -6,6 +6,7 @@ import { products } from '../../shared/assets/products/products';
 import './style.css';
 
 export const LiveProfile = () => {
+  const location = useLocation();
   const { id } = useParams();
 
   const currentVideo = Object.fromEntries(streamsData.map((item) => [item.videoId, item]));
@@ -14,6 +15,7 @@ export const LiveProfile = () => {
   const prods = currentProduct[currentVideo[id].userId].products.filter(
     (product) => product.type === 'showing-now' || product.type === 'default'
   );
+  const isLive = location.pathname.includes('/live');
 
   return (
     <section className="video-section-page">
@@ -22,10 +24,11 @@ export const LiveProfile = () => {
 
         <div className="live-section-video">
           <VideoLive title={currentVideo[id].videoTitle} video={currentVideo[id]} />
+          <div className="section-product-mobile">11</div>
         </div>
 
         <div className="live-section-chat">
-          <ChatSidebar />
+          <ChatSidebar isLive={isLive} />
         </div>
 
         <div className="live-section-product">

@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import { useOutsideClick } from '../../../shared/hooks';
+import planetIcon from '../../../shared/assets/svg/planet.svg';
 import './styles.css';
 
-export const CustomSelect = ({ items, selectedItem, onSelect, type }) => {
+export const CustomSelect = ({ items, selectedItem, onSelect, type, planet }) => {
   const [isOpen, setIsOpen] = useState(false);
   const ref = useOutsideClick(() => setIsOpen(false));
 
@@ -10,7 +11,7 @@ export const CustomSelect = ({ items, selectedItem, onSelect, type }) => {
     <div className={`select-custom ${type}`} ref={ref}>
       <div className="select-custom-btn" onClick={() => setIsOpen(!isOpen)}>
         <img
-          src={`https://flagcdn.com/w40/${selectedItem.code}.png`}
+          src={planet ? planetIcon : `https://flagcdn.com/w40/${selectedItem.code}.png`}
           alt="flag"
           className="select-custom-flag"
         />
@@ -38,7 +39,9 @@ export const CustomSelect = ({ items, selectedItem, onSelect, type }) => {
               setIsOpen(false);
             }}
           >
-            <img src={`https://flagcdn.com/w40/${item.code}.png`} width="24" alt={item.name} />
+            {!planet && (
+              <img src={`https://flagcdn.com/w40/${item.code}.png`} width="24" alt={item.name} />
+            )}
             <span>{item.name}</span>
           </div>
         ))}
