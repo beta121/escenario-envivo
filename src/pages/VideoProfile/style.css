@@ -48,21 +48,6 @@
   grid-area: product;
 }
 
-.section-product-mobile {
-  height: auto;
-  position: absolute;
-  left: 0;
-  bottom: 5px;
-  width: 100%;
-  overflow-x: auto;
-  display: flex;
-  flex-direction: row;
-  padding: 0 0 0 12px;
-  box-sizing: border-box;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
 .section-product-mobile::-webkit-scrollbar {
   display: none;
   width: 0;
@@ -70,9 +55,7 @@
 }
 
 @media (min-width: 800px) {
-  .section-product-mobile {
-    display: none;
-  }
+
 
   .video-section-video {
     height: 496px;

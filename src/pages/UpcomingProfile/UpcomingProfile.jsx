@@ -43,6 +43,7 @@ const UpcomingProfile = () => {
             video={currentVideo[id]}
             title={currentVideo[id]?.videoTitle}
           />
+          <div className="section-product-mobile">1111</div>
         </div>
 
         <div className="upcoming-section-btn-rem">

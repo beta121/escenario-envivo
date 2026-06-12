@@ -7,6 +7,9 @@
 }
 
 @media (min-width: 800px) {
+  .main-container {
+    padding-left: 32px;
+  }
 
   .main-search-container {
     display: none;
