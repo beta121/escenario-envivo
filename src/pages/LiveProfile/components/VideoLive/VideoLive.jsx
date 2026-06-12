@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { StreamerInfo } from '../../../ui';
+import { StreamerInfo } from '../../../../components/ui';
 import './style.css';
 
 export const VideoLive = ({ video, title }) => {

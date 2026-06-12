@@ -1,5 +1,6 @@
 import { useParams, useLocation } from 'react-router-dom';
-import { ProductCarousel, ChatSidebar, VideoLive, ExpandableBox } from '../../components/layout';
+import { ProductCarousel, ChatSidebar, ExpandableBox } from '../../components/layout';
+import { VideoLive } from './components';
 import { StreamCard } from '../../components/ui';
 import { streamsData } from '../../shared/assets/user/streamsData';
 import { products } from '../../shared/assets/products/products';

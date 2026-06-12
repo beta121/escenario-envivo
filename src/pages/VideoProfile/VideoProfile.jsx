@@ -1,10 +1,15 @@
-import { useParams } from 'react-router-dom';
-import { ProductCarousel, ChatSidebar, VideoPlayer } from '../../components/layout';
+import { useState, useEffect } from 'react';
+import { useParams, useLocation } from 'react-router-dom';
+import { ProductCarousel, ChatSidebar, ExpandableBox } from '../../components/layout';
 import { streamsData } from '../../shared/assets/user/streamsData';
+import { VideoViews } from './components/VideoViews';
+import { StreamCard } from '../../components/ui';
 import { products } from '../../shared/assets/products/products';
 import './style.css';
 
 const VideoProfile = () => {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const location = useLocation();
   const { id } = useParams();
 
   const currentVideo = Object.fromEntries(streamsData.map((item) => [item.videoId, item]));
@@ -15,23 +20,45 @@ const VideoProfile = () => {
       product.type === 'discount' || (product.type === 'default' && product.variant === 'default')
   );
 
-  return (
-    <section className="broadcast-page">
-      <div className="main-layout">
-        <h3 className="broadcast-title">{currentVideo[id].videoTitle}</h3>
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
 
-        <div className="view-section">
-          <VideoPlayer
-            streamerData={currentVideo[id]}
-            videoUrl={currentVideo[id]?.streamVideo}
-            status={currentVideo[id]?.status}
-          />
-          <ChatSidebar />
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  return (
+    <section className="video-section-page">
+      <div className="video-section-wrapper">
+        <h3 className="video-section-title">{currentVideo[id]?.videoTitle}</h3>
+
+        <div className="video-section-video">
+          <VideoViews title={currentVideo[id].videoTitle} video={currentVideo[id]} />
         </div>
 
-        <footer className="products-shelf">
+        <div className="video-section-chat">
+          <ChatSidebar
+            isLive={windowWidth >= 800 ? true : false}
+            isDefaultOpen={windowWidth >= 576 ? true : false}
+          />
+        </div>
+
+        <div className="video-section-product">
           <ProductCarousel currentProduct={prods} />
-        </footer>
+        </div>
+
+        <div className="video-section-all-video">
+          <ExpandableBox showGradient={false} showMo={streamsData.length}>
+            {(streamsData || []).map((stream) => (
+              <StreamCard stream={stream} key={`stream-${stream.videoId}`} />
+            ))}
+          </ExpandableBox>
+        </div>
       </div>
     </section>
   );

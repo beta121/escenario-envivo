@@ -122,12 +122,7 @@
       "product product"
       "allVideo allVideo";
     gap: 16px;
-
     justify-content: center;
-  }
-
-  .live-section-all-video {
-    padding-left: 0;
   }
 
   .live-section-video-title {
@@ -152,10 +147,24 @@
     width: 100%;
   }
 
-  .live-section-product {
-    margin-top: 0;
-    padding-left: 0;
+  .live-section-all-video {
+    grid-column: 1 / -1;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-left: calc((100vw - 1200px) / 2);
+    padding-right: 0;
+  }
 
+  .live-section-product {
+    grid-column: 1 / -1;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-left: calc((100vw - 1200px) / 2);
+    padding-right: 0;
   }
 }
 
@@ -168,7 +177,20 @@
       "product product"
       "allVideo allVideo";
     gap: 16px;
-
     justify-content: center;
   }
+
+
+  .live-section-product,
+  .live-section-all-video {
+    grid-column: 1 / -1;
+    width: 100%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-left: 0;
+    padding-right: 0;
+    box-sizing: border-box;
+  }
+
 }
