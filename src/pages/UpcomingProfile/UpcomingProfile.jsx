@@ -50,7 +50,10 @@ const UpcomingProfile = () => {
         </div>
 
         <div className="upcoming-section-chat">
-          <ChatSidebar isDefaultOpen={windowWidth >= 576 ? true : false} />
+          <ChatSidebar
+            isLive={windowWidth >= 800 ? true : false}
+            isDefaultOpen={windowWidth >= 576 ? true : false}
+          />
         </div>
 
         <div className="upcoming-section-product">

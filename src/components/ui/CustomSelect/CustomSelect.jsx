@@ -30,9 +30,9 @@ export const CustomSelect = ({ items, selectedItem, onSelect, type, planet }) =>
       </div>
 
       <div className={`select-custom-dropdown ${isOpen ? 'open' : ''}`}>
-        {items.map((item) => (
+        {items.map((item, idx) => (
           <div
-            key={item.code}
+            key={item.code ?? `option-${idx}`}
             className="select-custom-option"
             onClick={() => {
               onSelect(item);
