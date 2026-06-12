@@ -4,7 +4,7 @@ import { CategoryAction, HighlightCard, Short, SearchBar, StreamCard } from '../
 import { ExpandableBox, FavoriteSellers } from '../../components/layout';
 import { streamsData } from '../../shared/assets/user/streamsData';
 import { products } from '../../shared/assets/products/products';
-import { shorts } from '../../shared/assets/user/shorts1';
+import { shorts } from '../../shared/assets/user/shorts';
 import { useHeader } from '../../shared/context/HeaderContext';
 
 import AppliancesIcon from '../../shared/assets/svg/AppliancesIcon';

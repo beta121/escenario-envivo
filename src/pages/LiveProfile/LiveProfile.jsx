@@ -25,7 +25,7 @@ export const LiveProfile = () => {
 
         <div className="live-section-video">
           <VideoLive title={currentVideo[id].videoTitle} video={currentVideo[id]} />
-          <div className="section-product-mobile">11</div>
+          <div className="section-product-mobile">1111</div>
         </div>
 
         <div className="live-section-chat">

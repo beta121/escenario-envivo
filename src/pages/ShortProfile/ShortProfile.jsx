@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { StreamerInfo, ProductCard } from '../../components/ui';
 import { ChatSidebar } from '../../components/layout';
 
-import { shorts } from '../../shared/assets/user/shorts1';
+import { shorts } from '../../shared/assets/user/shorts';
 import { sellersUsers } from '../../shared/assets/user/sellersUsers';
 import { products } from '../../shared/assets/products/products';
 

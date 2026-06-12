@@ -10,22 +10,17 @@ import StreamPhoto3 from './img/StreamPhoto_3.png'
 import StreamPhoto4 from './img/StreamPhoto_4.png'
 import StreamPhoto5 from './img/StreamPhoto_5.png'
 
-
 import stream1 from './streams/stream1.mp4';
 import stream2 from './streams/stream2.mp4';
 import stream3 from './streams/stream3.mp4';
 import stream4 from './streams/stream4.mp4';
 import stream5 from './streams/stream5.mp4';
 
-
 import video1 from './video/video1.mp4';
 import video2 from './video/video2.mp4';
 import video3 from './video/video3.mp4';
 import video4 from './video/video4.mp4';
 import video5 from './video/video5.mp4';
-
-
-
 
 export const streamsData = [
   {
