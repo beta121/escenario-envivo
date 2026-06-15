@@ -71,6 +71,14 @@ const Home = () => {
     return [...firsts, ...remaining.slice(0, needed)];
   }, []);
 
+  // убрать когда буду все магазині
+
+  const priorityShorts = limitShorts.filter((short) => Number(short.userId) === 1);
+  const otherShorts = limitShorts.filter((short) => Number(short.userId) !== 1);
+
+  const orderedShorts = [...priorityShorts, ...otherShorts];
+  //--------------------------------------
+
   return (
     <div className="main-container">
       <AnimatePresence>
@@ -104,7 +112,6 @@ const Home = () => {
         <ExpandableBox showGradient={false} showMo={currentProducts.length} gap={20}>
           {(currentProducts || []).map((product, index) => {
             const productId = product?.id || product?.productId || product?._id || index;
-
             return <HighlightCard product={product} key={`product-${productId}`} />;
           })}
         </ExpandableBox>
@@ -112,7 +119,7 @@ const Home = () => {
 
       <div style={{ margin: '15px 0 24px' }}>
         <ExpandableBox showGradient={false} showMo={limitShorts.length}>
-          {(limitShorts || []).map((short) => (
+          {(orderedShorts || []).map((short) => (
             <Short key={`short-${short.id}`} short={short} showInfo={false} />
           ))}
         </ExpandableBox>

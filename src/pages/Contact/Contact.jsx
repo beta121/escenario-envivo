@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { TextField, Button, Toasty } from '../../components/ui';
-import contactSupport from '../../shared/assets/contactSupport.png';
+import contactSupport from '../../shared/assets/interface/contactSupport.png';
 import './style.css';
 
 const initialFormState = {

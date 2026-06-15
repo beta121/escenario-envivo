@@ -6,9 +6,9 @@ import { MobileDrawer } from '../MobileDrawer/MobileDrawer';
 import { useHeader } from '../../../../shared/context/HeaderContext';
 import { useTranslation } from 'react-i18next';
 import { useOutsideClick } from '../../../../shared/hooks/useOutsideClick';
-import logo from '../../../../shared/assets/Logo.svg';
-import burger from '../../../../shared/assets/burger.svg';
-import search from '../../../../shared/assets/search.svg';
+import logo from '../../../../shared/assets/interface/Logo.svg';
+import burger from '../../../../shared/assets/interface/burger.svg';
+import search from '../../../../shared/assets/interface/search.svg';
 
 import './styles.css';
 

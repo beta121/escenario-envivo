@@ -1,3 +1,20 @@
+
+
+import product1 from '../shops/shop2/products/product1.png'
+import product2 from '../shops/shop2/products/product2.png'
+import product3 from '../shops/shop2/products/product3.png'
+import product4 from '../shops/shop2/products/product4.png'
+import product5 from '../shops/shop2/products/product5.png'
+import product6 from '../shops/shop2/products/product6.png'
+import product7 from '../shops/shop2/products/product7.png'
+import product8 from '../shops/shop2/products/product8.png'
+
+
+
+
+
+
+
 import prod1 from './comp/item-buy1.png'
 import prod2 from './comp/item-buy2.png'
 import prod3 from './comp/item-buy3.png'
@@ -23,7 +40,7 @@ export const products = [
       {
         productId: '1',
         variant: 'default',
-        imgSrc: pcProduct,
+        imgSrc: product1,
         description: 'Lorem ipsum dolor sit amet consectetur.',
         price: '0',
         type: 'giveaway',
@@ -34,7 +51,7 @@ export const products = [
       {
         productId: '2',
         variant: 'default',
-        imgSrc: prod3,
+        imgSrc: product2,
         description: 'Lorem ipsum dolor sit amet consectetur.',
         price: '13',
         type: 'showing-now',
@@ -42,7 +59,7 @@ export const products = [
       {
         productId: '3',
         variant: 'default',
-        imgSrc: prod3,
+        imgSrc: product3,
         description: 'Lorem ipsum dolor sit amet consectetur.',
         oldPrice: '7085',
         time: '10:00',
@@ -53,7 +70,7 @@ export const products = [
       {
         productId: '4',
         variant: 'default',
-        imgSrc: prod4,
+        imgSrc: product4,
         description: 'Lorem ipsum dolor sit amet consectetur.',
         oldPrice: '7085',
         time: '7:14',
@@ -63,7 +80,7 @@ export const products = [
       {
         productId: '5',
         variant: 'default',
-        imgSrc: prod5,
+        imgSrc: product5,
         description: 'Lorem ipsum dolor sit amet consectetur.',
         oldPrice: '7085',
         price: '1300',
@@ -74,7 +91,7 @@ export const products = [
       {
         productId: '6',
         variant: 'auction',
-        imgSrc: prod1,
+        imgSrc: product6,
         description: 'Lorem ipsum dolor sit amet consectetur.',
         price: 785,
         type: 'default'
@@ -82,7 +99,7 @@ export const products = [
       {
         productId: '7',
         variant: 'default',
-        imgSrc: prod2,
+        imgSrc: product7,
         description: 'Lorem ipsum dolor sit amet consectetur.',
         price: 45,
         type: 'default'
@@ -90,7 +107,7 @@ export const products = [
       {
         productId: '8',
         variant: 'giveaway',
-        imgSrc: prod3,
+        imgSrc: product8,
         description: 'Lorem ipsum dolor sit amet consectetur.',
         price: '145',
         type: 'default',
@@ -103,7 +120,7 @@ export const products = [
       {
         productId: '9',
         variant: 'default',
-        imgSrc: phoneProduct,
+        imgSrc: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg',
         description: 'Lorem ipsum dolor sit amet consectetur.',
         price: '13',
         type: 'showing-now',
@@ -114,7 +131,7 @@ export const products = [
       {
         productId: '10',
         variant: 'default',
-        imgSrc: tel2,
+        imgSrc: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg',
         description: 'Lorem ipsum dolor sit amet consectetur.',
         oldPrice: '7085',
         time: '10:00',
@@ -125,7 +142,7 @@ export const products = [
       {
         productId: '11',
         variant: 'default',
-        imgSrc: tel4,
+        imgSrc: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg',
         description: 'Lorem ipsum dolor sit amet consectetur.',
         oldPrice: '7085',
         time: '10:00',
@@ -135,7 +152,7 @@ export const products = [
       {
         productId: '12',
         variant: 'default',
-        imgSrc: tel1,
+        imgSrc: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg',
         description: 'Lorem ipsum dolor sit amet consectetur.',
         price: '13',
         type: 'default',
@@ -144,7 +161,7 @@ export const products = [
       {
         productId: '13',
         variant: 'default',
-        imgSrc: tel3,
+        imgSrc: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg',
         description: 'Lorem ipsum dolor sit amet consectetur.',
         oldPrice: '7085',
         time: '7:14',
@@ -155,7 +172,7 @@ export const products = [
       {
         productId: '14',
         variant: 'auction',
-        imgSrc: tel5,
+        imgSrc: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg',
         description: 'Lorem ipsum dolor sit amet consectetur.',
         price: 785,
         type: 'default'
@@ -163,7 +180,7 @@ export const products = [
       {
         productId: '15',
         variant: 'default',
-        imgSrc: tel3,
+        imgSrc: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg',
         description: 'Lorem ipsum dolor sit amet consectetur.',
         price: 45,
         type: 'default'
@@ -171,7 +188,7 @@ export const products = [
       {
         productId: '16',
         variant: 'giveaway',
-        imgSrc: tel2,
+        imgSrc: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg',
         description: 'Lorem ipsum dolor sit amet consectetur.',
         price: 'VALUE OF $145',
         type: 'default',
@@ -184,7 +201,7 @@ export const products = [
       {
         productId: '17',
         variant: 'default',
-        imgSrc: phoneProduct1,
+        imgSrc: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg',
         description: 'Lorem ipsum dolor sit amet consectetur.',
         oldPrice: '1999',
         price: '599',
@@ -197,7 +214,7 @@ export const products = [
       {
         productId: '18',
         variant: 'default',
-        imgSrc: prod5,
+        imgSrc: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg',
         description: 'Lorem ipsum dolor sit amet consectetur.',
         price: '599',
         type: 'giveaway',
@@ -209,7 +226,7 @@ export const products = [
       {
         productId: '19',
         variant: 'default',
-        imgSrc: prod3,
+        imgSrc: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg',
         description: 'Lorem ipsum dolor sit amet consectetur.',
         price: '13',
         type: 'showing-now',
@@ -217,7 +234,7 @@ export const products = [
       {
         productId: '20',
         variant: 'default',
-        imgSrc: prod3,
+        imgSrc: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg',
         description: 'Lorem ipsum dolor sit amet consectetur.',
         oldPrice: '7085',
         time: '10:00',
@@ -228,7 +245,7 @@ export const products = [
       {
         productId: '21',
         variant: 'default',
-        imgSrc: prod4,
+        imgSrc: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg',
         description: 'Lorem ipsum dolor sit amet consectetur.',
         oldPrice: '7085',
         time: '7:14',
@@ -238,7 +255,7 @@ export const products = [
       {
         productId: '22',
         variant: 'auction',
-        imgSrc: prod1,
+        imgSrc: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg',
         description: 'Lorem ipsum dolor sit amet consectetur.',
         price: 785,
         type: 'default'
@@ -246,7 +263,7 @@ export const products = [
       {
         productId: '23',
         variant: 'default',
-        imgSrc: prod2,
+        imgSrc: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg',
         description: 'Lorem ipsum dolor sit amet consectetur.',
         price: 45,
         type: 'default'
@@ -254,7 +271,7 @@ export const products = [
       {
         productId: '24',
         variant: 'giveaway',
-        imgSrc: prod3,
+        imgSrc: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg',
         description: 'Lorem ipsum dolor sit amet consectetur.',
         price: '145',
         type: 'default',
@@ -267,7 +284,7 @@ export const products = [
       {
         productId: '25',
         variant: 'default',
-        imgSrc: phoneProduct2,
+        imgSrc: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg',
         description: 'Lorem ipsum dolor sit amet consectetur.',
         oldPrice: '599',
         price: '499',
@@ -279,7 +296,7 @@ export const products = [
       {
         productId: '26',
         variant: 'default',
-        imgSrc: prod3,
+        imgSrc: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg',
         description: 'Lorem ipsum dolor sit amet consectetur.',
         oldPrice: '7085',
         time: false,
@@ -291,7 +308,7 @@ export const products = [
       {
         productId: '27',
         variant: 'default',
-        imgSrc: prod3,
+        imgSrc: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg',
         description: 'Lorem ipsum dolor sit amet consectetur.',
         price: '13',
         type: 'showing-now',
@@ -299,7 +316,7 @@ export const products = [
       {
         productId: '28',
         variant: 'default',
-        imgSrc: prod5,
+        imgSrc: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg',
         description: 'Lorem ipsum dolor sit amet consectetur.',
         price: '499',
         type: 'default',
@@ -310,7 +327,7 @@ export const products = [
       {
         productId: '29',
         variant: 'default',
-        imgSrc: prod4,
+        imgSrc: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg',
         description: 'Lorem ipsum dolor sit amet consectetur.',
         oldPrice: '7085',
         time: '7:14',
@@ -320,7 +337,7 @@ export const products = [
       {
         productId: '30',
         variant: 'auction',
-        imgSrc: prod1,
+        imgSrc: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg',
         description: 'Lorem ipsum dolor sit amet consectetur.',
         price: 785,
         type: 'default'
@@ -328,7 +345,7 @@ export const products = [
       {
         productId: '31',
         variant: 'default',
-        imgSrc: prod2,
+        imgSrc: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg',
         description: 'Lorem ipsum dolor sit amet consectetur.',
         price: 45,
         type: 'default'
@@ -336,7 +353,7 @@ export const products = [
       {
         productId: '32',
         variant: 'giveaway',
-        imgSrc: prod3,
+        imgSrc: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg',
         description: 'Lorem ipsum dolor sit amet consectetur.',
         price: '145',
         type: 'default',
@@ -349,7 +366,7 @@ export const products = [
       {
         productId: '33',
         variant: 'default',
-        imgSrc: sonyProduct,
+        imgSrc: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg',
         description: 'Lorem ipsum dolor sit amet consectetur.',
         oldPrice: '7085',
         price: '3999',
@@ -362,7 +379,7 @@ export const products = [
       {
         productId: '34',
         variant: 'default',
-        imgSrc: prod3,
+        imgSrc: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg',
         description: 'Lorem ipsum dolor sit amet consectetur.',
         oldPrice: '7085',
         time: false,
@@ -374,7 +391,7 @@ export const products = [
       {
         productId: '35',
         variant: 'default',
-        imgSrc: prod3,
+        imgSrc: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg',
         description: 'Lorem ipsum dolor sit amet consectetur.',
         price: '13',
         type: 'showing-now',
@@ -382,7 +399,7 @@ export const products = [
       {
         productId: '36',
         variant: 'default',
-        imgSrc: prod5,
+        imgSrc: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg',
         description: 'Lorem ipsum dolor sit amet consectetur.',
         price: '1299',
         type: 'default',
@@ -394,7 +411,7 @@ export const products = [
       {
         productId: '37',
         variant: 'default',
-        imgSrc: prod4,
+        imgSrc: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg',
         description: 'Lorem ipsum dolor sit amet consectetur.',
         oldPrice: '7085',
         time: '7:14',
@@ -404,7 +421,7 @@ export const products = [
       {
         productId: '38',
         variant: 'auction',
-        imgSrc: prod1,
+        imgSrc: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg',
         description: 'Lorem ipsum dolor sit amet consectetur.',
         price: 785,
         type: 'default'
@@ -412,7 +429,7 @@ export const products = [
       {
         productId: '39',
         variant: 'default',
-        imgSrc: prod2,
+        imgSrc: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg',
         description: 'Lorem ipsum dolor sit amet consectetur.',
         price: 45,
         type: 'default'
@@ -420,7 +437,7 @@ export const products = [
       {
         productId: '40',
         variant: 'giveaway',
-        imgSrc: prod3,
+        imgSrc: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg',
         description: 'Lorem ipsum dolor sit amet consectetur.',
         price: '145',
         type: 'default',

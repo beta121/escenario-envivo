@@ -7,7 +7,7 @@ export const Short = ({ short, showInfo = true }) => {
     <Link to={`/shorts/${short.id}`} className="short-card">
       <Badge text={`Views ${short.views}`} type={'video'} />
       <div className="short-video-wrapper">
-        <video src={short.shortSrc} alt={short.title} className="short-video-content" />
+        <img src={short.screenSaver} alt={short.title} className="short-video-content" />
       </div>
       {showInfo && (
         <div className="short-info">

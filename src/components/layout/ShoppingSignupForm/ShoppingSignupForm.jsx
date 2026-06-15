@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { TextField, Button, CheckBox } from '../../ui';
-import shoppingForm from '../../../shared/assets/shopping-form.png';
+import shoppingForm from '../../../shared/assets/interface/shopping-form.png';
 import './style.css';
 
 const OPTIONS = [

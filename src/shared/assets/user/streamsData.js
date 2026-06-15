@@ -4,19 +4,28 @@ import avatar3 from './img/avatar3.png'
 import avatar4 from './img/avatar-4.png'
 import avatar5 from './img/avatar-5.png'
 
-import StreamPhoto1 from './img/StreamPhoto_1.png'
-import StreamPhoto2 from './img/StreamPhoto_2.png'
-import StreamPhoto3 from './img/StreamPhoto_3.png'
-import StreamPhoto4 from './img/StreamPhoto_4.png'
-import StreamPhoto5 from './img/StreamPhoto_5.png'
+// -----------stream preview-----------
+import streamPreview1 from '../shops/shop2/preview/stream/streamPrev1.jpg'
 
-import stream1 from './streams/stream1.mp4';
+// -----------video preview-----------
+import videoPreview1 from '../shops/shop2/preview/video/videoPrev1.jpg'
+
+// -----------upcoming preview-----------
+import upcomingPreview1 from '../shops/shop2/preview/upcoming/upcomingPrev1.jpg'
+
+// -----------stream-------------
+import stream1 from '../shops/shop2/videos/stream/stream1.MP4'
+
+// -----------video--------------
+import video1 from '../shops/shop2/videos/video/video1.MP4'
+
+//----------delete-------
+
 import stream2 from './streams/stream2.mp4';
 import stream3 from './streams/stream3.mp4';
 import stream4 from './streams/stream4.mp4';
 import stream5 from './streams/stream5.mp4';
 
-import video1 from './video/video1.mp4';
 import video2 from './video/video2.mp4';
 import video3 from './video/video3.mp4';
 import video4 from './video/video4.mp4';
@@ -38,7 +47,7 @@ export const streamsData = [
     isNewSeller: true,
     rating: 5,
     hasNotification: false,
-    screenSaver: StreamPhoto1
+    screenSaver: streamPreview1
   },
   {
     videoId: '2',
@@ -55,7 +64,7 @@ export const streamsData = [
     rating: 4.4,
     isNewSeller: false,
     hasNotification: false,
-    screenSaver: StreamPhoto2
+    screenSaver: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg'
 
   },
   {
@@ -73,7 +82,7 @@ export const streamsData = [
     isNewSeller: true,
     rating: 4.1,
     hasNotification: false,
-    screenSaver: StreamPhoto3
+    screenSaver: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg'
 
   },
   {
@@ -91,7 +100,7 @@ export const streamsData = [
     rating: 4.8,
     isNewSeller: false,
     hasNotification: false,
-    screenSaver: StreamPhoto4
+    screenSaver: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg'
 
   },
   {
@@ -109,7 +118,7 @@ export const streamsData = [
     rating: 4,
     isNewSeller: false,
     hasNotification: false,
-    screenSaver: StreamPhoto5
+    screenSaver: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg'
 
   },
 
@@ -132,7 +141,7 @@ export const streamsData = [
     rating: 5,
     isNewSeller: true,
     hasNotification: true,
-    screenSaver: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg'
+    screenSaver: upcomingPreview1
   },
   {
     videoId: '8',
@@ -225,7 +234,7 @@ export const streamsData = [
     rating: 5,
     isNewSeller: true,
     hasNotification: false,
-    screenSaver: ''
+    screenSaver: videoPreview1
   },
   {
     videoId: '13',
@@ -242,7 +251,7 @@ export const streamsData = [
     rating: 4.4,
     isNewSeller: false,
     hasNotification: false,
-    screenSaver: ''
+    screenSaver: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg'
   },
   {
     videoId: '14',
@@ -259,7 +268,7 @@ export const streamsData = [
     badgeText: '2.2K',
     rating: 4.1,
     hasNotification: false,
-    screenSaver: ''
+    screenSaver: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg'
   },
   {
     videoId: '15',
@@ -276,7 +285,7 @@ export const streamsData = [
     rating: 4.8,
     isNewSeller: false,
     hasNotification: false,
-    screenSaver: ''
+    screenSaver: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg'
   },
   {
     videoId: '16',
@@ -293,6 +302,6 @@ export const streamsData = [
     rating: 4,
     isNewSeller: false,
     hasNotification: false,
-    screenSaver: ''
+    screenSaver: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg'
   },
 ]

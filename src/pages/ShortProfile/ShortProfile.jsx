@@ -169,7 +169,6 @@ const ShortProfile = () => {
                   src={currentShort.shortSrc}
                   autoPlay
                   loop
-                  muted
                   playsInline
                 />
               </div>

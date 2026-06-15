@@ -46,7 +46,6 @@ export const StreamCard = ({ stream }) => {
     userName,
     star,
     avatarUrl,
-    streamVideo,
     videoTitle,
     category,
     description,
@@ -103,7 +102,7 @@ export const StreamCard = ({ stream }) => {
             </div>
           )}
 
-          <video src={streamVideo} className="u-poster" poster={screenSaver} />
+          <img src={screenSaver} className="u-poster" />
 
           <div className="u-descriptionBox">
             <h4 className="video-title">{videoTitle}</h4>

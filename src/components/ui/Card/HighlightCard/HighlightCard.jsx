@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { Toasty } from '../../../ui';
 import { useTimer } from '../../../../shared/hooks/useTimer';
+import { products } from '../../../../shared/assets/products/products';
+
 import './style.css';
 
 export const HighlightCard = ({ product }) => {
@@ -9,8 +11,13 @@ export const HighlightCard = ({ product }) => {
   const { type, oldPrice, price, discounts, imgSrc, time, sale } = product;
   const { timeLeft } = useTimer(time);
   const category = type === 'giveaway';
+
+  const currentSellerId =
+    products.find((seller) => seller.products.some((p) => p.productId === product.productId))
+      ?.userId || null;
+
   return (
-    <Link to={'user/1'}>
+    <Link to={`user/${currentSellerId}`}>
       <div
         className="highlight-container"
         style={{
