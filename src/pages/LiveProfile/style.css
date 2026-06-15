@@ -30,6 +30,8 @@
   box-sizing: border-box;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  gap: 8px;
+  align-items: flex-end;
 }
 
 .live-section-video-title {

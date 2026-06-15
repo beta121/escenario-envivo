@@ -18,6 +18,8 @@
   box-sizing: border-box;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  gap: 8px;
+  align-items: flex-end;
 }
 
 .upcoming-section-wrapper {
@@ -70,6 +72,10 @@
 }
 
 @media (min-width: 800px) {
+  .section-product-mobile {
+    display: none;
+  }
+
   .upcoming-section-btn-rem {
     display: none;
   }

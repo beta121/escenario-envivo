@@ -4,4 +4,6 @@ export * from './DefaultCard'
 export * from './DiscountCard'
 export * from './GiveawayCard'
 export * from './HighlightCard'
+export * from './MobileCard'
+
 

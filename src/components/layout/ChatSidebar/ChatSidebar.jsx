@@ -241,25 +241,26 @@ export const ChatSidebar = ({ isDefaultOpen = true, isLive = false }) => {
 
   return (
     <div className="chat-container">
-      <div
-        className="chat-header"
-        onClick={() => {
-          if (isLive) return;
-          setIsOpen(false);
-        }}
-      >
-        <div className="chat-collapsed-title">
-          <span>Chat</span>
-          <span className="chat-icon">
-            <ChatIcon />
-          </span>
-        </div>
-        {!isLive && (
+      {!isLive && (
+        <div
+          className="chat-header"
+          onClick={() => {
+            if (isLive) return;
+            setIsOpen(false);
+          }}
+        >
+          <div className="chat-collapsed-title">
+            <span>Chat</span>
+            <span className="chat-icon">
+              <ChatIcon />
+            </span>
+          </div>
+
           <div className="chat-arrow-icon up" style={{ transform: 'rotate(180deg)' }}>
             <ExpandArrow />
           </div>
-        )}
-      </div>
+        </div>
+      )}
 
       <div className="chat-messages" ref={scrollContainerRef}>
         {message.map((msg, i) => (
