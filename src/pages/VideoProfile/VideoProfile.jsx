@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
 import { useParams, useLocation } from 'react-router-dom';
 import { ProductCarousel, ChatSidebar, ExpandableBox } from '../../components/layout';
-import { streamsData } from '../../shared/assets/user/streamsData';
+import { streamsData } from '../../shared/mocks/streamsData';
 import { VideoViews } from './components/VideoViews';
-import { StreamCard } from '../../components/ui';
-import { products } from '../../shared/assets/products/products';
+import { StreamCard, MobileCard } from '../../components/ui';
+import { products } from '../../shared/mocks/productsData';
 import './style.css';
 
 const VideoProfile = () => {
@@ -42,10 +42,15 @@ const VideoProfile = () => {
         </div>
 
         <div className="video-section-chat">
-          <ChatSidebar
-            isLive={windowWidth >= 800 ? true : false}
-            isDefaultOpen={windowWidth >= 576 ? true : false}
-          />
+          <ChatSidebar isDefaultOpen={windowWidth >= 576 ? true : false} />
+        </div>
+
+        <div className="video-products-mobile">
+          <div className="section-product-mobile">
+            {prods.map((prod) => {
+              return <MobileCard key={prod.productId} product={prod} />;
+            })}
+          </div>
         </div>
 
         <div className="video-section-product">

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Button, StreamCard, Toasty } from '../../components/ui';
-import { streamsData } from '../../shared/assets/user/streamsData';
-import ing from '../../shared/assets/products/Vector.svg';
+import { streamsData } from '../../shared/mocks/streamsData';
+import ing from '../../shared/assets/svg/Vector.svg';
 
 import './style.css';
 

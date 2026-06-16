@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { TextField, Select, Button } from '../../ui';
-import sellerForm from '../../../shared/assets/seller-form.png';
+import sellerForm from '../../../shared/assets/interface/seller-form.png';
 import './style.css';
 
 const countries = [

@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { ProductCarousel, ChatSidebar, ExpandableBox } from '../../components/layout';
-import { StreamCard } from '../../components/ui';
+import { StreamCard, MobileCard } from '../../components/ui';
 import { UpcomingViews, UpcomingBtn } from './components';
-import { streamsData } from '../../shared/assets/user/streamsData';
-import { products } from '../../shared/assets/products/products';
+import { streamsData } from '../../shared/mocks/streamsData';
+import { products } from '../../shared/mocks/productsData';
 import './style.css';
 
 const UpcomingProfile = () => {
@@ -43,7 +43,12 @@ const UpcomingProfile = () => {
             video={currentVideo[id]}
             title={currentVideo[id]?.videoTitle}
           />
-          <div className="section-product-mobile">1111</div>
+
+          <div className="section-product-mobile">
+            {prods.map((prod) => {
+              return <MobileCard key={prod.productId} product={prod} />;
+            })}
+          </div>
         </div>
 
         <div className="upcoming-section-btn-rem">

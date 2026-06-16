@@ -1,6 +1,10 @@
 import { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Gallery, Toasty } from '../../components/ui';
+
+import { sellersUsers } from '../../shared/mocks/sellersData';
+import { products } from '../../shared/assets/products/products';
+
 import avatar1 from '../../shared/assets/user/img/avatar1.png';
 import com1 from '../../shared/assets/products/comp/item-buy1.png';
 import com2 from '../../shared/assets/products/comp/item-buy2.png';
@@ -32,6 +36,13 @@ const ProductPage = () => {
     setCurrentIndex((prev) => (prev === 0 ? imgArr.length - 1 : prev - 1));
   };
 
+  const currentSellerId =
+    products.find((seller) => seller.products.some((p) => p.productId === id))?.userId || null;
+
+  const currentAvatar = sellersUsers.find(
+    (seller) => Number(seller.id) === Number(currentSellerId)
+  );
+
   return (
     <div className="product">
       <div className="product__gallery">
@@ -56,18 +67,18 @@ const ProductPage = () => {
       </div>
 
       <div className="product__info">
-        <div className="product__heder">
-          <div className="user__avatar">
-            <img src={avatar1} />
-          </div>
+        <Link to={`/user/${currentSellerId}`}>
+          <div className="product__heder">
+            <div className="user__avatar">
+              <img src={currentAvatar.avatar} />
+            </div>
 
-          <Link to={`/user/1`}>
             <h3 className="product__shop-title">
               Live Haul Hub <span className="product__rating">★ 4.7</span>{' '}
               <span className="product__reviews">(21,671 reviews)</span>
             </h3>
-          </Link>
-        </div>
+          </div>
+        </Link>
 
         <p className="product__title">
           2020 Apple MacBook Pro with Apple M1 Chip (13-inch, 8GB RAM, 256GB SSD Storage) - Space

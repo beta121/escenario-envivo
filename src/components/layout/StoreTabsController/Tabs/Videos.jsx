@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom';
-import { streamsData } from '../../../../shared/assets/user/streamsData';
+import { streamsData } from '../../../../shared/mocks/streamsData';
 import { StreamCard } from '../../../../components/ui';
 
 export const Videos = () => {

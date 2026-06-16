@@ -1,9 +1,9 @@
 import { useParams, useLocation } from 'react-router-dom';
 import { ProductCarousel, ChatSidebar, ExpandableBox } from '../../components/layout';
 import { VideoLive } from './components';
-import { StreamCard } from '../../components/ui';
-import { streamsData } from '../../shared/assets/user/streamsData';
-import { products } from '../../shared/assets/products/products';
+import { StreamCard, MobileCard } from '../../components/ui';
+import { streamsData } from '../../shared/mocks/streamsData';
+import { products } from '../../shared/mocks/productsData';
 import './style.css';
 
 export const LiveProfile = () => {
@@ -25,7 +25,12 @@ export const LiveProfile = () => {
 
         <div className="live-section-video">
           <VideoLive title={currentVideo[id].videoTitle} video={currentVideo[id]} />
-          <div className="section-product-mobile">1111</div>
+
+          <div className="section-product-mobile">
+            {prods.map((prod) => {
+              return <MobileCard key={prod.productId} product={prod} />;
+            })}
+          </div>
         </div>
 
         <div className="live-section-chat">

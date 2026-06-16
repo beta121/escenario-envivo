@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { ProductCard } from '../../../ui';
-import { products as P } from '../../../../shared/assets/products/products';
+import { products as P } from '../../../../shared/mocks/productsData';
 
 export const Products = () => {
   const { id } = useParams();
