@@ -1,22 +1,22 @@
 import { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Gallery, Toasty } from '../../components/ui';
-
 import { sellersUsers } from '../../shared/mocks/sellersData';
-import { products } from '../../shared/assets/products/products';
+import { products } from '../../shared/mocks/productsData';
 
-import avatar1 from '../../shared/assets/user/img/avatar1.png';
-import com1 from '../../shared/assets/products/comp/item-buy1.png';
-import com2 from '../../shared/assets/products/comp/item-buy2.png';
-import com3 from '../../shared/assets/products/comp/item-buy3.png';
-import com4 from '../../shared/assets/products/comp/item-buy4.png';
-import com5 from '../../shared/assets/products/comp/item-buy5.png';
-import com12 from '../../shared/assets/products/comp/highlights1.png';
+//-------------------------delete---------------------------------------
+import com1 from '../../shared/assets/comp/item-buy1.png';
+import com2 from '../../shared/assets/comp/item-buy2.png';
+import com3 from '../../shared/assets/comp/item-buy3.png';
+import com4 from '../../shared/assets/comp/item-buy4.png';
+import com5 from '../../shared/assets/comp/item-buy5.png';
+import com12 from '../../shared/assets/comp/highlights1.png';
+//----------------------------------------------------------------
+
 import card1 from '../../shared/assets/svg/card4.svg';
 import card2 from '../../shared/assets/svg/card2.svg';
 import card3 from '../../shared/assets/svg/card3.svg';
 import card4 from '../../shared/assets/svg/card1.svg';
-
 import './style.css';
 
 const footerCard = [card1, card2, card3, card4];

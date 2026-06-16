@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 
-.section-product-mobile {
+.upcoming-section-product-mobile {
   height: auto;
   position: absolute;
   left: 0;
@@ -71,9 +71,20 @@
   grid-area: product;
 }
 
+.upcoming-section-product-mobile {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.upcoming-section-product-mobile::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
 @media (min-width: 800px) {
-  .section-product-mobile {
-    display: none;
+  .upcoming-section-product-mobile {
+    display: none !important;
   }
 
   .upcoming-section-btn-rem {
