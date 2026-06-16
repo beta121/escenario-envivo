@@ -1,10 +1,13 @@
-import { useParams, Outlet } from 'react-router-dom';
-import { ProductCarousel, ChatSidebar, VideoPlayer } from '../../components/layout';
+import { useParams, useLocation } from 'react-router-dom';
+import { ProductCarousel, ChatSidebar, ExpandableBox } from '../../components/layout';
+import { VideoLive } from './components';
+import { StreamCard } from '../../components/ui';
 import { streamsData } from '../../shared/assets/user/streamsData';
 import { products } from '../../shared/assets/products/products';
 import './style.css';
 
 export const LiveProfile = () => {
+  const location = useLocation();
   const { id } = useParams();
 
   const currentVideo = Object.fromEntries(streamsData.map((item) => [item.videoId, item]));
@@ -13,27 +16,34 @@ export const LiveProfile = () => {
   const prods = currentProduct[currentVideo[id].userId].products.filter(
     (product) => product.type === 'showing-now' || product.type === 'default'
   );
+  const isLive = location.pathname.includes('/live');
 
   return (
-    <section className="broadcast-page">
-      <div className="main-layout">
-        <h3 className="broadcast-title">{currentVideo[id].videoTitle}</h3>
+    <section className="video-section-page">
+      <div className="live-section-wrapper">
+        <h3 className="live-section-video-title">{currentVideo[id].videoTitle}</h3>
 
-        <div className="view-section">
-          <VideoPlayer
-            streamerData={currentVideo[id]}
-            videoUrl={currentVideo[id]?.streamVideo}
-            status={currentVideo[id]?.status}
-          />
-          <ChatSidebar />
+        <div className="live-section-video">
+          <VideoLive title={currentVideo[id].videoTitle} video={currentVideo[id]} />
+          <div className="section-product-mobile">1111</div>
         </div>
 
-        <footer className="products-shelf">
-          <ProductCarousel currentProduct={prods} />
-        </footer>
-      </div>
+        <div className="live-section-chat">
+          <ChatSidebar isLive={isLive} />
+        </div>
 
-      <Outlet />
+        <div className="live-section-product">
+          <ProductCarousel currentProduct={prods} />
+        </div>
+
+        <div className="live-section-all-video">
+          <ExpandableBox showGradient={false} showMo={streamsData.length}>
+            {(streamsData || []).map((stream) => (
+              <StreamCard stream={stream} key={`stream-${stream.videoId}`} />
+            ))}
+          </ExpandableBox>
+        </div>
+      </div>
     </section>
   );
 };

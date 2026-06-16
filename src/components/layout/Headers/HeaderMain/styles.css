@@ -1,47 +1,102 @@
 .header {
-  height: 64px;
-  background: white;
-  border-bottom: 1px solid #eee;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: sticky;
   top: 0;
   z-index: 1000;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 64px;
+
+  background: #fff;
+  border-bottom: 1px solid #eee;
 }
 
 .header-content {
-  width: 1440px;
-  max-width: 100%;
-  padding: 0 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
+
+  width: 1320px;
+  max-width: 100%;
+  padding: 0 16px;
+
+  gap: 8px;
 }
+
+/* =========================
+   Logo
+   ========================= */
 
 .logo-container img {
   display: block;
-  width: 148px;
   height: 48px;
-  object-fit: cover;
-  display: block;
+  width: auto;
+  object-fit: contain;
+}
+
+/* =========================
+   Mobile Menu
+   ========================= */
+
+.mobile-menu {
+  display: flex;
+  align-items: center;
+}
+
+.mobile-menu button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.search-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 16px;
+
+  object-fit: contain;
+}
+
+.burger-icon {
+  width: 32px;
+  height: 32px;
+
+  object-fit: contain;
+}
+
+/* =========================
+   Desktop Menu
+   ========================= */
+
+.desktop-menu {
+  display: none;
 }
 
 .header-right-section {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 15px;
 }
 
 .login-link {
   color: #e85d26;
-  font-weight: 700;
+
   font-size: 14px;
+  font-weight: 700;
+
+  white-space: nowrap;
+
   border-bottom: 1.5px solid #e85d26;
   padding-bottom: 2px;
-  white-space: nowrap;
-  transition: opacity 0.2s;
+
+  transition: opacity 0.2s ease;
 }
 
 .login-link:hover {
@@ -52,4 +107,47 @@
   display: flex;
   align-items: center;
   gap: 12px;
+}
+
+/* =========================
+   Desktop (800px+)
+   ========================= */
+
+@media (min-width: 800px) {
+  .header-content {
+    padding: 0 32px;
+  }
+
+  .mobile-menu {
+    display: none;
+  }
+
+  .desktop-menu {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    gap: 8px;
+  }
+
+  .desktop-menu> :nth-child(2) {
+    flex: 1;
+  }
+}
+
+
+@media (min-width:1280px) {
+  .desktop-menu {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    gap: 20px;
+  }
+
+  .header-right-section {
+    gap: 24px;
+  }
+
+  .header-content {
+    gap: 20px
+  }
 }

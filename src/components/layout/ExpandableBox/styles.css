@@ -1,63 +1,73 @@
 .expandable-container {
-  width: 1320px;
-}
-
-.expandable-btn {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 100%;
-  color: #EB5A21;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding-right: 12px;
+  width: 100%;
 }
 
 .expandable-box {
   display: flex;
   flex-wrap: wrap;
   overflow: hidden;
-  transition: height 0.4s ease;
   position: relative;
-  padding: 10px 0 20px 0;
+  padding: 10px 0 20px;
   box-sizing: border-box;
-  overflow: hidden;
-  transition: max-height 0.25s ease;
-  will-change: max-height;
+  transition: max-height 0.3s ease;
 }
 
 .expandable-box::after {
   content: '';
   position: absolute;
-  z-index: 2;
   top: 0;
   right: 0;
   width: 200px;
   height: 100%;
+  pointer-events: none;
+
   background: linear-gradient(to left,
       #f3f3f3 0%,
       rgba(243, 243, 243, 0.9) 15%,
       rgba(243, 243, 243, 0) 100%);
-  pointer-events: none;
+
   opacity: var(--gradient-opacity, 1);
-  transition: opacity 0.4s ease;
+  transition: opacity 0.3s ease;
 }
 
-.item {
-  width: 260px;
-  height: 160px;
-  background: dodgerblue;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 16px;
+.mobile-scroll {
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-height: none !important;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.mobile-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.mobile-scroll::after {
+  display: none;
+}
+
+.mobile-scroll>* {
+  flex-shrink: 0;
 }
 
 .expandable-footer {
-  width: 100%;
   display: flex;
-  align-items: center;
   justify-content: center;
-  margin-top: 4px;
+  align-items: center;
+  margin-top: 8px;
+  cursor: pointer;
+}
+
+.expandable-btn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+
+  font-size: 14px;
+  font-weight: 500;
+  color: #eb5a21;
+
+  padding-right: 12px;
 }

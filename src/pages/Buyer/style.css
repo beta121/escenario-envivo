@@ -62,12 +62,6 @@
   margin-top: 0;
 }
 
-@media (max-width: 768px) {
-  .seller-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
 
 .seller-split-block {
   margin-top: 60px;
@@ -90,20 +84,4 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-
-@media (max-width: 768px) {
-  .seller-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .seller-split-block.reversed .seller-grid {
-    display: flex;
-    flex-direction: column-reverse;
-  }
-
-  .seller-main-title {
-    font-size: 26px;
-  }
 }

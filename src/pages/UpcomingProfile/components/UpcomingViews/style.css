@@ -1,0 +1,120 @@
+.upcoming-views-container {
+  width: 100%;
+  background-color: #212121;
+  height: clamp(269px, 59.5vw, 496px);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.upcoming-views-container>div:first-child {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 8px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.upcoming-views-container>div:nth-child(2) {
+  margin-top: auto;
+  margin-bottom: auto;
+  align-self: center;
+  transform: translateY(-36px);
+}
+
+.upcoming-video-live-title {
+  display: block;
+  font-family: Roboto, sans-serif;
+  color: #FFFFFF;
+  font-size: 10px;
+  font-weight: 500;
+  color: #FFFFFF;
+  width: 212px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  align-self: baseline;
+}
+
+.upcoming-live-video-button {
+  padding: 8px 12px;
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.upcoming-countdown-container {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  pointer-events: auto;
+}
+
+.upcoming-time-block {
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.upcoming-time-value {
+  letter-spacing: -2px;
+  font-size: 56px;
+  font-weight: 600;
+  line-height: 1;
+  color: #FFFFFF;
+}
+
+.upcoming-time-label {
+  font-size: 16px;
+  color: #FFFFFF;
+  text-transform: lowercase;
+}
+
+.upcoming-btn-desktop {
+  display: none;
+}
+
+@media (min-width: 800px) {
+  .upcoming-views-container {
+    height: 100%
+  }
+
+  .upcoming-btn-desktop {
+    margin-top: 0;
+    margin-bottom: auto;
+    display: block;
+  }
+
+  .upcoming-live-video-button {
+    display: none;
+  }
+
+  .upcoming-video-live-title {
+    display: none;
+  }
+
+  .upcoming-countdown-container {
+    gap: 60px;
+  }
+
+  .upcoming-time-value {
+    font-size: 120px;
+  }
+
+  .upcoming-time-label {
+    font-size: 32px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .upcoming-views-container {
+    border-radius: 16px;
+  }
+}

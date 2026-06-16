@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { Short } from '../../../ui';
-import { shorts } from '../../../../shared/assets/user/shorts1';
+import { shorts } from '../../../../shared/assets/user/shorts';
 
 export const Shorts = () => {
   const { id } = useParams();

@@ -17,7 +17,8 @@ export const Landing = () => {
   const [scrollPoints, setScrollPoints] = useState([0, 0.25, 0.5, 0.75]);
   const [isImageLoaded, setIsImageLoaded] = useState(false);
 
-  const bgImage = new URL('../../shared/assets/ai-features/AiFrame.png', import.meta.url).href;
+  const bgImage = new URL('../../shared/assets/landing/ai-features/AiFrame.png', import.meta.url)
+    .href;
 
   useEffect(() => {
     const img = new Image();

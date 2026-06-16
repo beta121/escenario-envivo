@@ -7,7 +7,7 @@ export const StreamerInfo = ({ userId, avatar, name, rating }) => {
   const [isFollow, setFollow] = useState(true);
 
   return (
-    <div className="streamer-info" style={{ background: '#00000080', padding: '13px 12px' }}>
+    <div className="streamer-info">
       <Link
         to={`/user/${userId}`}
         style={{
@@ -26,7 +26,7 @@ export const StreamerInfo = ({ userId, avatar, name, rating }) => {
             <i className="fa-solid fa-star">
               <img src={star} />
             </i>
-            {rating}
+            <p className="streamer-rating-counter">{rating}</p>
           </span>
         </div>
       </Link>

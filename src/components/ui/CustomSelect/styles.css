@@ -11,7 +11,7 @@
   gap: 8px;
   padding: 8px 4px;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 12px;
   white-space: nowrap;
 }
 
@@ -29,13 +29,18 @@
 .select-custom-dropdown {
   display: none;
   position: absolute;
-  top: calc(100% + 10px);
+  top: 100%;
+  left: 0;
+  width: 100%;
+  min-width: 160px;
   background: white;
   border: 1px solid #eee;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   border-radius: 12px;
-  z-index: 110;
+  z-index: 2100;
   padding: 8px 0;
+  max-height: 250px;
+  overflow-y: auto;
 }
 
 .select-custom-dropdown.open {
@@ -57,14 +62,6 @@
   color: #e85d26;
 }
 
-
-.select-custom.region .select-custom-dropdown {
-  left: -40px;
-  min-width: 220px;
-  max-height: 300px;
-  overflow-y: auto;
-}
-
 .select-custom.lang .select-custom-dropdown {
   right: -20px;
   min-width: 120px;
@@ -82,4 +79,26 @@
 .select-custom.lang .select-custom-dropdown {
   right: -20px;
   min-width: 120px;
+}
+
+
+@media (min-width:1280px) {
+  .select-custom-btn {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 800px) {
+  .select-custom.region .select-custom-dropdown {
+    left: -40px;
+    right: auto;
+    min-width: 220px;
+    max-height: 300px;
+  }
+
+  .select-custom.lang .select-custom-dropdown {
+    left: auto;
+    right: -20px;
+    min-width: auto;
+  }
 }
