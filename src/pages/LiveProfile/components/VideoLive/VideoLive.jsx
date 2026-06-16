@@ -1,9 +1,12 @@
 import { useState, useEffect } from 'react';
 import { StreamerInfo } from '../../../../components/ui';
+import { useLiveVideoRandomTime } from '../../../../shared/hooks';
+
 import './style.css';
 
 export const VideoLive = ({ video, title }) => {
   const [isLoading, setIsLoading] = useState(true);
+  const videoRef = useLiveVideoRandomTime(true, video.streamVideo);
 
   useEffect(() => {
     setIsLoading(true);
@@ -26,6 +29,7 @@ export const VideoLive = ({ video, title }) => {
       </div>
 
       <video
+        ref={videoRef}
         src={video.streamVideo}
         className="video-live"
         muted={false}

@@ -5,16 +5,36 @@
   box-sizing: border-box;
 }
 
+
 .video-section-wrapper {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   grid-template-areas:
     'title'
     'video'
+    'productMobile'
     'chat'
     'allVideo';
   gap: 16px;
   width: 100%;
+}
+
+.section-product-mobile {
+  height: auto;
+  width: 100%;
+  overflow-x: auto;
+  display: flex;
+  flex-direction: row;
+  padding: 0 0 0 12px;
+  box-sizing: border-box;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  gap: 8px;
+  align-items: flex-end;
+}
+
+.video-products-mobile {
+  grid-area: productMobile;
 }
 
 .video-section-title {
@@ -55,7 +75,9 @@
 }
 
 @media (min-width: 800px) {
-
+  .video-products-mobile {
+    display: none;
+  }
 
   .video-section-video {
     height: 496px;

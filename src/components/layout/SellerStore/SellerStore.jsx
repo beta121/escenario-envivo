@@ -2,9 +2,9 @@ import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { StoreTabsController } from '../../layout';
 import { Button, ProductCard, Toasty } from '../../ui';
-import { sellersUsers } from '../../../shared/assets/user/sellersUsers';
-import { products as allProducts } from '../../../shared/assets/products/products';
-import ing from '../../../shared/assets/products/Vector.svg';
+import { sellersUsers } from '../../../shared/mocks/sellersData';
+import { products as allProducts } from '../../../shared/mocks/productsData';
+import ing from '../../../shared/assets/svg/Vector.svg';
 import star from '../../../shared/assets/svg/star.svg';
 
 import './style.css';

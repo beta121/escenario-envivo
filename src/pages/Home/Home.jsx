@@ -2,9 +2,9 @@ import { useMemo, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { CategoryAction, HighlightCard, Short, SearchBar, StreamCard } from '../../components/ui';
 import { ExpandableBox, FavoriteSellers } from '../../components/layout';
-import { streamsData } from '../../shared/assets/user/streamsData';
-import { products } from '../../shared/assets/products/products';
-import { shorts } from '../../shared/assets/user/shorts';
+import { streamsData } from '../../shared/mocks/streamsData';
+import { products } from '../../shared/mocks/productsData';
+import { shorts } from '../../shared/mocks/shortsData';
 import { useHeader } from '../../shared/context/HeaderContext';
 
 import AppliancesIcon from '../../shared/assets/svg/AppliancesIcon';
@@ -49,6 +49,8 @@ const Home = () => {
 
   const currentProducts = products.map((product) => product.products[0]);
 
+  // убрать когда буду все магазині
+
   const limitShorts = useMemo(() => {
     const firsts = Object.values(
       shorts.reduce((acc, short) => {
@@ -70,6 +72,14 @@ const Home = () => {
 
     return [...firsts, ...remaining.slice(0, needed)];
   }, []);
+
+  // убрать когда буду все магазині
+
+  const priorityShorts = limitShorts.filter((short) => Number(short.userId) === 1);
+  const otherShorts = limitShorts.filter((short) => Number(short.userId) !== 1);
+
+  const orderedShorts = [...priorityShorts, ...otherShorts];
+  //--------------------------------------
 
   return (
     <div className="main-container">
@@ -104,15 +114,14 @@ const Home = () => {
         <ExpandableBox showGradient={false} showMo={currentProducts.length} gap={20}>
           {(currentProducts || []).map((product, index) => {
             const productId = product?.id || product?.productId || product?._id || index;
-
             return <HighlightCard product={product} key={`product-${productId}`} />;
           })}
         </ExpandableBox>
       </div>
 
       <div style={{ margin: '15px 0 24px' }}>
-        <ExpandableBox showGradient={false} showMo={limitShorts.length}>
-          {(limitShorts || []).map((short) => (
+        <ExpandableBox showGradient={false} showMo={shorts.length}>
+          {(shorts || []).map((short) => (
             <Short key={`short-${short.id}`} short={short} showInfo={false} />
           ))}
         </ExpandableBox>

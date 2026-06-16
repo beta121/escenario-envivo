@@ -1,5 +1,5 @@
-import sellerWorking from '../../shared/assets/aifeatures-hero.png';
-import streamingShoes from '../../shared/assets/aifeatures-angel.png';
+import sellerWorking from '../../shared/assets/interface/aifeatures-hero.png';
+import streamingShoes from '../../shared/assets/interface/aifeatures-angel.png';
 import './style.css';
 
 const AiFeatures = () => {

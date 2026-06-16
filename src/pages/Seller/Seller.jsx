@@ -1,6 +1,6 @@
-import sellerWorking from '../../shared/assets/seller-working.png';
-import streamingShoes from '../../shared/assets/streaming-shoes.png';
-import streamingGirl from '../../shared/assets/streaming-girl.png';
+import sellerWorking from '../../shared/assets/interface/seller-working.png';
+import streamingShoes from '../../shared/assets/interface/streaming-shoes.png';
+import streamingGirl from '../../shared/assets/interface/streaming-girl.png';
 
 import './style.css';
 

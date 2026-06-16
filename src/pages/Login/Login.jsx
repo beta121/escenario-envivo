@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { TextField } from '../../components/ui';
-import loginImg from '../../shared/assets/login-img.png';
+import loginImg from '../../shared/assets/interface/login-img.png';
 import './style.css';
 
 const Login = () => {

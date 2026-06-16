@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom';
 import { SellerStore } from '../../components/layout';
 import { AboutProfileUser } from '../AboutProfileUser/AboutProfileUser';
-import { sellersUsers } from '../../shared/assets/user/sellersUsers';
+import { sellersUsers } from '../../shared/mocks/sellersData';
 
 export const UserProfile = () => {
   const { id } = useParams();
