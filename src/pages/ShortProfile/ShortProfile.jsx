@@ -4,9 +4,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { StreamerInfo, ProductCard } from '../../components/ui';
 import { ChatSidebar } from '../../components/layout';
 
-import { shorts } from '../../shared/assets/user/shorts';
-import { sellersUsers } from '../../shared/assets/user/sellersUsers';
-import { products } from '../../shared/assets/products/products';
+import { shorts } from '../../shared/mocks/shortsData';
+import { sellersUsers } from '../../shared/mocks/sellersData';
+import { products } from '../../shared/mocks/productsData';
 
 import DislikeIcon from '../../shared/assets/svg/DislikeIcon';
 import LikeIcon from '../../shared/assets/svg/LikeIcon';

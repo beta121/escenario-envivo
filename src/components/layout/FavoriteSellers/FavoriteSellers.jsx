@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
-import { sellersUsers } from '../../../shared/assets/user/sellersUsers';
-import { streamsData } from '../../../shared/assets/user/streamsData';
+import { sellersUsers } from '../../../shared/mocks/sellersData';
+import { streamsData } from '../../../shared/mocks/streamsData';
 
 import './styles.css';
 

@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Gallery, Toasty } from '../../components/ui';
 
-import { sellersUsers } from '../../shared/assets/user/sellersUsers';
+import { sellersUsers } from '../../shared/mocks/sellersData';
 import { products } from '../../shared/assets/products/products';
 
 import avatar1 from '../../shared/assets/user/img/avatar1.png';

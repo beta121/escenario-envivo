@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { Toasty } from '../../../ui';
 import { useTimer } from '../../../../shared/hooks/useTimer';
-import { products } from '../../../../shared/assets/products/products';
+import { products } from '../../../../shared/mocks/productsData';
 
 import './style.css';
 

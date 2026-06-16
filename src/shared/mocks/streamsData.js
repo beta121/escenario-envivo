@@ -5,49 +5,62 @@ import avatar4 from '../assets/shops/avatars/avatar4.png'
 import avatar5 from '../assets/shops/avatars/avatar5.png'
 
 // -----------stream preview-----------
-import streamPreview1 from '../assets/shops/shop1/preview/stream/streamPrev1.jpg'
+import streamPreview1 from '../assets/shops/shop1/preview/stream/streamPrev1.png'
+import streamPreview21 from '../assets/shops/shop2/preview/stream/streamPrev1.jpg'
+import streamPreview31 from '../assets/shops/shop3/preview/stream/streamPrev1.jpg'
+import streamPreview41 from '../assets/shops/shop4/preview/stream/streamPrev1.jpg'
+import streamPreview51 from '../assets/shops/shop5/preview/stream/streamPrev1.jpg'
+
 
 // -----------video preview-----------
-import videoPreview1 from '../assets/shops/shop1/preview/videos/videoPrev1.jpg'
+import videoPreview1 from '../assets/shops/shop1/preview/video/videoPrev1.png'
+import videoPreview21 from '../assets/shops/shop2/preview/video/videoPrev1.jpg'
+import videoPreview31 from '../assets/shops/shop3/preview/video/videoPrev1.jpg'
+import videoPreview41 from '../assets/shops/shop4/preview/video/videoPrev1.jpg'
+import videoPreview51 from '../assets/shops/shop5/preview/video/videoPrev1.jpg'
+
+
 
 // -----------upcoming preview-----------
-import upcomingPreview1 from '../assets/shops/shop1/preview/upcoming/upcomingPrev1.jpg'
+import upcomingPreview1 from '../assets/shops/shop1/preview/upcoming/upcomingPrev1.png'
+import upcomingPreview21 from '../assets/shops/shop2/preview/upcoming/upcomingPrev1.jpg'
+import upcomingPreview31 from '../assets/shops/shop3/preview/upcoming/upcomingPrev1.jpg'
+import upcomingPreview41 from '../assets/shops/shop4/preview/upcoming/upcomingPrev1.jpg'
+import upcomingPreview51 from '../assets/shops/shop5/preview/upcoming/upcomingPrev1.jpg'
+
+
 
 // -----------stream-------------
 import stream1 from '../assets/shops/shop1/videos/stream/stream1.mp4'
+import stream21 from '../assets/shops/shop2/videos/stream/stream1.MP4'
+import stream31 from '../assets/shops/shop3/videos/stream/stream1.MP4'
+import stream41 from '../assets/shops/shop4/videos/stream/stream1.MP4'
+import stream51 from '../assets/shops/shop5/videos/stream/stream1.MP4'
+
+
 
 // -----------video--------------
-import video1 from '../assets/shops/shop1/videos/video/video1.mp4'
+import video1 from '../assets/shops/shop1/videos/video/video1.MP4'
+import video21 from '../assets/shops/shop2/videos/video/video1.MP4'
+import video31 from '../assets/shops/shop3/videos/video/video1.MP4'
+import video41 from '../assets/shops/shop4/videos/video/video1.MP4'
+import video51 from '../assets/shops/shop5/videos/video/video1.MP4'
 
 
-//------------------------------delete-------------------------------
 
-import StreamPhoto2 from '../assets/user/img/StreamPhoto_2.png'
-import StreamPhoto3 from '../assets/user/img/StreamPhoto_3.png'
-import StreamPhoto4 from '../assets/user/img/StreamPhoto_4.png'
-import StreamPhoto5 from '../assets/user/img/StreamPhoto_5.png'
 
-import stream2 from '../assets/user/streams/stream2.mp4';
-import stream3 from '../assets/user/streams/stream3.mp4';
-import stream4 from '../assets/user/streams/stream4.mp4';
-import stream5 from '../assets/user/streams/stream5.mp4';
-
-import video2 from '../assets/user/video/video2.mp4';
-import video3 from '../assets/user/video/video3.mp4';
-import video4 from '../assets/user/video/video4.mp4';
-import video5 from '../assets/user/video/video5.mp4';
 
 export const streamsData = [
   {
     videoId: '1',
     userId: '1',
-    userName: "Live Haul Hub",
+    userName: "CompWorld",
     avatarUrl: avatar1,
     star: true,
     streamVideo: stream1,
-    videoTitle: "$1 Starts, Giveaways, Macbooks, iPads, Chromebooks & More!",
-    category: "Appliances",
-    description: "Appliances, Home electronics, Computers, Computer Appliances, Home electronics, Computers, Computer",
+    videoTitle: "Crazy tech & Blowout! Super stream",
+    category: "Competers",
+    description: "Competers, Trxt, trewd, wuec",
     status: 'live',
     badgeText: '3K',
     isNewSeller: true,
@@ -61,7 +74,7 @@ export const streamsData = [
     userName: "Spotlight Sales",
     avatarUrl: avatar2,
     star: true,
-    streamVideo: stream2,
+    streamVideo: stream21,
     videoTitle: "1 Starts, Giveaways, Macbooks, iPads, Chromebooks & More!",
     category: "Appliances",
     description: "Appliances, Home electronics, Comasdasd",
@@ -70,7 +83,7 @@ export const streamsData = [
     rating: 4.4,
     isNewSeller: false,
     hasNotification: false,
-    screenSaver: StreamPhoto2
+    screenSaver: streamPreview21
 
   },
   {
@@ -79,7 +92,7 @@ export const streamsData = [
     userName: "Flash Sale Live",
     avatarUrl: avatar3,
     star: true,
-    streamVideo: stream3,
+    streamVideo: stream31,
     videoTitle: "⚡️‼️Voltage HIGH END Electronics Show! Feat Abbie👀 Exercise Equipment",
     category: "Appliances",
     description: "Appliances, Home electronics, Coasda",
@@ -88,7 +101,7 @@ export const streamsData = [
     isNewSeller: true,
     rating: 4.1,
     hasNotification: false,
-    screenSaver: StreamPhoto3
+    screenSaver: streamPreview31
 
   },
   {
@@ -97,7 +110,7 @@ export const streamsData = [
     userName: "Best buys",
     avatarUrl: avatar4,
     star: false,
-    streamVideo: stream4,
+    streamVideo: stream41,
     videoTitle: "Pallet Pulls and Giveaways! Join the Shady Deals Crew!",
     category: "Appliances",
     description: "Appliances, Home electronics,",
@@ -106,7 +119,7 @@ export const streamsData = [
     rating: 4.8,
     isNewSeller: false,
     hasNotification: false,
-    screenSaver: StreamPhoto4
+    screenSaver: streamPreview41
 
   },
   {
@@ -115,7 +128,7 @@ export const streamsData = [
     userName: "Curated Catch",
     avatarUrl: avatar5,
     star: true,
-    streamVideo: stream5,
+    streamVideo: stream51,
     videoTitle: "Pallet Pulls and Giveaways! Join the Shady Deals Crew!",
     category: "Appliances",
     description: "Appliances, Home electronics, Computers, Computers",
@@ -124,7 +137,7 @@ export const streamsData = [
     rating: 4,
     isNewSeller: false,
     hasNotification: false,
-    screenSaver: StreamPhoto5
+    screenSaver: streamPreview51
 
   },
 
@@ -134,12 +147,12 @@ export const streamsData = [
   {
     videoId: '7',
     userId: '1',
-    userName: "Live Haul Hub",
+    userName: "CompWorld",
     avatarUrl: avatar1,
     star: true,
-    videoTitle: "$1 Starts, Giveaways, Macbooks, iPads, Chromebooks & More!",
-    category: "Gadgets",
-    description: "Appliances, Home electronics, Computers, Computer Appliances, Home electronics, Computers, Computer",
+    videoTitle: "Clearance Blowout: Double Laptops, Insane Prices!",
+    category: "Competers",
+    description: "Competers, Trxt, trewd, wuec",
     badgeText: '01:0:15',
     textBadge: 'Today 11:30 PM',
     status: 'upcoming',
@@ -164,6 +177,7 @@ export const streamsData = [
     rating: 4.4,
     isNewSeller: false,
     hasNotification: true,
+    screenSaver: upcomingPreview21
   },
   {
     videoId: '9',
@@ -180,6 +194,7 @@ export const streamsData = [
     textBadge: 'Today 11:30 PM',
     rating: 4.1,
     hasNotification: true,
+    screenSaver: upcomingPreview31
   },
   {
     videoId: '10',
@@ -196,6 +211,7 @@ export const streamsData = [
     rating: 4.8,
     isNewSeller: false,
     hasNotification: true,
+    screenSaver: upcomingPreview41
   },
   {
     videoId: '11',
@@ -212,6 +228,7 @@ export const streamsData = [
     rating: 4,
     isNewSeller: false,
     hasNotification: true,
+    screenSaver: upcomingPreview51
   },
 
 
@@ -220,13 +237,13 @@ export const streamsData = [
   {
     videoId: '12',
     userId: '1',
-    userName: "Live Haul Hub",
+    userName: "CompWorld",
     avatarUrl: avatar1,
     star: true,
     streamVideo: video1,
-    videoTitle: "$1 Starts, Giveaways, Macbooks, iPads, Chromebooks & More!",
-    category: "Gadgets",
-    description: "Appliances, Home electronics, Computers, Computer Appliances, Home electronics, Computers, Computer",
+    videoTitle: "Live stream! Crazy tech & Blowout!",
+    category: "Competers",
+    description: "Competers, Trxt, trewd, wuec",
     badgeText: '3K',
     status: 'video',
     rating: 5,
@@ -240,7 +257,7 @@ export const streamsData = [
     userName: "Spotlight Sales",
     avatarUrl: avatar2,
     star: true,
-    streamVideo: video2,
+    streamVideo: video21,
     videoTitle: "1 Starts, Giveaways, Macbooks, iPads, Chromebooks & More!",
     category: "Phones",
     description: "Appliances, Home electronics, Comasdasd",
@@ -249,7 +266,7 @@ export const streamsData = [
     rating: 4.4,
     isNewSeller: false,
     hasNotification: false,
-    screenSaver: ''
+    screenSaver: videoPreview21
   },
   {
     videoId: '14',
@@ -257,7 +274,7 @@ export const streamsData = [
     userName: "Flash Sale Live",
     avatarUrl: avatar3,
     star: true,
-    streamVideo: video3,
+    streamVideo: video31,
     videoTitle: "⚡️‼️Voltage HIGH END Electronics Show! Feat Abbie👀 Exercise Equipment",
     category: "Phones",
     description: "Appliances, Home electronics, Coasda",
@@ -266,7 +283,7 @@ export const streamsData = [
     badgeText: '2.2K',
     rating: 4.1,
     hasNotification: false,
-    screenSaver: ''
+    screenSaver: videoPreview31
   },
   {
     videoId: '15',
@@ -274,7 +291,7 @@ export const streamsData = [
     userName: "Best buys",
     avatarUrl: avatar4,
     star: false,
-    streamVideo: video4,
+    streamVideo: video41,
     videoTitle: "Pallet Pulls and Giveaways! Join the Shady Deals Crew!",
     category: "Phones",
     description: "Appliances, Home electronics,",
@@ -283,7 +300,7 @@ export const streamsData = [
     rating: 4.8,
     isNewSeller: false,
     hasNotification: false,
-    screenSaver: ''
+    screenSaver: videoPreview41
   },
   {
     videoId: '16',
@@ -291,7 +308,7 @@ export const streamsData = [
     userName: "Curated Catch",
     avatarUrl: avatar5,
     star: true,
-    streamVideo: video5,
+    streamVideo: video51,
     videoTitle: "Pallet Pulls and Giveaways! Join the Shady Deals Crew!",
     category: "Phones",
     description: "Appliances, Home electronics, Computers, Computers",
@@ -300,6 +317,6 @@ export const streamsData = [
     rating: 4,
     isNewSeller: false,
     hasNotification: false,
-    screenSaver: ''
+    screenSaver: videoPreview51
   },
 ]

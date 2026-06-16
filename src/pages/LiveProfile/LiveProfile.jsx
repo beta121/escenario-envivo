@@ -2,8 +2,8 @@ import { useParams, useLocation } from 'react-router-dom';
 import { ProductCarousel, ChatSidebar, ExpandableBox } from '../../components/layout';
 import { VideoLive } from './components';
 import { StreamCard, MobileCard } from '../../components/ui';
-import { streamsData } from '../../shared/assets/user/streamsData';
-import { products } from '../../shared/assets/products/products';
+import { streamsData } from '../../shared/mocks/streamsData';
+import { products } from '../../shared/mocks/productsData';
 import './style.css';
 
 export const LiveProfile = () => {

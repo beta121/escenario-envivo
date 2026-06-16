@@ -5,22 +5,22 @@ import avatar3 from '../assets/shops/avatars/avatar3.png'
 import avatar4 from '../assets/shops/avatars/avatar4.png'
 import avatar5 from '../assets/shops/avatars/avatar5.png'
 
-export const sellersData = [
+export const sellersUsers = [
   {
     id: 1,
-    name: 'Live Haul Hub',
-    description: 'The best offers in Colombia!',
+    name: 'CompWorld',
+    description: 'Always best prices and service!',
     avatar: avatar1,
     online: true,
     hasStore: true,
-    rating: 5,
+    rating: 4.7,
     followers: 196.7,
     reviewsCount: 18.200,
     unitsSold: 72.700,
     avgShippingTime: '1 Day',
     upcomingStreams: 53,
     finishedStreams: 126,
-    igHandle: '@LiveHaulHub',
+    igHandle: '@ComputerWarehouse',
     store: true,
     upcomingID: '7'
   },
@@ -45,7 +45,7 @@ export const sellersData = [
   },
   {
     id: 3,
-    name: 'Flash Sale Live',
+    name: 'Laptops Plus',
     description: 'Blink and you miss it!',
     avatar: avatar3,
     online: false,

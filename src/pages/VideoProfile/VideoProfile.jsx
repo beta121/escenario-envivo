@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
 import { useParams, useLocation } from 'react-router-dom';
 import { ProductCarousel, ChatSidebar, ExpandableBox } from '../../components/layout';
-import { streamsData } from '../../shared/assets/user/streamsData';
+import { streamsData } from '../../shared/mocks/streamsData';
 import { VideoViews } from './components/VideoViews';
 import { StreamCard, MobileCard } from '../../components/ui';
-import { products } from '../../shared/assets/products/products';
+import { products } from '../../shared/mocks/productsData';
 import './style.css';
 
 const VideoProfile = () => {

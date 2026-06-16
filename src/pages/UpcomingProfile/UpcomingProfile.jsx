@@ -3,8 +3,8 @@ import { useParams } from 'react-router-dom';
 import { ProductCarousel, ChatSidebar, ExpandableBox } from '../../components/layout';
 import { StreamCard, MobileCard } from '../../components/ui';
 import { UpcomingViews, UpcomingBtn } from './components';
-import { streamsData } from '../../shared/assets/user/streamsData';
-import { products } from '../../shared/assets/products/products';
+import { streamsData } from '../../shared/mocks/streamsData';
+import { products } from '../../shared/mocks/productsData';
 import './style.css';
 
 const UpcomingProfile = () => {

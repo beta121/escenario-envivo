@@ -2,9 +2,9 @@ import { useMemo, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { CategoryAction, HighlightCard, Short, SearchBar, StreamCard } from '../../components/ui';
 import { ExpandableBox, FavoriteSellers } from '../../components/layout';
-import { streamsData } from '../../shared/assets/user/streamsData';
-import { products } from '../../shared/assets/products/products';
-import { shorts } from '../../shared/assets/user/shorts';
+import { streamsData } from '../../shared/mocks/streamsData';
+import { products } from '../../shared/mocks/productsData';
+import { shorts } from '../../shared/mocks/shortsData';
 import { useHeader } from '../../shared/context/HeaderContext';
 
 import AppliancesIcon from '../../shared/assets/svg/AppliancesIcon';
@@ -48,6 +48,8 @@ const Home = () => {
   }, [category, streamsData]);
 
   const currentProducts = products.map((product) => product.products[0]);
+
+  // убрать когда буду все магазині
 
   const limitShorts = useMemo(() => {
     const firsts = Object.values(
@@ -118,8 +120,8 @@ const Home = () => {
       </div>
 
       <div style={{ margin: '15px 0 24px' }}>
-        <ExpandableBox showGradient={false} showMo={limitShorts.length}>
-          {(orderedShorts || []).map((short) => (
+        <ExpandableBox showGradient={false} showMo={shorts.length}>
+          {(shorts || []).map((short) => (
             <Short key={`short-${short.id}`} short={short} showInfo={false} />
           ))}
         </ExpandableBox>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { CommentItem } from '../../../ui';
-import { reviews } from '../../../../shared/assets/user/reviews';
+import { reviews } from '../../../../shared/mocks/reviewsData';
 
 export const Reviews = () => {
   const { id } = useParams();

@@ -1,38 +1,42 @@
-import short1 from '../assets/shops/shop1/videos/shorts/short1.mp4'
-import short2 from '../assets/shops/shop1/videos/shorts/short2.mp4'
-import short3 from '../assets/shops/shop1/videos/shorts/short3.mp4'
-import short4 from '../assets/shops/shop1/videos/shorts/short4.mp4'
-import short5 from '../assets/shops/shop1/videos/shorts/short5.mp4'
+// -----------short video-----------
+import short1 from '../assets/shops/shop1/videos/shorts/short1.MP4'
+import short2 from '../assets/shops/shop1/videos/shorts/short2.MP4'
+import short3 from '../assets/shops/shop1/videos/shorts/short3.MP4'
+import short4 from '../assets/shops/shop1/videos/shorts/short4.MP4'
+import short5 from '../assets/shops/shop1/videos/shorts/short5.MP4'
+
+import short21 from '../assets/shops/shop2/videos/shorts/short1.MP4'
+import short22 from '../assets/shops/shop2/videos/shorts/short2.MP4'
+import short23 from '../assets/shops/shop2/videos/shorts/short3.MP4'
+import short24 from '../assets/shops/shop2/videos/shorts/short4.MP4'
+import short25 from '../assets/shops/shop2/videos/shorts/short5.MP4'
+
+import short31 from '../assets/shops/shop3/videos/shorts/short1.MP4'
+import short32 from '../assets/shops/shop3/videos/shorts/short2.MP4'
+import short33 from '../assets/shops/shop3/videos/shorts/short3.MP4'
+import short34 from '../assets/shops/shop3/videos/shorts/short4.MP4'
+import short35 from '../assets/shops/shop3/videos/shorts/short5.MP4'
+
+import short41 from '../assets/shops/shop4/videos/shorts/short1.MP4'
+import short42 from '../assets/shops/shop4/videos/shorts/short2.MP4'
+import short43 from '../assets/shops/shop4/videos/shorts/short3.MP4'
+import short44 from '../assets/shops/shop4/videos/shorts/short4.MP4'
+import short45 from '../assets/shops/shop4/videos/shorts/short5.MP4'
+
+import short51 from '../assets/shops/shop5/videos/shorts/short1.MP4'
+import short52 from '../assets/shops/shop5/videos/shorts/short2.MP4'
+import short53 from '../assets/shops/shop5/videos/shorts/short3.MP4'
+import short54 from '../assets/shops/shop5/videos/shorts/short4.MP4'
+import short55 from '../assets/shops/shop5/videos/shorts/short5.MP4'
+
+// -----------short preview-----------
+import shortPrev1 from '../assets/shops/shop1/preview/shorts/shortPrev1.png'
+import shortPrev2 from '../assets/shops/shop1/preview/shorts/shortPrev2.png'
+import shortPrev3 from '../assets/shops/shop1/preview/shorts/shortPrev3.png'
+import shortPrev4 from '../assets/shops/shop1/preview/shorts/shortPrev4.png'
+import shortPrev5 from '../assets/shops/shop1/preview/shorts/shortPrev5.png'
 
 
-
-//--------------delete---------------
-
-import shortVideo1 from '../short/shortVideo1.mp4'
-import shortVideo2 from '../short/shortVideo2.mp4'
-import shortVideo3 from '../short/shortVideo3.mp4'
-import shortVideo4 from '../short/shortVideo4.mp4'
-import shortVideo5 from '../short/shortVideo5.mp4'
-import shortVideo6 from '../short/shortVideo6.mp4'
-import shortVideo7 from '../short/shortVideo7.mp4'
-import shortVideo8 from '../short/shortVideo8.mp4'
-import shortVideo9 from '../short/shortVideo9.mp4'
-import shortVideo10 from '../short/shortVideo10.mp4'
-import shortVideo11 from '../short/shortVideo11.mp4'
-import shortVideo12 from '../short/shortVideo12.mp4'
-import shortVideo13 from '../short/shortVideo13.mp4'
-import shortVideo14 from '../short/shortVideo14.mp4'
-import shortVideo15 from '../short/shortVideo15.mp4'
-import shortVideo16 from '../short/shortVideo16.mp4'
-import shortVideo17 from '../short/shortVideo17.mp4'
-import shortVideo18 from '../short/shortVideo18.mp4'
-import shortVideo19 from '../short/shortVideo19.mp4'
-import shortVideo20 from '../short/shortVideo20.mp4'
-import shortVideo21 from '../short/shortVideo21.mp4'
-import shortVideo22 from '../short/shortVideo22.mp4'
-import shortVideo23 from '../short/shortVideo23.mp4'
-import shortVideo24 from '../short/shortVideo24.mp4'
-import shortVideo25 from '../short/shortVideo25.mp4'
 
 export const shorts = [
   {
@@ -43,6 +47,8 @@ export const shorts = [
     category: 'Competers',
     tags: ['Trxt', 'trewd', 'wuec'],
     shortSrc: short1,
+    screenSaver: shortPrev1
+
   },
   {
     id: 2,
@@ -52,6 +58,8 @@ export const shorts = [
     category: 'Competers',
     tags: ['Trxt', 'trewd', 'wuec'],
     shortSrc: short2,
+    screenSaver: shortPrev2
+
   }, {
     id: 3,
     userId: 1,
@@ -60,6 +68,7 @@ export const shorts = [
     category: 'Competers',
     tags: ['Trxt', 'trewd', 'wuec'],
     shortSrc: short3,
+    screenSaver: shortPrev3
 
   },
   {
@@ -70,6 +79,7 @@ export const shorts = [
     category: 'Competers',
     tags: ['Trxt', 'trewd', 'wuec'],
     shortSrc: short4,
+    screenSaver: shortPrev4
 
   },
   {
@@ -80,6 +90,7 @@ export const shorts = [
     category: 'Competers',
     tags: ['Trxt', 'trewd', 'wuec'],
     shortSrc: short5,
+    screenSaver: shortPrev5
 
   },
   // =====
@@ -91,7 +102,9 @@ export const shorts = [
     views: '3K',
     category: 'Competers',
     tags: ['Trxt', 'trewd', 'wuec'],
-    shortSrc: shortVideo6,
+    shortSrc: short21,
+    screenSaver: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg'
+
   },
   {
     id: 7,
@@ -100,7 +113,8 @@ export const shorts = [
     views: '1K',
     category: 'Competers',
     tags: ['Trxt', 'trewd', 'wuec'],
-    shortSrc: shortVideo7,
+    shortSrc: short22,
+    screenSaver: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg'
 
   }, {
     id: 8,
@@ -109,7 +123,8 @@ export const shorts = [
     views: '2.4K',
     category: 'Competers',
     tags: ['Trxt', 'trewd', 'wuec'],
-    shortSrc: shortVideo8,
+    shortSrc: short23,
+    screenSaver: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg'
 
   },
   {
@@ -119,7 +134,8 @@ export const shorts = [
     views: '2K',
     category: 'Competers',
     tags: ['Trxt', 'trewd', 'wuec'],
-    shortSrc: shortVideo9,
+    shortSrc: short24,
+    screenSaver: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg'
 
   },
   {
@@ -129,7 +145,8 @@ export const shorts = [
     views: '2K',
     category: 'Competers',
     tags: ['Trxt', 'trewd', 'wuec'],
-    shortSrc: shortVideo10,
+    shortSrc: short25,
+    screenSaver: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg'
 
   },
   // =====
@@ -141,7 +158,8 @@ export const shorts = [
     views: '3K',
     category: 'Competers',
     tags: ['Trxt', 'trewd', 'wuec'],
-    shortSrc: shortVideo11,
+    shortSrc: short31,
+    screenSaver: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg'
 
   },
   {
@@ -151,7 +169,8 @@ export const shorts = [
     views: '1K',
     category: 'Competers',
     tags: ['Trxt', 'trewd', 'wuec'],
-    shortSrc: shortVideo12,
+    shortSrc: short32,
+    screenSaver: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg'
 
   }, {
     id: 13,
@@ -160,7 +179,8 @@ export const shorts = [
     views: '2.4K',
     category: 'Competers',
     tags: ['Trxt', 'trewd', 'wuec'],
-    shortSrc: shortVideo13,
+    shortSrc: short33,
+    screenSaver: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg'
 
   },
   {
@@ -170,7 +190,8 @@ export const shorts = [
     views: '2K',
     category: 'Competers',
     tags: ['Trxt', 'trewd', 'wuec'],
-    shortSrc: shortVideo14,
+    shortSrc: short34,
+    screenSaver: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg'
 
   },
   {
@@ -180,7 +201,8 @@ export const shorts = [
     views: '2K',
     category: 'Competers',
     tags: ['Trxt', 'trewd', 'wuec'],
-    shortSrc: shortVideo15,
+    shortSrc: short35,
+    screenSaver: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg'
 
   },
   // =====
@@ -192,7 +214,8 @@ export const shorts = [
     views: '3K',
     category: 'Competers',
     tags: ['Trxt', 'trewd', 'wuec'],
-    shortSrc: shortVideo16,
+    shortSrc: short41,
+    screenSaver: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg'
 
   },
   {
@@ -202,7 +225,8 @@ export const shorts = [
     views: '1K',
     category: 'Competers',
     tags: ['Trxt', 'trewd', 'wuec'],
-    shortSrc: shortVideo17,
+    shortSrc: short42,
+    screenSaver: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg'
 
   }, {
     id: 18,
@@ -211,7 +235,8 @@ export const shorts = [
     views: '2.4K',
     category: 'Competers',
     tags: ['Trxt', 'trewd', 'wuec'],
-    shortSrc: shortVideo18,
+    shortSrc: short43,
+    screenSaver: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg'
 
   },
   {
@@ -221,7 +246,8 @@ export const shorts = [
     views: '2K',
     category: 'Competers',
     tags: ['Trxt', 'trewd', 'wuec'],
-    shortSrc: shortVideo19,
+    shortSrc: short44,
+    screenSaver: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg'
 
   },
   {
@@ -231,7 +257,8 @@ export const shorts = [
     views: '2K',
     category: 'Competers',
     tags: ['Trxt', 'trewd', 'wuec'],
-    shortSrc: shortVideo20,
+    shortSrc: short45,
+    screenSaver: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg'
 
   },
 
@@ -243,7 +270,8 @@ export const shorts = [
     views: '3K',
     category: 'Competers',
     tags: ['Trxt', 'trewd', 'wuec'],
-    shortSrc: shortVideo21,
+    shortSrc: short51,
+    screenSaver: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg'
 
   },
   {
@@ -253,7 +281,8 @@ export const shorts = [
     views: '1K',
     category: 'Competers',
     tags: ['Trxt', 'trewd', 'wuec'],
-    shortSrc: shortVideo22,
+    shortSrc: short52,
+    screenSaver: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg'
 
   }, {
     id: 23,
@@ -262,7 +291,8 @@ export const shorts = [
     views: '2.4K',
     category: 'Competers',
     tags: ['Trxt', 'trewd', 'wuec'],
-    shortSrc: shortVideo23,
+    shortSrc: short53,
+    screenSaver: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg'
 
   },
   {
@@ -272,7 +302,8 @@ export const shorts = [
     views: '2K',
     category: 'Competers',
     tags: ['Trxt', 'trewd', 'wuec'],
-    shortSrc: shortVideo24,
+    shortSrc: short54,
+    screenSaver: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg'
 
   },
   {
@@ -282,6 +313,7 @@ export const shorts = [
     views: '2K',
     category: 'Competers',
     tags: ['Trxt', 'trewd', 'wuec'],
-    shortSrc: shortVideo25,
+    shortSrc: short55,
+    screenSaver: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg'
   },
 ]
