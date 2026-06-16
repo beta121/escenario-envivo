@@ -46,7 +46,7 @@ const VideoProfile = () => {
         </div>
 
         <div className="video-products-mobile">
-          <div className="section-product-mobile">
+          <div className="video-section-product-mobile">
             {prods.map((prod) => {
               return <MobileCard key={prod.productId} product={prod} />;
             })}

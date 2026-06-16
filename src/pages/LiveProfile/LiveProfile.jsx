@@ -26,7 +26,7 @@ export const LiveProfile = () => {
         <div className="live-section-video">
           <VideoLive title={currentVideo[id].videoTitle} video={currentVideo[id]} />
 
-          <div className="section-product-mobile">
+          <div className="live-section-product-mobile">
             {prods.map((prod) => {
               return <MobileCard key={prod.productId} product={prod} />;
             })}
