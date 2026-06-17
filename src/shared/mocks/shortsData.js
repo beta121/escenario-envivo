@@ -30,11 +30,11 @@ import short54 from '../assets/shops/shop5/videos/shorts/short4.MP4'
 import short55 from '../assets/shops/shop5/videos/shorts/short5.MP4'
 
 // -----------short preview-----------
-import shortPrev1 from '../assets/shops/shop1/preview/shorts/shortPrev1.png'
-import shortPrev2 from '../assets/shops/shop1/preview/shorts/shortPrev2.png'
-import shortPrev3 from '../assets/shops/shop1/preview/shorts/shortPrev3.png'
-import shortPrev4 from '../assets/shops/shop1/preview/shorts/shortPrev4.png'
-import shortPrev5 from '../assets/shops/shop1/preview/shorts/shortPrev5.png'
+import shortPrev1 from '../assets/shops/shop1/preview/shorts/shortPrev1.webp'
+import shortPrev2 from '../assets/shops/shop1/preview/shorts/shortPrev2.webp'
+import shortPrev3 from '../assets/shops/shop1/preview/shorts/shortPrev3.webp'
+import shortPrev4 from '../assets/shops/shop1/preview/shorts/shortPrev4.webp'
+import shortPrev5 from '../assets/shops/shop1/preview/shorts/shortPrev5.webp'
 
 
 
