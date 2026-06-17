@@ -1,25 +1,39 @@
 import { lazy, Suspense } from 'react';
 import { MainLayout } from '../../components/layout';
 import Home from '../../pages/Home/Home';
+import { Loader } from '../../components/ui';
 
-const Seller = lazy(() => import('../../pages/Seller/Seller.jsx'));
-const UserProfile = lazy(() => import('../../pages/UserProfile/UserProfile.jsx'));
-const LiveProfile = lazy(() => import('../../pages/LiveProfile/LiveProfile.jsx'));
-const UpcomingProfile = lazy(() => import('../../pages/UpcomingProfile/UpcomingProfile.jsx'));
-const ProductPage = lazy(() => import('../../pages/ProductPage/ProductPage.jsx'));
-const Contact = lazy(() => import('../../pages/Contact/Contact.jsx'));
-const Investor = lazy(() => import('../../pages/Investor/Investor.jsx'));
-const VideoProfile = lazy(() => import('../../pages/VideoProfile/VideoProfile.jsx'));
-const ShortProfile = lazy(() => import('../../pages/ShortProfile/ShortProfile.jsx'));
-const Buyer = lazy(() => import('../../pages/Buyer/Buyer.jsx'));
-const AiFeatures = lazy(() => import('../../pages/AiFeatures/AiFeatures.jsx'));
-const Login = lazy(() => import('../../pages/Login/Login.jsx'));
+const SellerLazy = lazy(() => import('../../pages/Seller/Seller.jsx'));
+const UserProfileLazy = lazy(() => import('../../pages/UserProfile/UserProfile.jsx'));
+const LiveProfileLazy = lazy(() => import('../../pages/LiveProfile/LiveProfile.jsx'));
+const UpcomingProfileLazy = lazy(() => import('../../pages/UpcomingProfile/UpcomingProfile.jsx'));
+const ProductPageLazy = lazy(() => import('../../pages/ProductPage/ProductPage.jsx'));
+const ContactLazy = lazy(() => import('../../pages/Contact/Contact.jsx'));
+const InvestorLazy = lazy(() => import('../../pages/Investor/Investor.jsx'));
+const VideoProfileLazy = lazy(() => import('../../pages/VideoProfile/VideoProfile.jsx'));
+const ShortProfileLazy = lazy(() => import('../../pages/ShortProfile/ShortProfile.jsx'));
+const BuyerLazy = lazy(() => import('../../pages/Buyer/Buyer.jsx'));
+const AiFeaturesLazy = lazy(() => import('../../pages/AiFeatures/AiFeatures.jsx'));
+const LoginLazy = lazy(() => import('../../pages/Login/Login.jsx'));
 
 const Loadable = (Component) => (props) => (
-  <Suspense fallback={<div>Loading...</div>}>
+  <Suspense fallback={<Loader />}>
     <Component {...props} />
   </Suspense>
 );
+
+const Seller = Loadable(SellerLazy);
+const Login = Loadable(LoginLazy);
+const Buyer = Loadable(BuyerLazy);
+const AiFeatures = Loadable(AiFeaturesLazy);
+const Investor = Loadable(InvestorLazy);
+const Contact = Loadable(ContactLazy);
+const UserProfile = Loadable(UserProfileLazy);
+const LiveProfile = Loadable(LiveProfileLazy);
+const UpcomingProfile = Loadable(UpcomingProfileLazy);
+const VideoProfile = Loadable(VideoProfileLazy);
+const ProductPage = Loadable(ProductPageLazy);
+const ShortProfile = Loadable(ShortProfileLazy);
 
 export const routes = [
   {
