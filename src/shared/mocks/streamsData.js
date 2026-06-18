@@ -1,50 +1,50 @@
-import avatar1 from '../assets/shops/avatars/avatar1.png'
-import avatar2 from '../assets/shops/avatars/avatar2.png'
-import avatar3 from '../assets/shops/avatars/avatar3.png'
-import avatar4 from '../assets/shops/avatars/avatar4.png'
-import avatar5 from '../assets/shops/avatars/avatar5.png'
+import avatar1 from '../assets/shops/avatars/avatar1.webp'
+import avatar2 from '../assets/shops/avatars/avatar2.webp'
+import avatar3 from '../assets/shops/avatars/avatar3.webp'
+import avatar4 from '../assets/shops/avatars/avatar4.webp'
+import avatar5 from '../assets/shops/avatars/avatar5.webp'
 
 // -----------stream preview-----------
-import streamPreview1 from '../assets/shops/shop1/preview/stream/streamPrev1.png'
-import streamPreview21 from '../assets/shops/shop2/preview/stream/streamPrev1.jpg'
-import streamPreview31 from '../assets/shops/shop3/preview/stream/streamPrev1.jpg'
-import streamPreview41 from '../assets/shops/shop4/preview/stream/streamPrev1.jpg'
-import streamPreview51 from '../assets/shops/shop5/preview/stream/streamPrev1.jpg'
+import streamPreview1 from '../assets/shops/shop1/preview/stream/streamPrev1.webp'
+import streamPreview21 from '../assets/shops/shop2/preview/stream/streamPrev1.webp'
+import streamPreview31 from '../assets/shops/shop3/preview/stream/streamPrev1.webp'
+import streamPreview41 from '../assets/shops/shop4/preview/stream/streamPrev1.webp'
+import streamPreview51 from '../assets/shops/shop5/preview/stream/streamPrev1.webp'
 
 
 // -----------video preview-----------
-import videoPreview1 from '../assets/shops/shop1/preview/video/videoPrev1.png'
-import videoPreview21 from '../assets/shops/shop2/preview/video/videoPrev1.jpg'
-import videoPreview31 from '../assets/shops/shop3/preview/video/videoPrev1.jpg'
-import videoPreview41 from '../assets/shops/shop4/preview/video/videoPrev1.jpg'
-import videoPreview51 from '../assets/shops/shop5/preview/video/videoPrev1.jpg'
+import videoPreview1 from '../assets/shops/shop1/preview/video/videoPrev1.webp'
+import videoPreview21 from '../assets/shops/shop2/preview/video/videoPrev1.webp'
+import videoPreview31 from '../assets/shops/shop3/preview/video/videoPrev1.webp'
+import videoPreview41 from '../assets/shops/shop4/preview/video/videoPrev1.webp'
+import videoPreview51 from '../assets/shops/shop5/preview/video/videoPrev1.webp'
 
 
 
 // -----------upcoming preview-----------
-import upcomingPreview1 from '../assets/shops/shop1/preview/upcoming/upcomingPrev1.png'
-import upcomingPreview21 from '../assets/shops/shop2/preview/upcoming/upcomingPrev1.jpg'
-import upcomingPreview31 from '../assets/shops/shop3/preview/upcoming/upcomingPrev1.jpg'
-import upcomingPreview41 from '../assets/shops/shop4/preview/upcoming/upcomingPrev1.jpg'
-import upcomingPreview51 from '../assets/shops/shop5/preview/upcoming/upcomingPrev1.jpg'
+import upcomingPreview1 from '../assets/shops/shop1/preview/upcoming/upcomingPrev1.webp'
+import upcomingPreview21 from '../assets/shops/shop2/preview/upcoming/upcomingPrev1.webp'
+import upcomingPreview31 from '../assets/shops/shop3/preview/upcoming/upcomingPrev1.webp'
+import upcomingPreview41 from '../assets/shops/shop4/preview/upcoming/upcomingPrev1.webp'
+import upcomingPreview51 from '../assets/shops/shop5/preview/upcoming/upcomingPrev1.webp'
 
 
 
 // -----------stream-------------
 import stream1 from '../assets/shops/shop1/videos/stream/stream1.mp4'
-import stream21 from '../assets/shops/shop2/videos/stream/stream1.MP4'
-import stream31 from '../assets/shops/shop3/videos/stream/stream1.MP4'
-import stream41 from '../assets/shops/shop4/videos/stream/stream1.MP4'
-import stream51 from '../assets/shops/shop5/videos/stream/stream1.MP4'
+import stream21 from '../assets/shops/shop2/videos/stream/stream1.mp4'
+import stream31 from '../assets/shops/shop3/videos/stream/stream1.mp4'
+import stream41 from '../assets/shops/shop4/videos/stream/stream1.mp4'
+import stream51 from '../assets/shops/shop5/videos/stream/stream1.mp4'
 
 
 
 // -----------video--------------
-import video1 from '../assets/shops/shop1/videos/video/video1.MP4'
-import video21 from '../assets/shops/shop2/videos/video/video1.MP4'
-import video31 from '../assets/shops/shop3/videos/video/video1.MP4'
-import video41 from '../assets/shops/shop4/videos/video/video1.MP4'
-import video51 from '../assets/shops/shop5/videos/video/video1.MP4'
+import video1 from '../assets/shops/shop1/videos/video/video1.mp4'
+import video21 from '../assets/shops/shop2/videos/video/video1.mp4'
+import video31 from '../assets/shops/shop3/videos/video/video1.mp4'
+import video41 from '../assets/shops/shop4/videos/video/video1.mp4'
+import video51 from '../assets/shops/shop5/videos/video/video1.mp4'
 
 
 

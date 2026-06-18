@@ -49,36 +49,20 @@ const Home = () => {
 
   const currentProducts = products.map((product) => product.products[0]);
 
-  // убрать когда буду все магазині
+  // -----------------убрать когда буду все магазині------------
 
-  const limitShorts = useMemo(() => {
-    const firsts = Object.values(
-      shorts.reduce((acc, short) => {
-        if (!acc[short.userId]) {
-          acc[short.userId] = short;
-        }
-        return acc;
-      }, {})
-    );
+  const oneShortPerUser = shorts.reduce((acc, currentVideo) => {
+    const userExists = acc.some((item) => item.userId === currentVideo.userId);
 
-    if (shorts.length <= 12) return shorts;
-    if (firsts.length >= 12) return firsts.slice(0, 12);
+    if (!userExists) {
+      acc.push(currentVideo);
+    }
 
-    const takenIds = new Set(firsts.map((s) => s.id));
-
-    const remaining = shorts.filter((short) => !takenIds.has(short.id));
-
-    const needed = 12 - firsts.length;
-
-    return [...firsts, ...remaining.slice(0, needed)];
+    return acc;
   }, []);
 
-  // убрать когда буду все магазині
+  console.log(oneShortPerUser);
 
-  const priorityShorts = limitShorts.filter((short) => Number(short.userId) === 1);
-  const otherShorts = limitShorts.filter((short) => Number(short.userId) !== 1);
-
-  const orderedShorts = [...priorityShorts, ...otherShorts];
   //--------------------------------------
 
   return (
@@ -120,8 +104,8 @@ const Home = () => {
       </div>
 
       <div style={{ margin: '15px 0 24px' }}>
-        <ExpandableBox showGradient={false} showMo={shorts.length}>
-          {(shorts || []).map((short) => (
+        <ExpandableBox showGradient={false} showMo={oneShortPerUser.length}>
+          {(oneShortPerUser || []).map((short) => (
             <Short key={`short-${short.id}`} short={short} showInfo={false} />
           ))}
         </ExpandableBox>
