@@ -5,7 +5,6 @@ import './style.css';
 export const Short = ({ short, showInfo = true }) => {
   return (
     <Link to={`/shorts/${short.id}`} className="short-card">
-      <Badge text={`Views ${short.views}`} type={'video'} />
       <div className="short-video-wrapper">
         <img src={short.screenSaver} alt={short.title} className="short-video-content" />
       </div>

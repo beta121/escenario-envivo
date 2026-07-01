@@ -1,42 +1,64 @@
 // -----------short video-----------
-import short1 from '../assets/shops/shop1/videos/shorts/short1.MP4'
-import short2 from '../assets/shops/shop1/videos/shorts/short2.MP4'
-import short3 from '../assets/shops/shop1/videos/shorts/short3.MP4'
-import short4 from '../assets/shops/shop1/videos/shorts/short4.MP4'
-import short5 from '../assets/shops/shop1/videos/shorts/short5.MP4'
+import short1 from '../assets/shops/shop1/videos/shorts/short1.mp4'
+import short2 from '../assets/shops/shop1/videos/shorts/short2.mp4'
+import short3 from '../assets/shops/shop1/videos/shorts/short3.mp4'
+import short4 from '../assets/shops/shop1/videos/shorts/short4.mp4'
+import short5 from '../assets/shops/shop1/videos/shorts/short5.mp4'
 
-import short21 from '../assets/shops/shop2/videos/shorts/short1.MP4'
-import short22 from '../assets/shops/shop2/videos/shorts/short2.MP4'
-import short23 from '../assets/shops/shop2/videos/shorts/short3.MP4'
-import short24 from '../assets/shops/shop2/videos/shorts/short4.MP4'
-import short25 from '../assets/shops/shop2/videos/shorts/short5.MP4'
+import short21 from '../assets/shops/shop2/videos/shorts/short1.mp4'
+import short22 from '../assets/shops/shop2/videos/shorts/short2.mp4'
+import short23 from '../assets/shops/shop2/videos/shorts/short3.mp4'
+import short24 from '../assets/shops/shop2/videos/shorts/short4.mp4'
+import short25 from '../assets/shops/shop2/videos/shorts/short5.mp4'
 
-import short31 from '../assets/shops/shop3/videos/shorts/short1.MP4'
-import short32 from '../assets/shops/shop3/videos/shorts/short2.MP4'
-import short33 from '../assets/shops/shop3/videos/shorts/short3.MP4'
-import short34 from '../assets/shops/shop3/videos/shorts/short4.MP4'
-import short35 from '../assets/shops/shop3/videos/shorts/short5.MP4'
+import short31 from '../assets/shops/shop3/videos/shorts/short1.mp4'
+import short32 from '../assets/shops/shop3/videos/shorts/short2.mp4'
+import short33 from '../assets/shops/shop3/videos/shorts/short3.mp4'
+import short34 from '../assets/shops/shop3/videos/shorts/short4.mp4'
+import short35 from '../assets/shops/shop3/videos/shorts/short5.mp4'
 
-import short41 from '../assets/shops/shop4/videos/shorts/short1.MP4'
-import short42 from '../assets/shops/shop4/videos/shorts/short2.MP4'
-import short43 from '../assets/shops/shop4/videos/shorts/short3.MP4'
-import short44 from '../assets/shops/shop4/videos/shorts/short4.MP4'
-import short45 from '../assets/shops/shop4/videos/shorts/short5.MP4'
+import short41 from '../assets/shops/shop4/videos/shorts/short1.mp4'
+import short42 from '../assets/shops/shop4/videos/shorts/short2.mp4'
+import short43 from '../assets/shops/shop4/videos/shorts/short3.mp4'
+import short44 from '../assets/shops/shop4/videos/shorts/short4.mp4'
+import short45 from '../assets/shops/shop4/videos/shorts/short5.mp4'
 
-import short51 from '../assets/shops/shop5/videos/shorts/short1.MP4'
-import short52 from '../assets/shops/shop5/videos/shorts/short2.MP4'
-import short53 from '../assets/shops/shop5/videos/shorts/short3.MP4'
-import short54 from '../assets/shops/shop5/videos/shorts/short4.MP4'
-import short55 from '../assets/shops/shop5/videos/shorts/short5.MP4'
+import short51 from '../assets/shops/shop5/videos/shorts/short1.mp4'
+import short52 from '../assets/shops/shop5/videos/shorts/short2.mp4'
+import short53 from '../assets/shops/shop5/videos/shorts/short3.mp4'
+import short54 from '../assets/shops/shop5/videos/shorts/short4.mp4'
+import short55 from '../assets/shops/shop5/videos/shorts/short5.mp4'
 
 // -----------short preview-----------
-import shortPrev1 from '../assets/shops/shop1/preview/shorts/shortPrev1.png'
-import shortPrev2 from '../assets/shops/shop1/preview/shorts/shortPrev2.png'
-import shortPrev3 from '../assets/shops/shop1/preview/shorts/shortPrev3.png'
-import shortPrev4 from '../assets/shops/shop1/preview/shorts/shortPrev4.png'
-import shortPrev5 from '../assets/shops/shop1/preview/shorts/shortPrev5.png'
+import shortPrev1 from '../assets/shops/shop1/preview/shorts/shortPrev1.webp'
+import shortPrev2 from '../assets/shops/shop1/preview/shorts/shortPrev2.webp'
+import shortPrev3 from '../assets/shops/shop1/preview/shorts/shortPrev3.webp'
+import shortPrev4 from '../assets/shops/shop1/preview/shorts/shortPrev4.webp'
+import shortPrev5 from '../assets/shops/shop1/preview/shorts/shortPrev5.webp'
 
+import shortPrev21 from '../assets/shops/shop2/preview/shorts/shortPrev1.webp'
+import shortPrev22 from '../assets/shops/shop2/preview/shorts/shortPrev2.webp'
+import shortPrev23 from '../assets/shops/shop2/preview/shorts/shortPrev3.webp'
+import shortPrev24 from '../assets/shops/shop2/preview/shorts/shortPrev4.webp'
+import shortPrev25 from '../assets/shops/shop2/preview/shorts/shortPrev5.webp'
 
+import shortPrev31 from '../assets/shops/shop3/preview/shorts/shortPrev1.webp'
+import shortPrev32 from '../assets/shops/shop3/preview/shorts/shortPrev2.webp'
+import shortPrev33 from '../assets/shops/shop3/preview/shorts/shortPrev3.webp'
+import shortPrev34 from '../assets/shops/shop3/preview/shorts/shortPrev4.webp'
+import shortPrev35 from '../assets/shops/shop3/preview/shorts/shortPrev5.webp'
+
+import shortPrev41 from '../assets/shops/shop4/preview/shorts/shortPrev1.webp'
+import shortPrev42 from '../assets/shops/shop4/preview/shorts/shortPrev2.webp'
+import shortPrev43 from '../assets/shops/shop4/preview/shorts/shortPrev3.webp'
+import shortPrev44 from '../assets/shops/shop4/preview/shorts/shortPrev4.webp'
+import shortPrev45 from '../assets/shops/shop4/preview/shorts/shortPrev5.webp'
+
+import shortPrev51 from '../assets/shops/shop5/preview/shorts/shortPrev1.webp'
+import shortPrev52 from '../assets/shops/shop5/preview/shorts/shortPrev2.webp'
+import shortPrev53 from '../assets/shops/shop5/preview/shorts/shortPrev3.webp'
+import shortPrev54 from '../assets/shops/shop5/preview/shorts/shortPrev4.webp'
+import shortPrev55 from '../assets/shops/shop5/preview/shorts/shortPrev5.webp'
 
 export const shorts = [
   {
@@ -44,7 +66,7 @@ export const shorts = [
     userId: 1,
     title: 'Crazy tech & Blowout! Super stream',
     views: '3K',
-    category: 'Competers',
+    category: 'Computers',
     tags: ['Trxt', 'trewd', 'wuec'],
     shortSrc: short1,
     screenSaver: shortPrev1
@@ -55,7 +77,7 @@ export const shorts = [
     userId: 1,
     title: '1 Starts, Giveaways, Macbooks,iPads, Chromebooks & More!',
     views: '1K',
-    category: 'Competers',
+    category: 'Computers',
     tags: ['Trxt', 'trewd', 'wuec'],
     shortSrc: short2,
     screenSaver: shortPrev2
@@ -65,7 +87,7 @@ export const shorts = [
     userId: 1,
     title: '⚡️‼️Voltage HIGH END Electronics Show! Feat Abbie👀 Exercise…',
     views: '2.4K',
-    category: 'Competers',
+    category: 'Computers',
     tags: ['Trxt', 'trewd', 'wuec'],
     shortSrc: short3,
     screenSaver: shortPrev3
@@ -76,7 +98,7 @@ export const shorts = [
     userId: 1,
     title: 'FREEEEEE SHOW FRIDAYYYY',
     views: '2K',
-    category: 'Competers',
+    category: 'Computers',
     tags: ['Trxt', 'trewd', 'wuec'],
     shortSrc: short4,
     screenSaver: shortPrev4
@@ -87,7 +109,7 @@ export const shorts = [
     userId: 1,
     title: 'FREEEEEE SHOW FRIDAYYYY',
     views: '2K',
-    category: 'Competers',
+    category: 'Computers',
     tags: ['Trxt', 'trewd', 'wuec'],
     shortSrc: short5,
     screenSaver: shortPrev5
@@ -100,10 +122,10 @@ export const shorts = [
     userId: 2,
     title: 'Crazy tech & Blowout! Super stream',
     views: '3K',
-    category: 'Competers',
+    category: 'Computers',
     tags: ['Trxt', 'trewd', 'wuec'],
     shortSrc: short21,
-    screenSaver: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg'
+    screenSaver: shortPrev21
 
   },
   {
@@ -111,20 +133,20 @@ export const shorts = [
     userId: 2,
     title: '1 Starts, Giveaways, Macbooks,iPads, Chromebooks & More!',
     views: '1K',
-    category: 'Competers',
+    category: 'Computers',
     tags: ['Trxt', 'trewd', 'wuec'],
     shortSrc: short22,
-    screenSaver: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg'
+    screenSaver: shortPrev22
 
   }, {
     id: 8,
     userId: 2,
     title: '⚡️‼️Voltage HIGH END Electronics Show! Feat Abbie👀 Exercise…',
     views: '2.4K',
-    category: 'Competers',
+    category: 'Computers',
     tags: ['Trxt', 'trewd', 'wuec'],
     shortSrc: short23,
-    screenSaver: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg'
+    screenSaver: shortPrev23
 
   },
   {
@@ -132,10 +154,10 @@ export const shorts = [
     userId: 2,
     title: 'FREEEEEE SHOW FRIDAYYYY',
     views: '2K',
-    category: 'Competers',
+    category: 'Computers',
     tags: ['Trxt', 'trewd', 'wuec'],
     shortSrc: short24,
-    screenSaver: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg'
+    screenSaver: shortPrev24
 
   },
   {
@@ -143,10 +165,10 @@ export const shorts = [
     userId: 2,
     title: 'FREEEEEE SHOW FRIDAYYYY',
     views: '2K',
-    category: 'Competers',
+    category: 'Computers',
     tags: ['Trxt', 'trewd', 'wuec'],
     shortSrc: short25,
-    screenSaver: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg'
+    screenSaver: shortPrev25
 
   },
   // =====
@@ -156,10 +178,10 @@ export const shorts = [
     userId: 3,
     title: 'Crazy tech & Blowout! Super stream',
     views: '3K',
-    category: 'Competers',
+    category: 'Computers',
     tags: ['Trxt', 'trewd', 'wuec'],
     shortSrc: short31,
-    screenSaver: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg'
+    screenSaver: shortPrev31
 
   },
   {
@@ -167,20 +189,20 @@ export const shorts = [
     userId: 3,
     title: '1 Starts, Giveaways, Macbooks,iPads, Chromebooks & More!',
     views: '1K',
-    category: 'Competers',
+    category: 'Computers',
     tags: ['Trxt', 'trewd', 'wuec'],
     shortSrc: short32,
-    screenSaver: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg'
+    screenSaver: shortPrev32
 
   }, {
     id: 13,
     userId: 3,
     title: '⚡️‼️Voltage HIGH END Electronics Show! Feat Abbie👀 Exercise…',
     views: '2.4K',
-    category: 'Competers',
+    category: 'Computers',
     tags: ['Trxt', 'trewd', 'wuec'],
     shortSrc: short33,
-    screenSaver: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg'
+    screenSaver: shortPrev33
 
   },
   {
@@ -188,10 +210,10 @@ export const shorts = [
     userId: 3,
     title: 'FREEEEEE SHOW FRIDAYYYY',
     views: '2K',
-    category: 'Competers',
+    category: 'Computers',
     tags: ['Trxt', 'trewd', 'wuec'],
     shortSrc: short34,
-    screenSaver: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg'
+    screenSaver: shortPrev34
 
   },
   {
@@ -199,10 +221,10 @@ export const shorts = [
     userId: 3,
     title: 'FREEEEEE SHOW FRIDAYYYY',
     views: '2K',
-    category: 'Competers',
+    category: 'Computers',
     tags: ['Trxt', 'trewd', 'wuec'],
     shortSrc: short35,
-    screenSaver: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg'
+    screenSaver: shortPrev35
 
   },
   // =====
@@ -212,10 +234,10 @@ export const shorts = [
     userId: 4,
     title: 'Crazy tech & Blowout! Super stream',
     views: '3K',
-    category: 'Competers',
+    category: 'Computers',
     tags: ['Trxt', 'trewd', 'wuec'],
     shortSrc: short41,
-    screenSaver: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg'
+    screenSaver: shortPrev41
 
   },
   {
@@ -223,20 +245,20 @@ export const shorts = [
     userId: 4,
     title: '1 Starts, Giveaways, Macbooks,iPads, Chromebooks & More!',
     views: '1K',
-    category: 'Competers',
+    category: 'Computers',
     tags: ['Trxt', 'trewd', 'wuec'],
     shortSrc: short42,
-    screenSaver: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg'
+    screenSaver: shortPrev42
 
   }, {
     id: 18,
     userId: 4,
     title: '⚡️‼️Voltage HIGH END Electronics Show! Feat Abbie👀 Exercise…',
     views: '2.4K',
-    category: 'Competers',
+    category: 'Computers',
     tags: ['Trxt', 'trewd', 'wuec'],
     shortSrc: short43,
-    screenSaver: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg'
+    screenSaver: shortPrev43
 
   },
   {
@@ -244,10 +266,10 @@ export const shorts = [
     userId: 4,
     title: 'FREEEEEE SHOW FRIDAYYYY',
     views: '2K',
-    category: 'Competers',
+    category: 'Computers',
     tags: ['Trxt', 'trewd', 'wuec'],
     shortSrc: short44,
-    screenSaver: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg'
+    screenSaver: shortPrev44
 
   },
   {
@@ -255,10 +277,10 @@ export const shorts = [
     userId: 4,
     title: 'FREEEEEE SHOW FRIDAYYYY',
     views: '2K',
-    category: 'Competers',
+    category: 'Computers',
     tags: ['Trxt', 'trewd', 'wuec'],
     shortSrc: short45,
-    screenSaver: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg'
+    screenSaver: shortPrev45
 
   },
 
@@ -268,10 +290,10 @@ export const shorts = [
     userId: 5,
     title: 'Crazy tech & Blowout! Super stream',
     views: '3K',
-    category: 'Competers',
+    category: 'Computers',
     tags: ['Trxt', 'trewd', 'wuec'],
     shortSrc: short51,
-    screenSaver: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg'
+    screenSaver: shortPrev51
 
   },
   {
@@ -279,20 +301,20 @@ export const shorts = [
     userId: 5,
     title: '1 Starts, Giveaways, Macbooks,iPads, Chromebooks & More!',
     views: '1K',
-    category: 'Competers',
+    category: 'Computers',
     tags: ['Trxt', 'trewd', 'wuec'],
     shortSrc: short52,
-    screenSaver: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg'
+    screenSaver: shortPrev52
 
   }, {
     id: 23,
     userId: 5,
     title: '⚡️‼️Voltage HIGH END Electronics Show! Feat Abbie👀 Exercise…',
     views: '2.4K',
-    category: 'Competers',
+    category: 'Computers',
     tags: ['Trxt', 'trewd', 'wuec'],
     shortSrc: short53,
-    screenSaver: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg'
+    screenSaver: shortPrev53
 
   },
   {
@@ -300,10 +322,10 @@ export const shorts = [
     userId: 5,
     title: 'FREEEEEE SHOW FRIDAYYYY',
     views: '2K',
-    category: 'Competers',
+    category: 'Computers',
     tags: ['Trxt', 'trewd', 'wuec'],
     shortSrc: short54,
-    screenSaver: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg'
+    screenSaver: shortPrev54
 
   },
   {
@@ -311,9 +333,9 @@ export const shorts = [
     userId: 5,
     title: 'FREEEEEE SHOW FRIDAYYYY',
     views: '2K',
-    category: 'Competers',
+    category: 'Computers',
     tags: ['Trxt', 'trewd', 'wuec'],
     shortSrc: short55,
-    screenSaver: 'https://images.wallpaperscraft.ru/image/single/blesk_tochki_chernyj_fon_121191_1920x1200.jpg'
+    screenSaver: shortPrev55
   },
 ]

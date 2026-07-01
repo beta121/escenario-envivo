@@ -44,7 +44,7 @@ const UpcomingProfile = () => {
             title={currentVideo[id]?.videoTitle}
           />
 
-          <div className="section-product-mobile">
+          <div className="upcoming-section-product-mobile">
             {prods.map((prod) => {
               return <MobileCard key={prod.productId} product={prod} />;
             })}

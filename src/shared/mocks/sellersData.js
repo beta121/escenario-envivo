@@ -1,9 +1,9 @@
 //--------new------
-import avatar1 from '../assets/shops/avatars/avatar1.png'
-import avatar2 from '../assets/shops/avatars/avatar2.png'
-import avatar3 from '../assets/shops/avatars/avatar3.png'
-import avatar4 from '../assets/shops/avatars/avatar4.png'
-import avatar5 from '../assets/shops/avatars/avatar5.png'
+import avatar1 from '../assets/shops/avatars/avatar1.webp'
+import avatar2 from '../assets/shops/avatars/avatar2.webp'
+import avatar3 from '../assets/shops/avatars/avatar3.webp'
+import avatar4 from '../assets/shops/avatars/avatar4.webp'
+import avatar5 from '../assets/shops/avatars/avatar5.webp'
 
 export const sellersUsers = [
   {

@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { StreamerInfo, ProductCard } from '../../components/ui';
+import { StreamerInfo, ProductCard, Badge } from '../../components/ui';
 import { ChatSidebar } from '../../components/layout';
 
 import { shorts } from '../../shared/mocks/shortsData';
@@ -11,6 +11,8 @@ import { products } from '../../shared/mocks/productsData';
 import DislikeIcon from '../../shared/assets/svg/DislikeIcon';
 import LikeIcon from '../../shared/assets/svg/LikeIcon';
 import MessengerIcon from '../../shared/assets/svg/MessengerIcon';
+import star from '../../shared/assets/svg/star.svg';
+
 import './style.css';
 
 const slideVariants = {
@@ -48,8 +50,10 @@ const chatVariants = {
 };
 
 const ShortProfile = () => {
+  const touchStartY = useRef(0);
   const [isOpenChat, setIsOpenChat] = useState(false);
   const { id } = useParams();
+  const location = useLocation();
   const navigate = useNavigate();
 
   const [direction, setDirection] = useState('next');
@@ -89,6 +93,37 @@ const ShortProfile = () => {
       const prevShort = shorts[currentIndex - 1];
       navigate(`/shorts/${prevShort.id}`, { replace: true });
     }
+  };
+  const handleTouchStart = (e) => {
+    // Если свайпают внутри чата, не переключаем видео
+    if (e.target.closest('.short-profile-chat')) return;
+
+    touchStartY.current = e.touches[0].clientY;
+  };
+
+  const handleTouchEnd = (e) => {
+    if (e.target.closest('.short-profile-chat')) return;
+    if (isScrolling.current) return;
+
+    const touchEndY = e.changedTouches[0].clientY;
+    const deltaY = touchStartY.current - touchEndY; // Разница в пикселях
+
+    // Чувствительность свайпа: переключаем, только если протянули больше чем на 50px
+    if (Math.abs(deltaY) < 50) return;
+
+    isScrolling.current = true;
+
+    if (deltaY > 0) {
+      // Свайп снизу вверх -> следующее видео
+      changeShort('next');
+    } else {
+      // Свайп сверху вниз -> предыдущее видео
+      changeShort('prev');
+    }
+
+    setTimeout(() => {
+      isScrolling.current = false;
+    }, 600);
   };
 
   const handleWheel = (e) => {
@@ -137,8 +172,16 @@ const ShortProfile = () => {
     .find((data) => Number(data.userId) === Number(currentShort.userId))
     ?.products?.find((product) => product.type === 'giveaway');
 
+  const isShorts = location.pathname.includes('/shorts');
+
   return (
-    <section className="short-profile-wrapper" onWheel={handleWheel}>
+    <section
+      className="short-profile-wrapper"
+      onWheel={handleWheel}
+      onWheel={handleWheel}
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
+    >
       <div className="short-profile-content">
         <div className="short-profile-user">
           <ProductCard product={currentProduct} />
@@ -163,6 +206,20 @@ const ShortProfile = () => {
               className="short-profile-video-content"
               style={{ width: '100%', height: '100%' }}
             >
+              <div className="short-profile-heder">
+                <div className="short-profile-heder-content">
+                  <div className="short-profile-avatar-mob">
+                    <img className="avatar-img" src={currentUser?.avatar} alt="avatar" />
+                    <i className="avatar-star-badge">
+                      <img src={star} alt="star" />
+                    </i>
+                  </div>
+                  <p className="short-profile-heder-title">{currentShort.title}</p>
+                </div>
+
+                <Badge text={`Views ${currentShort.views}`} type={'video'} />
+              </div>
+
               <div className="active-video-container">
                 <video
                   key={currentShort.id}
@@ -211,18 +268,18 @@ const ShortProfile = () => {
         <div className="short-profile-chat">
           <AnimatePresence>
             {isOpenChat && (
-              <motion.div
-                variants={chatVariants}
-                initial="hidden"
-                animate="visible"
-                exit="exit"
-                style={{
-                  height: '100%',
-                  width: '100%',
-                }}
-              >
-                <ChatSidebar />
-              </motion.div>
+              <div className="short-profile-chat-overlay" onClick={() => setIsOpenChat(false)}>
+                <motion.div
+                  variants={chatVariants}
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
+                  onClick={(e) => e.stopPropagation()}
+                  className="short-profile-chat-window"
+                >
+                  <ChatSidebar isLive={isShorts} />
+                </motion.div>
+              </div>
             )}
           </AnimatePresence>
         </div>
