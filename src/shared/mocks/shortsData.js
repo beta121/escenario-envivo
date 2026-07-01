@@ -66,7 +66,7 @@ export const shorts = [
     userId: 1,
     title: 'Crazy tech & Blowout! Super stream',
     views: '3K',
-    category: 'Competers',
+    category: 'Computers',
     tags: ['Trxt', 'trewd', 'wuec'],
     shortSrc: short1,
     screenSaver: shortPrev1
@@ -77,7 +77,7 @@ export const shorts = [
     userId: 1,
     title: '1 Starts, Giveaways, Macbooks,iPads, Chromebooks & More!',
     views: '1K',
-    category: 'Competers',
+    category: 'Computers',
     tags: ['Trxt', 'trewd', 'wuec'],
     shortSrc: short2,
     screenSaver: shortPrev2
@@ -87,7 +87,7 @@ export const shorts = [
     userId: 1,
     title: '⚡️‼️Voltage HIGH END Electronics Show! Feat Abbie👀 Exercise…',
     views: '2.4K',
-    category: 'Competers',
+    category: 'Computers',
     tags: ['Trxt', 'trewd', 'wuec'],
     shortSrc: short3,
     screenSaver: shortPrev3
@@ -98,7 +98,7 @@ export const shorts = [
     userId: 1,
     title: 'FREEEEEE SHOW FRIDAYYYY',
     views: '2K',
-    category: 'Competers',
+    category: 'Computers',
     tags: ['Trxt', 'trewd', 'wuec'],
     shortSrc: short4,
     screenSaver: shortPrev4
@@ -109,7 +109,7 @@ export const shorts = [
     userId: 1,
     title: 'FREEEEEE SHOW FRIDAYYYY',
     views: '2K',
-    category: 'Competers',
+    category: 'Computers',
     tags: ['Trxt', 'trewd', 'wuec'],
     shortSrc: short5,
     screenSaver: shortPrev5
@@ -122,7 +122,7 @@ export const shorts = [
     userId: 2,
     title: 'Crazy tech & Blowout! Super stream',
     views: '3K',
-    category: 'Competers',
+    category: 'Computers',
     tags: ['Trxt', 'trewd', 'wuec'],
     shortSrc: short21,
     screenSaver: shortPrev21
@@ -133,7 +133,7 @@ export const shorts = [
     userId: 2,
     title: '1 Starts, Giveaways, Macbooks,iPads, Chromebooks & More!',
     views: '1K',
-    category: 'Competers',
+    category: 'Computers',
     tags: ['Trxt', 'trewd', 'wuec'],
     shortSrc: short22,
     screenSaver: shortPrev22
@@ -143,7 +143,7 @@ export const shorts = [
     userId: 2,
     title: '⚡️‼️Voltage HIGH END Electronics Show! Feat Abbie👀 Exercise…',
     views: '2.4K',
-    category: 'Competers',
+    category: 'Computers',
     tags: ['Trxt', 'trewd', 'wuec'],
     shortSrc: short23,
     screenSaver: shortPrev23
@@ -154,7 +154,7 @@ export const shorts = [
     userId: 2,
     title: 'FREEEEEE SHOW FRIDAYYYY',
     views: '2K',
-    category: 'Competers',
+    category: 'Computers',
     tags: ['Trxt', 'trewd', 'wuec'],
     shortSrc: short24,
     screenSaver: shortPrev24
@@ -165,7 +165,7 @@ export const shorts = [
     userId: 2,
     title: 'FREEEEEE SHOW FRIDAYYYY',
     views: '2K',
-    category: 'Competers',
+    category: 'Computers',
     tags: ['Trxt', 'trewd', 'wuec'],
     shortSrc: short25,
     screenSaver: shortPrev25
@@ -178,7 +178,7 @@ export const shorts = [
     userId: 3,
     title: 'Crazy tech & Blowout! Super stream',
     views: '3K',
-    category: 'Competers',
+    category: 'Computers',
     tags: ['Trxt', 'trewd', 'wuec'],
     shortSrc: short31,
     screenSaver: shortPrev31
@@ -189,7 +189,7 @@ export const shorts = [
     userId: 3,
     title: '1 Starts, Giveaways, Macbooks,iPads, Chromebooks & More!',
     views: '1K',
-    category: 'Competers',
+    category: 'Computers',
     tags: ['Trxt', 'trewd', 'wuec'],
     shortSrc: short32,
     screenSaver: shortPrev32
@@ -199,7 +199,7 @@ export const shorts = [
     userId: 3,
     title: '⚡️‼️Voltage HIGH END Electronics Show! Feat Abbie👀 Exercise…',
     views: '2.4K',
-    category: 'Competers',
+    category: 'Computers',
     tags: ['Trxt', 'trewd', 'wuec'],
     shortSrc: short33,
     screenSaver: shortPrev33
@@ -210,7 +210,7 @@ export const shorts = [
     userId: 3,
     title: 'FREEEEEE SHOW FRIDAYYYY',
     views: '2K',
-    category: 'Competers',
+    category: 'Computers',
     tags: ['Trxt', 'trewd', 'wuec'],
     shortSrc: short34,
     screenSaver: shortPrev34
@@ -221,7 +221,7 @@ export const shorts = [
     userId: 3,
     title: 'FREEEEEE SHOW FRIDAYYYY',
     views: '2K',
-    category: 'Competers',
+    category: 'Computers',
     tags: ['Trxt', 'trewd', 'wuec'],
     shortSrc: short35,
     screenSaver: shortPrev35
@@ -234,7 +234,7 @@ export const shorts = [
     userId: 4,
     title: 'Crazy tech & Blowout! Super stream',
     views: '3K',
-    category: 'Competers',
+    category: 'Computers',
     tags: ['Trxt', 'trewd', 'wuec'],
     shortSrc: short41,
     screenSaver: shortPrev41
@@ -245,7 +245,7 @@ export const shorts = [
     userId: 4,
     title: '1 Starts, Giveaways, Macbooks,iPads, Chromebooks & More!',
     views: '1K',
-    category: 'Competers',
+    category: 'Computers',
     tags: ['Trxt', 'trewd', 'wuec'],
     shortSrc: short42,
     screenSaver: shortPrev42
@@ -255,7 +255,7 @@ export const shorts = [
     userId: 4,
     title: '⚡️‼️Voltage HIGH END Electronics Show! Feat Abbie👀 Exercise…',
     views: '2.4K',
-    category: 'Competers',
+    category: 'Computers',
     tags: ['Trxt', 'trewd', 'wuec'],
     shortSrc: short43,
     screenSaver: shortPrev43
@@ -266,7 +266,7 @@ export const shorts = [
     userId: 4,
     title: 'FREEEEEE SHOW FRIDAYYYY',
     views: '2K',
-    category: 'Competers',
+    category: 'Computers',
     tags: ['Trxt', 'trewd', 'wuec'],
     shortSrc: short44,
     screenSaver: shortPrev44
@@ -277,7 +277,7 @@ export const shorts = [
     userId: 4,
     title: 'FREEEEEE SHOW FRIDAYYYY',
     views: '2K',
-    category: 'Competers',
+    category: 'Computers',
     tags: ['Trxt', 'trewd', 'wuec'],
     shortSrc: short45,
     screenSaver: shortPrev45
@@ -290,7 +290,7 @@ export const shorts = [
     userId: 5,
     title: 'Crazy tech & Blowout! Super stream',
     views: '3K',
-    category: 'Competers',
+    category: 'Computers',
     tags: ['Trxt', 'trewd', 'wuec'],
     shortSrc: short51,
     screenSaver: shortPrev51
@@ -301,7 +301,7 @@ export const shorts = [
     userId: 5,
     title: '1 Starts, Giveaways, Macbooks,iPads, Chromebooks & More!',
     views: '1K',
-    category: 'Competers',
+    category: 'Computers',
     tags: ['Trxt', 'trewd', 'wuec'],
     shortSrc: short52,
     screenSaver: shortPrev52
@@ -311,7 +311,7 @@ export const shorts = [
     userId: 5,
     title: '⚡️‼️Voltage HIGH END Electronics Show! Feat Abbie👀 Exercise…',
     views: '2.4K',
-    category: 'Competers',
+    category: 'Computers',
     tags: ['Trxt', 'trewd', 'wuec'],
     shortSrc: short53,
     screenSaver: shortPrev53
@@ -322,7 +322,7 @@ export const shorts = [
     userId: 5,
     title: 'FREEEEEE SHOW FRIDAYYYY',
     views: '2K',
-    category: 'Competers',
+    category: 'Computers',
     tags: ['Trxt', 'trewd', 'wuec'],
     shortSrc: short54,
     screenSaver: shortPrev54
@@ -333,7 +333,7 @@ export const shorts = [
     userId: 5,
     title: 'FREEEEEE SHOW FRIDAYYYY',
     views: '2K',
-    category: 'Competers',
+    category: 'Computers',
     tags: ['Trxt', 'trewd', 'wuec'],
     shortSrc: short55,
     screenSaver: shortPrev55

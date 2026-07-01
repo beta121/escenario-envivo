@@ -51,19 +51,34 @@ const Home = () => {
 
   // -----------------убрать когда буду все магазині------------
 
-  const oneShortPerUser = shorts.reduce((acc, currentVideo) => {
-    const userExists = acc.some((item) => item.userId === currentVideo.userId);
+  const shuffleArray = (array) => {
+    const map = array.reduce((acc, short) => {
+      if (!acc[short.userId]) {
+        acc[short.userId] = [];
+      }
+      acc[short.userId].push(short);
+      return acc;
+    }, {});
 
-    if (!userExists) {
-      acc.push(currentVideo);
+    const res = [];
+    const keys = Object.keys(map);
+
+    for (let i = 0; i < 12; i++) {
+      const currentKey = keys[i % keys.length];
+      const userVideos = map[currentKey];
+
+      if (userVideos && userVideos.length > 0) {
+        const video = userVideos.shift();
+        res.push(video);
+      }
     }
 
-    return acc;
-  }, []);
+    return res;
+  };
 
-  console.log(oneShortPerUser);
+  const randomShorts = shuffleArray(shorts);
 
-  //--------------------------------------
+  //------------------12 шортов --------------------
 
   return (
     <div className="main-container">
@@ -104,8 +119,8 @@ const Home = () => {
       </div>
 
       <div style={{ margin: '15px 0 24px' }}>
-        <ExpandableBox showGradient={false} showMo={oneShortPerUser.length}>
-          {(oneShortPerUser || []).map((short) => (
+        <ExpandableBox showGradient={false} showMo={randomShorts.length}>
+          {(randomShorts || []).map((short) => (
             <Short key={`short-${short.id}`} short={short} showInfo={false} />
           ))}
         </ExpandableBox>
