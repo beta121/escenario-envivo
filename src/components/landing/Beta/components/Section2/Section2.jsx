@@ -12,8 +12,7 @@ const TABS_DATA = {
   1: {
     content: (
       <TabContent
-        title="Lorem ipsum dolor 1"
-        description="Lorem ipsum dolor sit amet consectetur. Venenatis pretium eu turpis egestas lectus. Sit odio lacus eu viverra enim."
+        description="The platform is optimized for shopping via live streams, shorts, videos and shops."
         img={Streams}
       />
     ),
@@ -21,8 +20,7 @@ const TABS_DATA = {
   2: {
     content: (
       <TabContent
-        title="Lorem ipsum dolor 2"
-        description="Lorem ipsum dolor sit amet consectetur. Venenatis pretium eu turpis egestas lectus. Sit odio lacus eu viverra enim."
+        description="Live shows where potential buyers can interact with merchants and product promoters have shown to drastically increase online sales."
         img={Shopping}
       />
     ),
@@ -30,8 +28,7 @@ const TABS_DATA = {
   3: {
     content: (
       <TabContent
-        title="Lorem ipsum dolor 3"
-        description="Lorem ipsum dolor sit amet consectetur. Venenatis pretium eu turpis egestas lectus. Sit odio lacus eu viverra enim."
+        description="Our customer communications and inventory management AI assistants allow sellers to focus on interacting with customers to increase sales."
         img={Focus}
       />
     ),
@@ -39,8 +36,7 @@ const TABS_DATA = {
   4: {
     content: (
       <TabContent
-        title="Lorem ipsum dolor 4"
-        description="Lorem ipsum dolor sit amet consectetur. Venenatis pretium eu turpis egestas lectus. Sit odio lacus eu viverra enim."
+        description="Shops are encouraged to promote regular or unique products to customers through a variety of media."
         img={Highlights}
       />
     ),
@@ -48,8 +44,7 @@ const TABS_DATA = {
   5: {
     content: (
       <TabContent
-        title="Lorem ipsum dolor 5"
-        description="Lorem ipsum dolor sit amet consectetur. Venenatis pretium eu turpis egestas lectus. Sit odio lacus eu viverra enim."
+        description="Customers get entertained, form emotional connections with shops and build a relationship that results in increased purchases."
         img={Buyer}
       />
     ),
